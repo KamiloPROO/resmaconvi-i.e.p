@@ -1,0 +1,47 @@
+{
+  "project_info": {
+    "project_number": "147289857948",
+    "project_id": "resmaconviep-9b448",
+    "storage_bucket": "resmaconviep-9b448.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:147289857948:android:dc1962c464db5bc1e1b259",
+        "android_client_info": {
+          "package_name": "com.kamiloinc.resmaconviiep"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "147289857948-pg0qhk1a8rg02s0pjoo8ia63verajf8n.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.kamiloinc.resmaconviiep",
+            "certificate_hash": "4fbf07b9e563b1439313b9cf55a04e4dc4cbaba9"
+          }
+        },
+        {
+          "client_id": "147289857948-hsmorbfj40dusc4rhkq0hsdk9p9ar6r0.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyATXB4vlACHno9pqUqKVFlAy1pQc6d-_Tw"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "147289857948-dhqitdiu1mcoml1k1mhdgt7s6cn20ant.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
