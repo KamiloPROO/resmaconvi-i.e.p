@@ -19,7 +19,7 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="0.01"
-        tools:ignore="MissingConstraints">
+        tools:ignore="ContentDescription,MissingConstraints">
 
     </ImageButton>
 
@@ -42,9 +42,9 @@
         android:layout_width="327dp"
         android:layout_height="69dp"
         android:fontFamily="monospace"
-        android:text=" "
+        android:text="@string/enBlanco"
         android:textAlignment="center"
-        android:textSize="30dp"
+        android:textSize="30sp"
         app:layout_constraintBottom_toTopOf="@+id/bottomNavigationView"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
@@ -55,30 +55,32 @@
         android:id="@+id/textView5"
         android:layout_width="51dp"
         android:layout_height="19dp"
-        android:text="Correo: "
+        android:text="@string/correo"
         android:textAlignment="center"
-        android:textSize="10dp"
+        android:textSize="10sp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.075"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.262" />
+        app:layout_constraintVertical_bias="0.262"
+        tools:ignore="SmallSp" />
 
     <TextView
         android:id="@+id/textid"
         android:layout_width="51dp"
         android:layout_height="19dp"
-        android:hint="id"
+        android:hint="@string/id"
         android:textAlignment="center"
-        android:textSize="10dp"
+        android:textSize="10sp"
         android:visibility="invisible"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.075"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.289" />
+        app:layout_constraintVertical_bias="0.289"
+        tools:ignore="SmallSp" />
 
     <TextView
         android:id="@+id/textCorreo"
@@ -87,19 +89,20 @@
         android:layout_marginTop="92dp"
         android:text=""
         android:textAlignment="center"
-        android:textSize="20dp"
+        android:textSize="20sp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.442"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.142" />
+        app:layout_constraintVertical_bias="0.142"
+        tools:ignore="SpUsage" />
 
     <ImageButton
         android:id="@+id/cerrarsesion2"
-        android:layout_width="56dp"
-        android:layout_height="45dp"
-        android:layout_marginTop="4dp"
+        android:layout_width="56sp"
+        android:layout_height="45sp"
+        android:layout_marginTop="4sp"
         android:background="@android:color/transparent"
         android:src="@drawable/enviarinicio"
         app:layout_constraintBottom_toTopOf="@+id/bottomNavigationView"
@@ -107,7 +110,8 @@
         app:layout_constraintHorizontal_bias="0.992"
         app:layout_constraintStart_toEndOf="@+id/cerrarsesion"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.0" />
+        app:layout_constraintVertical_bias="0.0"
+        tools:ignore="ContentDescription" />
 
     <ImageButton
         android:id="@+id/cerrarsesion"
@@ -121,7 +125,8 @@
         app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.0">
+        app:layout_constraintVertical_bias="0.0"
+        tools:ignore="ContentDescription">
 
     </ImageButton>
 

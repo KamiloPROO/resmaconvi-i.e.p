@@ -6,4 +6,249 @@
     android:layout_height="match_parent"
     tools:context=".AgregarDocentes">
 
+
+    <TextView
+        android:id="@+id/txtTituFormu"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:fontFamily="casual"
+        android:text="@string/formulario_de_registro"
+        android:textColor="@color/morado"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.497"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+    </TextView>
+
+    <TextView
+        android:id="@+id/txtIngresarNombreDocente"
+        android:layout_width="368dp"
+        android:layout_height="67dp"
+        android:layout_marginTop="20dp"
+        android:text="@string/ingrese_nombre_completo_del_docente"
+        android:textColor="@color/black"
+        android:textSize="18sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.488"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/txtTituFormu">
+
+    </TextView>
+
+    <ScrollView
+        android:id="@+id/scrollForm"
+        android:layout_width="match_parent"
+        android:layout_height="540dp"
+        android:orientation="vertical"
+        app:layout_constraintBottom_toTopOf="@+id/bottomNavigationView"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/txtIngresarNombreDocente"
+        app:layout_constraintVertical_bias="1.0">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <EditText
+                android:id="@+id/editNombreDocente"
+                android:layout_width="360dp"
+                android:layout_height="40dp"
+                android:layout_marginLeft="20dp"
+                android:layout_marginTop="10dp"
+                android:hint="Ingresa el nombre completo."
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.431"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/txtIngresarNombreDocente">
+
+            </EditText>
+
+            <EditText
+                android:id="@+id/editNumDocuDocente"
+                android:layout_width="360dp"
+                android:layout_height="40dp"
+                android:layout_marginLeft="20dp"
+                android:layout_marginTop="15dp"
+                android:hint="Numero de documento."
+                android:inputType="number"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.431"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/txtIngresarNombreDocente">
+
+            </EditText>
+
+
+            <EditText
+                android:id="@+id/editFechaNacimiento"
+                android:layout_width="360dp"
+                android:layout_height="40dp"
+                android:layout_marginLeft="20dp"
+                android:layout_marginTop="15dp"
+                android:inputType="date"
+                android:hint="Ingresa la fecha de nacimiento."
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.431"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/txtIngresarNombreDocente">
+
+            </EditText>
+
+            <EditText
+                android:id="@+id/editGeneroDocente"
+                android:layout_width="360dp"
+                android:layout_height="40dp"
+                android:layout_marginLeft="20dp"
+                android:layout_marginTop="15dp"
+                android:hint="Ingresa su genero."
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.431"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/txtIngresarNombreDocente">
+
+            </EditText>
+
+            <EditText
+                android:id="@+id/editCargoDocente"
+                android:layout_width="360dp"
+                android:layout_height="40dp"
+                android:layout_marginLeft="20dp"
+                android:layout_marginTop="15dp"
+                android:hint="Ingresa el cargo del docente"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.431"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/txtIngresarNombreDocente">
+
+            </EditText>
+
+            <EditText
+                android:id="@+id/editSedeDocente"
+                android:layout_width="360dp"
+                android:layout_height="40dp"
+                android:layout_marginLeft="20dp"
+                android:layout_marginTop="15dp"
+                android:hint="Ingresa la sede del docente"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.431"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/txtIngresarNombreDocente">
+
+            </EditText>
+
+            <EditText
+                android:id="@+id/editEspecialidadDocente"
+                android:layout_width="360dp"
+                android:layout_height="40dp"
+                android:layout_marginLeft="20dp"
+                android:layout_marginTop="15dp"
+                android:hint="Ingresa la area del docente"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.431"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/txtIngresarNombreDocente">
+
+            </EditText>
+
+            <EditText
+                android:id="@+id/editNivelDeEnseñanzaDocente"
+                android:layout_width="360dp"
+                android:layout_height="40dp"
+                android:layout_marginLeft="20dp"
+                android:layout_marginTop="15dp"
+                android:inputType="number"
+                android:hint="Ingresa el nivel de enseñanza del docente"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.431"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/txtIngresarNombreDocente">
+
+            </EditText>
+
+            <EditText
+                android:id="@+id/editRecidenciaDocente"
+                android:layout_width="360dp"
+                android:layout_height="40dp"
+                android:layout_marginLeft="20dp"
+                android:layout_marginTop="15dp"
+                android:inputType="text"
+                android:hint="Ingresa la residencia del docente"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.431"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/txtIngresarNombreDocente">
+
+            </EditText>
+
+            <EditText
+                android:id="@+id/editNumTelefonoDocente"
+                android:layout_width="360dp"
+                android:layout_height="40dp"
+                android:layout_marginLeft="20dp"
+                android:layout_marginTop="15dp"
+                android:inputType="number"
+                android:hint="Ingresa el numero de telefono del docente"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.431"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/txtIngresarNombreDocente">
+
+            </EditText>
+
+            <EditText
+                android:id="@+id/editCorreoDocente"
+                android:layout_width="360dp"
+                android:layout_height="40dp"
+                android:layout_marginLeft="20dp"
+                android:layout_marginTop="15dp"
+                android:inputType="textEmailSubject"
+                android:hint="Ingresa la dirección de correo del docente"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.431"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/txtIngresarNombreDocente">
+
+            </EditText>
+
+            <Button
+                android:id="@+id/btnAgregarDocenteForm"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="20dp"
+                android:layout_marginEnd="20dp"
+                android:background="@drawable/border_button"
+                android:text="Guardar"
+                android:textColor="@color/white"
+                android:layout_gravity="center"
+                >
+
+            </Button>
+
+
+        </LinearLayout>
+
+
+    </ScrollView>
+
+    <com.google.android.material.bottomnavigation.BottomNavigationView
+        android:id="@+id/bottomNavigationView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:itemIconTint="@drawable/selector"
+        app:itemTextColor="@drawable/selector"
+        android:background="@color/morado"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:menu="@menu/botton_nav_menu" />
+
+
+
+
 </androidx.constraintlayout.widget.ConstraintLayout>

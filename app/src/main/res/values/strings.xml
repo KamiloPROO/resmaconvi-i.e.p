@@ -3,4 +3,11 @@
     <string name="titulo_apk">RESMACONVI I.E.P</string>
     <string name="txt_inicio_bienvenida">Bienvenidos a RESMACONVI I.E.P</string>
     <string name="btn_docente">Agregar Docente</string>
+    <string name="id">id</string>
+    <string name="correo">Correo:</string>
+    <string name="enBlanco" />
+    <string name="formulario_de_registro">Formulario de registro</string>
+    <string name="ingrese_nombre_completo_del_docente">Antes de continuar no olvides de completar todos los campos con los datos del docente que se va agregar.</string>
+    <string name="completar_campo">completar campo</string>
+    <string name="ingresar">ingresar</string>
 </resources>
