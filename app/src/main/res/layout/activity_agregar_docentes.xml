@@ -157,7 +157,7 @@
             </EditText>
 
             <EditText
-                android:id="@+id/editNivelDeEnseñanzaDocente"
+                android:id="@+id/editNivelDeEnsenianzaDocente"
                 android:layout_width="360dp"
                 android:layout_height="40dp"
                 android:layout_marginLeft="20dp"

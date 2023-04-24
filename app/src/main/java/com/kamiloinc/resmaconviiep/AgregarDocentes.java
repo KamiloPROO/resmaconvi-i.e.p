@@ -25,7 +25,7 @@ public class AgregarDocentes extends AppCompatActivity {
 
     Button agregarDocentesFirebase;
 
-    EditText nombre, numDocumento, fechaNacimiento, genero, cargo, sede, especialidad, nivelEnseñanza, recidencia, numTelefono, correo;
+    EditText nombre, numDocumento, fechaNacimiento, genero, cargo, sede, especialidad, nivelEnsenianza, recidencia, numTelefono, correo;
 
     FirebaseFirestore firebaseFirestore;
 
@@ -43,7 +43,7 @@ public class AgregarDocentes extends AppCompatActivity {
         cargo.findViewById(R.id.editGeneroDocente);
         sede.findViewById(R.id.editSedeDocente);
         especialidad.findViewById(R.id.editEspecialidadDocente);
-        nivelEnseñanza.findViewById(R.id.editNivelDeEnseñanzaDocente);
+        nivelEnsenianza.findViewById(R.id.editNivelDeEnsenianzaDocente);
         recidencia.findViewById(R.id.editRecidenciaDocente);
         numTelefono.findViewById(R.id.editNumTelefonoDocente);
         correo.findViewById(R.id.editCorreoDocente);
@@ -69,19 +69,19 @@ public class AgregarDocentes extends AppCompatActivity {
            String cargoDocente = cargo.getText().toString().trim();
            String sedeDocente = sede.getText().toString().trim();
            String especialidadDocente = especialidad.getText().toString().trim();
-           String nivelEnseñanzaDocente = nivelEnseñanza.getText().toString().trim();
+           String nivelEnsenianzaDocente = nivelEnsenianza.getText().toString().trim();
            String recidenciaDocente = recidencia.getText().toString().trim();
            String numTelefonoDocente = numTelefono.getText().toString().trim();
            String correoDocente = correo.getText().toString().trim();
 
            if (nombreDocente.isEmpty() && numDocumentoDocente.isEmpty() && fechaNacimientoDocente.isEmpty() && generoDocente.isEmpty() && cargoDocente.isEmpty() && sedeDocente.isEmpty()
-           && especialidadDocente.isEmpty() && nivelEnseñanzaDocente.isEmpty() && recidenciaDocente.isEmpty() && numTelefonoDocente.isEmpty() && correoDocente.isEmpty() ){
+           && especialidadDocente.isEmpty() && nivelEnsenianzaDocente.isEmpty() && recidenciaDocente.isEmpty() && numTelefonoDocente.isEmpty() && correoDocente.isEmpty() ){
 
                Toast.makeText(AgregarDocentes.this, "Por favor ingresa todos los datos para poder continuar...", Toast.LENGTH_SHORT).show();
 
            }else {
 
-               subimosFirebase(nombreDocente,numDocumentoDocente,fechaNacimientoDocente,generoDocente,cargoDocente,sedeDocente,especialidadDocente,nivelEnseñanzaDocente,recidenciaDocente,numTelefonoDocente,correoDocente);
+               subimosFirebase(nombreDocente,numDocumentoDocente,fechaNacimientoDocente,generoDocente,cargoDocente,sedeDocente,especialidadDocente,nivelEnsenianzaDocente,recidenciaDocente,numTelefonoDocente,correoDocente);
 
            }
 
@@ -92,7 +92,7 @@ public class AgregarDocentes extends AppCompatActivity {
 
     }
 
-    private void subimosFirebase(String nombreDocente, String numDocumentoDocente, String fechaNacimientoDocente, String generoDocente, String cargoDocente, String sedeDocente, String especialidadDocente , String nivelEnseñanzaDocente, String recidenciaDocente, String numTelefonoDocente, String correoDocente) {
+    private void subimosFirebase(String nombreDocente, String numDocumentoDocente, String fechaNacimientoDocente, String generoDocente, String cargoDocente, String sedeDocente, String especialidadDocente , String nivelEnsenianzaDocente, String recidenciaDocente, String numTelefonoDocente, String correoDocente) {
 
         Map<String, Object> map = new HashMap<>();
 
@@ -103,7 +103,7 @@ public class AgregarDocentes extends AppCompatActivity {
         map.put("cargo", cargoDocente);
         map.put("sede", sedeDocente);
         map.put("especialidad", especialidadDocente);
-        map.put("nivelDeEnseñanza", nivelEnseñanzaDocente);
+        map.put("nivelDeEnsenianza", nivelEnsenianzaDocente);
         map.put("recidencia", recidenciaDocente);
         map.put("numTelefono", numTelefonoDocente);
         map.put("correo", correoDocente);
