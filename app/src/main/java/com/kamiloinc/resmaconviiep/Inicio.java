@@ -27,7 +27,7 @@ public class Inicio extends AppCompatActivity {
 
     private void conexiones() {
 
-        agregarDocente.findViewById(R.id.btn_agregarDocente);
+        agregarDocente = findViewById(R.id.btn_agregarDocente);
 
         agregarDocente.setOnClickListener(new View.OnClickListener() {
             @Override

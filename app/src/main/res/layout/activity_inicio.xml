@@ -27,18 +27,17 @@
         android:id="@+id/btn_agregarDocente"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="@string/btn_docente"
-        android:textColor="@color/white"
+        android:layout_marginTop="48dp"
         android:background="@drawable/border_button"
         android:padding="20px"
+        android:text="@string/btn_docente"
+        android:textColor="@color/white"
         app:layout_constraintBottom_toTopOf="@+id/bottomNavigationView"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/textView"
-        app:layout_constraintVertical_bias="0.126"
-        tools:ignore="MissingConstraints">
-
-    </Button>
+        app:layout_constraintVertical_bias="0.126">
+</Button>
 
     <com.google.android.material.bottomnavigation.BottomNavigationView
         android:id="@+id/bottomNavigationView"

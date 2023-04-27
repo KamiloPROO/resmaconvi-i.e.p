@@ -7,53 +7,57 @@
     tools:context=".AgregarDocentes">
 
 
-    <TextView
-        android:id="@+id/txtTituFormu"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="16dp"
-        android:fontFamily="casual"
-        android:text="@string/formulario_de_registro"
-        android:textColor="@color/morado"
-        android:textSize="20sp"
-        android:textStyle="bold"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.497"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent">
-    </TextView>
-
-    <TextView
-        android:id="@+id/txtIngresarNombreDocente"
-        android:layout_width="368dp"
-        android:layout_height="67dp"
-        android:layout_marginTop="20dp"
-        android:text="@string/ingrese_nombre_completo_del_docente"
-        android:textColor="@color/black"
-        android:textSize="18sp"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.488"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/txtTituFormu">
-
-    </TextView>
-
     <ScrollView
         android:id="@+id/scrollForm"
         android:layout_width="match_parent"
-        android:layout_height="540dp"
+        android:layout_height="674dp"
         android:orientation="vertical"
         app:layout_constraintBottom_toTopOf="@+id/bottomNavigationView"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/txtIngresarNombreDocente"
-        app:layout_constraintVertical_bias="1.0">
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.0">
+
 
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/txtTituFormu"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="16dp"
+                android:fontFamily="casual"
+                android:text="@string/formulario_de_registro"
+                android:textColor="@color/morado"
+                android:layout_gravity="center"
+                android:textSize="20sp"
+                android:textStyle="bold"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.497"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent">
+
+            </TextView>
+
+            <TextView
+                android:id="@+id/txtIngresarNombreDocente"
+                android:layout_width="368dp"
+                android:layout_height="67dp"
+                android:layout_marginTop="20dp"
+                android:layout_gravity="center"
+                android:text="@string/ingrese_nombre_completo_del_docente"
+                android:textColor="@color/black"
+                android:textSize="18sp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.488"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/txtTituFormu">
+
+            </TextView>
 
             <EditText
                 android:id="@+id/editNombreDocente"
@@ -91,8 +95,8 @@
                 android:layout_height="40dp"
                 android:layout_marginLeft="20dp"
                 android:layout_marginTop="15dp"
-                android:inputType="date"
                 android:hint="Ingresa la fecha de nacimiento."
+                android:inputType="date"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintHorizontal_bias="0.431"
                 app:layout_constraintStart_toStartOf="parent"
@@ -162,8 +166,8 @@
                 android:layout_height="40dp"
                 android:layout_marginLeft="20dp"
                 android:layout_marginTop="15dp"
-                android:inputType="number"
                 android:hint="Ingresa el nivel de enseñanza del docente"
+                android:inputType="number"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintHorizontal_bias="0.431"
                 app:layout_constraintStart_toStartOf="parent"
@@ -177,8 +181,8 @@
                 android:layout_height="40dp"
                 android:layout_marginLeft="20dp"
                 android:layout_marginTop="15dp"
-                android:inputType="text"
                 android:hint="Ingresa la residencia del docente"
+                android:inputType="text"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintHorizontal_bias="0.431"
                 app:layout_constraintStart_toStartOf="parent"
@@ -192,8 +196,8 @@
                 android:layout_height="40dp"
                 android:layout_marginLeft="20dp"
                 android:layout_marginTop="15dp"
-                android:inputType="number"
                 android:hint="Ingresa el numero de telefono del docente"
+                android:inputType="number"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintHorizontal_bias="0.431"
                 app:layout_constraintStart_toStartOf="parent"
@@ -207,8 +211,8 @@
                 android:layout_height="40dp"
                 android:layout_marginLeft="20dp"
                 android:layout_marginTop="15dp"
-                android:inputType="textEmailSubject"
                 android:hint="Ingresa la dirección de correo del docente"
+                android:inputType="textEmailSubject"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintHorizontal_bias="0.431"
                 app:layout_constraintStart_toStartOf="parent"
@@ -220,13 +224,12 @@
                 android:id="@+id/btnAgregarDocenteForm"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
+                android:layout_gravity="center"
                 android:layout_marginTop="20dp"
                 android:layout_marginEnd="20dp"
                 android:background="@drawable/border_button"
                 android:text="Guardar"
-                android:textColor="@color/white"
-                android:layout_gravity="center"
-                >
+                android:textColor="@color/white">
 
             </Button>
 
