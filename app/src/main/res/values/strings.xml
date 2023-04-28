@@ -3,6 +3,7 @@
     <string name="titulo_apk">RESMACONVI I.E.P</string>
     <string name="txt_inicio_bienvenida">Bienvenidos a RESMACONVI I.E.P</string>
     <string name="btn_docente">Agregar Docente</string>
+    <string name="btn_estudiante">Agregar Estudiante</string>
     <string name="id">id</string>
     <string name="correo">Correo:</string>
     <string name="enBlanco" />
@@ -10,4 +11,17 @@
     <string name="ingrese_nombre_completo_del_docente">Antes de continuar no olvides de completar todos los campos con los datos del docente que se va agregar.</string>
     <string name="completar_campo">completar campo</string>
     <string name="ingresar">ingresar</string>
+    <string name="ingresa_el_nombre_completo">Ingresa el nombre completo.</string>
+    <string name="numero_de_documento">Numero de documento.</string>
+    <string name="ingresa_la_fecha_de_nacimiento">Ingresa la fecha de nacimiento.</string>
+    <string name="ingresa_su_genero">Ingresa su genero.</string>
+    <string name="ingresa_el_cargo_del_docente">Ingresa el cargo del docente</string>
+    <string name="ingresa_la_sede_del_docente">Ingresa la sede del docente</string>
+    <string name="ingresa_la_area_del_docente">Ingresa la area del docente</string>
+    <string name="ingresa_el_nivel_de_ense_anza_del_docente">Ingresa el nivel de enseñanza del docente</string>
+    <string name="ingresa_la_residencia_del_docente">Ingresa la residencia del docente</string>
+    <string name="ingresa_el_numero_de_telefono_del_docente">Ingresa el numero de telefono del docente</string>
+    <string name="ingresa_la_direcci_n_de_correo_del_docente">Ingresa la dirección de correo del docente</string>
+    <string name="ingresar_nombre">Ingresar Nombre</string>
+    <string name="guardar">Guardar</string>
 </resources>

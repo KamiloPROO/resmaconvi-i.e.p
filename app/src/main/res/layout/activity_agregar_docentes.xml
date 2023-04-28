@@ -59,166 +59,251 @@
 
             </TextView>
 
-            <EditText
-                android:id="@+id/editNombreDocente"
-                android:layout_width="360dp"
-                android:layout_height="40dp"
-                android:layout_marginLeft="20dp"
-                android:layout_marginTop="10dp"
-                android:hint="Ingresa el nombre completo."
-                app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintHorizontal_bias="0.431"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/txtIngresarNombreDocente">
-
-            </EditText>
-
-            <EditText
-                android:id="@+id/editNumDocuDocente"
-                android:layout_width="360dp"
-                android:layout_height="40dp"
-                android:layout_marginLeft="20dp"
-                android:layout_marginTop="15dp"
-                android:hint="Numero de documento."
-                android:inputType="number"
-                app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintHorizontal_bias="0.431"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/txtIngresarNombreDocente">
-
-            </EditText>
 
 
-            <EditText
-                android:id="@+id/editFechaNacimiento"
-                android:layout_width="360dp"
-                android:layout_height="40dp"
-                android:layout_marginLeft="20dp"
-                android:layout_marginTop="15dp"
-                android:hint="Ingresa la fecha de nacimiento."
-                android:inputType="date"
-                app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintHorizontal_bias="0.431"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/txtIngresarNombreDocente">
+          <com.google.android.material.textfield.TextInputLayout
+              android:layout_width="match_parent"
+              android:layout_height="wrap_content"
+              android:layout_gravity="center">
 
-            </EditText>
+              <EditText
+                  android:id="@+id/editNombreDocente"
+                  android:layout_width="360dp"
+                  android:layout_height="48dp"
+                  android:layout_gravity="center"
+                  android:inputType="text"
+                  android:hint="@string/ingresa_el_nombre_completo"
+                  tools:ignore="Autofill">
 
-            <EditText
-                android:id="@+id/editGeneroDocente"
-                android:layout_width="360dp"
-                android:layout_height="40dp"
-                android:layout_marginLeft="20dp"
-                android:layout_marginTop="15dp"
-                android:hint="Ingresa su genero."
-                app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintHorizontal_bias="0.431"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/txtIngresarNombreDocente">
+              </EditText>
 
-            </EditText>
+          </com.google.android.material.textfield.TextInputLayout>
 
-            <EditText
-                android:id="@+id/editCargoDocente"
-                android:layout_width="360dp"
-                android:layout_height="40dp"
-                android:layout_marginLeft="20dp"
-                android:layout_marginTop="15dp"
-                android:hint="Ingresa el cargo del docente"
-                app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintHorizontal_bias="0.431"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/txtIngresarNombreDocente">
+            <com.google.android.material.textfield.TextInputLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
 
-            </EditText>
+                <EditText
+                    android:id="@+id/editNumDocuDocente"
+                    android:layout_width="360dp"
+                    android:layout_height="48dp"
+                    android:layout_gravity="center"
+                    android:hint="@string/numero_de_documento"
+                    android:inputType="number"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintHorizontal_bias="0.431"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/txtIngresarNombreDocente"
+                    tools:ignore="Autofill">
+                </EditText>
 
-            <EditText
-                android:id="@+id/editSedeDocente"
-                android:layout_width="360dp"
-                android:layout_height="40dp"
-                android:layout_marginLeft="20dp"
-                android:layout_marginTop="15dp"
-                android:hint="Ingresa la sede del docente"
-                app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintHorizontal_bias="0.431"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/txtIngresarNombreDocente">
+            </com.google.android.material.textfield.TextInputLayout>
 
-            </EditText>
+            <com.google.android.material.textfield.TextInputLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
 
-            <EditText
-                android:id="@+id/editEspecialidadDocente"
-                android:layout_width="360dp"
-                android:layout_height="40dp"
-                android:layout_marginLeft="20dp"
-                android:layout_marginTop="15dp"
-                android:hint="Ingresa la area del docente"
-                app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintHorizontal_bias="0.431"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/txtIngresarNombreDocente">
+                <EditText
+                    android:id="@+id/editFechaNacimiento"
+                    android:layout_width="360dp"
+                    android:layout_height="48dp"
+                    android:layout_gravity="center"
 
-            </EditText>
+                    android:hint="@string/ingresa_la_fecha_de_nacimiento"
+                    android:inputType="text"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintHorizontal_bias="0.431"
+                    app:layout_constraintStart_toStartOf="parent"
+                    tools:ignore="Autofill"
+                    app:layout_constraintTop_toBottomOf="@+id/txtIngresarNombreDocente">
 
-            <EditText
-                android:id="@+id/editNivelDeEnsenianzaDocente"
-                android:layout_width="360dp"
-                android:layout_height="40dp"
-                android:layout_marginLeft="20dp"
-                android:layout_marginTop="15dp"
-                android:hint="Ingresa el nivel de enseñanza del docente"
-                android:inputType="number"
-                app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintHorizontal_bias="0.431"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/txtIngresarNombreDocente">
+                </EditText>
 
-            </EditText>
+            </com.google.android.material.textfield.TextInputLayout>
 
-            <EditText
-                android:id="@+id/editRecidenciaDocente"
-                android:layout_width="360dp"
-                android:layout_height="40dp"
-                android:layout_marginLeft="20dp"
-                android:layout_marginTop="15dp"
-                android:hint="Ingresa la residencia del docente"
-                android:inputType="text"
-                app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintHorizontal_bias="0.431"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/txtIngresarNombreDocente">
+            <com.google.android.material.textfield.TextInputLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
 
-            </EditText>
+                <EditText
+                    android:id="@+id/editGeneroDocente"
+                    android:layout_width="360dp"
+                    android:layout_height="48dp"
+                    android:layout_gravity="center"
 
-            <EditText
-                android:id="@+id/editNumTelefonoDocente"
-                android:layout_width="360dp"
-                android:layout_height="40dp"
-                android:layout_marginLeft="20dp"
-                android:layout_marginTop="15dp"
-                android:hint="Ingresa el numero de telefono del docente"
-                android:inputType="number"
-                app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintHorizontal_bias="0.431"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/txtIngresarNombreDocente">
+                    android:hint="@string/ingresa_su_genero"
+                    android:inputType="text"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintHorizontal_bias="0.431"
+                    app:layout_constraintStart_toStartOf="parent"
+                    tools:ignore="Autofill"
+                    app:layout_constraintTop_toBottomOf="@+id/txtIngresarNombreDocente">
 
-            </EditText>
+                </EditText>
 
-            <EditText
-                android:id="@+id/editCorreoDocente"
-                android:layout_width="360dp"
-                android:layout_height="40dp"
-                android:layout_marginLeft="20dp"
-                android:layout_marginTop="15dp"
-                android:hint="Ingresa la dirección de correo del docente"
-                android:inputType="textEmailSubject"
-                app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintHorizontal_bias="0.431"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/txtIngresarNombreDocente">
+            </com.google.android.material.textfield.TextInputLayout>
 
-            </EditText>
+            <com.google.android.material.textfield.TextInputLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <EditText
+                    android:id="@+id/editCargoDocente"
+                    android:layout_width="360dp"
+                    android:layout_height="48dp"
+                    android:layout_gravity="center"
+
+                    android:hint="@string/ingresa_el_cargo_del_docente"
+                    android:inputType="text"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintHorizontal_bias="0.431"
+                    tools:ignore="Autofill"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/txtIngresarNombreDocente">
+
+                </EditText>
+
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <EditText
+                    android:id="@+id/editSedeDocente"
+                    android:layout_width="360dp"
+                    android:layout_height="48dp"
+                    android:layout_gravity="center"
+
+                    android:hint="@string/ingresa_la_sede_del_docente"
+                    android:inputType="text"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintHorizontal_bias="0.431"
+                    tools:ignore="Autofill"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/txtIngresarNombreDocente">
+
+                </EditText>
+
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <EditText
+                    android:id="@+id/editEspecialidadDocente"
+                    android:layout_width="360dp"
+                    android:layout_height="48dp"
+                    android:layout_gravity="center"
+
+                    android:hint="@string/ingresa_la_area_del_docente"
+                    android:inputType="text"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintHorizontal_bias="0.431"
+                    tools:ignore="Autofill"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/txtIngresarNombreDocente">
+
+                </EditText>
+
+            </com.google.android.material.textfield.TextInputLayout>
+
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <EditText
+                    android:id="@+id/editNivelDeEnsenianzaDocente"
+                    android:layout_width="360dp"
+                    android:layout_height="48dp"
+                    android:layout_gravity="center"
+
+                    android:hint="@string/ingresa_el_nivel_de_ense_anza_del_docente"
+                    android:inputType="text"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    tools:ignore="Autofill"
+                    app:layout_constraintHorizontal_bias="0.431"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/txtIngresarNombreDocente"
+                  >
+
+                </EditText>
+
+            </com.google.android.material.textfield.TextInputLayout>
+
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <EditText
+                    android:id="@+id/editRecidenciaDocente"
+                    android:layout_width="360dp"
+                    android:layout_height="48dp"
+                    android:layout_gravity="center"
+
+                    android:hint="@string/ingresa_la_residencia_del_docente"
+                    android:inputType="text"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintHorizontal_bias="0.431"
+                    tools:ignore="Autofill"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/txtIngresarNombreDocente">
+
+                </EditText>
+
+            </com.google.android.material.textfield.TextInputLayout>
+
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <EditText
+                    android:id="@+id/editNumTelefonoDocente"
+                    android:layout_width="360dp"
+                    android:layout_height="48dp"
+                    android:layout_gravity="center"
+
+                    android:hint="@string/ingresa_el_numero_de_telefono_del_docente"
+                    android:inputType="number"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintHorizontal_bias="0.431"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/txtIngresarNombreDocente"
+                    tools:ignore="Autofill">
+
+                </EditText>
+
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <EditText
+                    android:id="@+id/editCorreoDocente"
+                    android:layout_width="360dp"
+                    android:layout_height="48dp"
+                    android:layout_gravity="center"
+
+                    android:hint="@string/ingresa_la_direcci_n_de_correo_del_docente"
+                    android:inputType="textEmailSubject"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintHorizontal_bias="0.431"
+                    app:layout_constraintStart_toStartOf="parent"
+                    tools:ignore="Autofill"
+                    app:layout_constraintTop_toBottomOf="@+id/txtIngresarNombreDocente"
+                    android:importantForAutofill="no">
+
+                </EditText>
+
+            </com.google.android.material.textfield.TextInputLayout>
+
+
+
 
             <Button
                 android:id="@+id/btnAgregarDocenteForm"
@@ -228,7 +313,7 @@
                 android:layout_marginTop="20dp"
                 android:layout_marginEnd="20dp"
                 android:background="@drawable/border_button"
-                android:text="Guardar"
+                android:text="@string/guardar"
                 android:textColor="@color/white">
 
             </Button>

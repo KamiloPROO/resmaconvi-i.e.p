@@ -13,7 +13,7 @@ import com.google.android.material.bottomnavigation.BottomNavigationView;
 
 public class Inicio extends AppCompatActivity {
 
-    Button agregarDocente;
+    Button agregarDocente, agregarEstudiante;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -28,12 +28,23 @@ public class Inicio extends AppCompatActivity {
     private void conexiones() {
 
         agregarDocente = findViewById(R.id.btn_agregarDocente);
+        agregarEstudiante = findViewById(R.id.btn_agregarEstudiante);
 
         agregarDocente.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
 
                 Intent intent = new Intent( Inicio.this, AgregarDocentes.class );
+                startActivity(intent);
+
+            }
+        });
+
+        agregarEstudiante.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+
+                Intent intent = new Intent( Inicio.this, AgregarEstudiantes.class );
                 startActivity(intent);
 
             }
