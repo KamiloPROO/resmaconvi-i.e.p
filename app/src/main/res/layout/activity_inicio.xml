@@ -6,69 +6,392 @@
     android:layout_height="match_parent"
     tools:context=".Inicio">
 
-    <TextView
-        android:id="@+id/textView"
+
+    <ScrollView
+        android:id="@+id/scrollForm"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:fontFamily="casual"
-        android:text="@string/txt_inicio_bienvenida"
-        android:textAlignment="center"
-        android:textColor="@color/morado"
-        android:textSize="20sp"
-        android:textStyle="bold"
+        android:orientation="vertical"
         app:layout_constraintBottom_toTopOf="@+id/bottomNavigationView"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.051"
-        tools:layout_editor_absoluteX="0dp">
+        app:layout_constraintVertical_bias="0.0">
 
-    </TextView>
 
-    <Button
-        android:id="@+id/btn_agregarEstudiante"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:background="@drawable/border_button"
-        android:padding="20px"
-        android:text="@string/btn_estudiante"
-        android:textColor="@color/white"
-        app:layout_constraintBottom_toTopOf="@+id/bottomNavigationView"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.497"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/btn_agregarDocente"
-        app:layout_constraintVertical_bias="0.139">
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
 
-    </Button>
+            <TextView
+                android:id="@+id/txtTituFormu"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginTop="16dp"
+                android:fontFamily="casual"
+                android:text="@string/txt_inicio_bienvenida"
+                android:textColor="@color/morado"
+                android:textSize="20sp"
+                android:textStyle="bold"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.497"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent">
 
-    <Button
-        android:id="@+id/btn_agregarDocente"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="48dp"
-        android:background="@drawable/border_button"
-        android:padding="20px"
-        android:text="@string/btn_docente"
-        android:textColor="@color/white"
-        app:layout_constraintBottom_toTopOf="@+id/bottomNavigationView"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textView"
-        app:layout_constraintVertical_bias="0.025">
+            </TextView>
 
-    </Button>
+            <com.airbnb.lottie.LottieAnimationView
+
+                android:layout_width="250dp"
+                android:layout_height="160dp"
+                android:layout_gravity="center"
+                app:lottie_autoPlay="true"
+                app:lottie_loop="true"
+                app:lottie_rawRes="@raw/bienvenido" />
+
+            <TextView
+                android:id="@+id/txtIngresarNombreDocente"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:textAlignment="center"
+                android:fontFamily="sans-serif-thin"
+                android:layout_marginTop="20dp"
+                android:text="@string/ruta_de_atenci_n_integral_para_la_convivencia_escolar"
+                android:textColor="@color/white"
+                android:textSize="20sp"
+                android:background="@color/morado"
+                android:textStyle="bold"
+                >
+
+            </TextView>
+
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/promocion"
+                android:textSize="25sp"
+                android:textStyle="bold"
+                android:layout_marginTop="40dp"
+                android:textAlignment="center"
+                android:textColor="@color/verde"
+                android:layout_gravity="center"
+
+                />
+
+            <com.airbnb.lottie.LottieAnimationView
+                android:id="@+id/imgSplash"
+                android:layout_width="200dp"
+                android:layout_height="120dp"
+                android:layout_gravity="center"
+                app:lottie_autoPlay="true"
+                app:lottie_loop="true"
+                app:lottie_rawRes="@raw/promocion" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/promocion_text"
+                android:textSize="20sp"
+                android:textStyle="normal"
+                android:layout_marginTop="10dp"
+                android:textAlignment="center"
+                android:textColor="@color/verde"
+                android:layout_gravity="center"
+
+                />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/prevencion"
+                android:textSize="25sp"
+                android:textStyle="bold"
+                android:layout_marginTop="40dp"
+                android:textAlignment="center"
+                android:textColor="@color/azul"
+                android:layout_gravity="center"
+
+                />
+
+            <com.airbnb.lottie.LottieAnimationView
+
+                android:layout_width="200dp"
+                android:layout_height="120dp"
+                android:layout_gravity="center"
+                app:lottie_autoPlay="true"
+                app:lottie_loop="true"
+                app:lottie_rawRes="@raw/prevencion" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/prevencion_text"
+                android:textSize="20sp"
+                android:textStyle="normal"
+                android:layout_marginTop="10dp"
+                android:textAlignment="center"
+                android:textColor="@color/azul"
+                android:layout_gravity="center"
+
+                />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/atencion"
+                android:textSize="25sp"
+                android:textStyle="bold"
+                android:layout_marginTop="40dp"
+                android:textAlignment="center"
+                android:textColor="@color/rojo"
+                android:layout_gravity="center"
+
+                />
+
+            <com.airbnb.lottie.LottieAnimationView
+
+                android:layout_width="200dp"
+                android:layout_height="120dp"
+                android:layout_gravity="center"
+                app:lottie_autoPlay="true"
+                app:lottie_loop="true"
+                app:lottie_rawRes="@raw/atencion" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/atencion_text"
+                android:textSize="20sp"
+                android:textStyle="normal"
+                android:layout_marginTop="10dp"
+                android:textAlignment="center"
+                android:textColor="@color/rojo"
+                android:layout_gravity="center"
+
+                />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/seguimiento"
+                android:textSize="25sp"
+                android:textStyle="bold"
+                android:layout_marginTop="40dp"
+                android:textAlignment="center"
+                android:textColor="@color/amarillo_pastel"
+                android:layout_gravity="center"
+
+                />
+
+            <com.airbnb.lottie.LottieAnimationView
+
+                android:layout_width="200dp"
+                android:layout_height="120dp"
+                android:layout_gravity="center"
+                app:lottie_autoPlay="true"
+                app:lottie_loop="true"
+                app:lottie_rawRes="@raw/seguimiento" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/seguimiento_text"
+                android:textSize="20sp"
+                android:textStyle="normal"
+                android:layout_marginTop="10dp"
+                android:textAlignment="center"
+                android:textColor="@color/amarillo_pastel"
+                android:layout_gravity="center"
+
+                />
+
+            <TextView
+
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:textAlignment="center"
+                android:fontFamily="sans-serif-thin"
+                android:layout_marginTop="50dp"
+                android:text="@string/situaciones_que_afectan_la_convivencia_escolar_y_el_ejercicio_de_los_derechos_humanos_sexuales_y_reproductivos"
+                android:textColor="@color/white"
+                android:background="@color/rojo"
+                android:textSize="20sp"
+                android:textStyle="bold"
+                >
+
+            </TextView>
+
+            <com.airbnb.lottie.LottieAnimationView
+
+                android:layout_width="200dp"
+                android:layout_height="120dp"
+                android:layout_gravity="center"
+                app:lottie_autoPlay="true"
+                app:lottie_loop="true"
+                app:lottie_rawRes="@raw/flechas" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/situaciones1"
+                android:textSize="25sp"
+                android:textStyle="bold"
+                android:layout_marginTop="0dp"
+                android:textAlignment="center"
+                android:textColor="@color/amarillo_pastel"
+                android:layout_gravity="center"
+
+                />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/tipo1_text"
+                android:textSize="20sp"
+                android:textStyle="normal"
+                android:layout_marginTop="1dp"
+                android:textAlignment="center"
+                android:textColor="@color/black"
+                android:layout_gravity="center"
+                android:background="@color/amarillo_pastel"
+
+                />
+
+            <Button
+                android:id="@+id/btnSituaciones1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:text="@string/ver_faltas_tipo_1"
+                android:background="@drawable/border_button_amarillo"
+                android:layout_marginTop="6dp"
+                android:padding="7dp"
+                />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/situaciones2"
+                android:textSize="25sp"
+                android:textStyle="bold"
+                android:layout_marginTop="30dp"
+                android:textAlignment="center"
+                android:textColor="@color/rosa"
+                android:layout_gravity="center"
+
+                />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/tipo2_text1"
+                android:textSize="20sp"
+                android:textStyle="normal"
+                android:layout_marginTop="1dp"
+                android:textAlignment="center"
+                android:textColor="@color/black"
+                android:layout_gravity="center"
+                android:background="@color/rosa_pastel"
+
+                />
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/tipo2_text2"
+                android:textSize="20sp"
+                android:textStyle="normal"
+                android:textAlignment="center"
+                android:textColor="@color/black"
+                android:layout_gravity="center"
+                android:background="@color/rosa_pastel"
+
+                />
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/tipo2_text3"
+                android:textSize="20sp"
+                android:textStyle="normal"
+                android:textAlignment="center"
+                android:textColor="@color/black"
+                android:layout_gravity="center"
+                android:background="@color/rosa_pastel"
+
+                />
+
+            <Button
+                android:id="@+id/btnSituaciones2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:text="@string/ver_faltas_tipo_2"
+                android:background="@drawable/border_button_rosa"
+                android:layout_marginTop="6dp"
+                android:padding="7dp"
+                />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/situaciones3"
+                android:textSize="25sp"
+                android:textStyle="bold"
+                android:layout_marginTop="30dp"
+                android:textAlignment="center"
+                android:textColor="@color/rojo"
+                android:layout_gravity="center"
+
+                />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/tipo3_text"
+                android:textSize="20sp"
+                android:textStyle="normal"
+                android:layout_marginTop="1dp"
+                android:textAlignment="center"
+                android:textColor="@color/black"
+                android:layout_gravity="center"
+                android:background="@color/rojo_pastel"
+
+
+                />
+
+            <Button
+                android:id="@+id/btnSituaciones3"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:text="@string/ver_faltas_tipo_3"
+                android:background="@drawable/border_button_rojo"
+                android:layout_marginTop="6dp"
+                android:padding="7dp"
+                android:layout_marginBottom="60dp"
+                />
+
+        </LinearLayout>
+
+
+    </ScrollView>
 
     <com.google.android.material.bottomnavigation.BottomNavigationView
         android:id="@+id/bottomNavigationView"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:background="@color/morado"
         app:itemIconTint="@drawable/selector"
         app:itemTextColor="@drawable/selector"
-        android:background="@color/morado"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:menu="@menu/botton_nav_menu" />
-
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>

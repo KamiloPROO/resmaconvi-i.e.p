@@ -148,6 +148,16 @@ public class Perfil extends AppCompatActivity {
                                 , Inicio.class));
                         overridePendingTransition(0, 0);
                         return true;
+                    case R.id.admin:
+                        startActivity(new Intent(getApplicationContext()
+                                , Administrador.class));
+                        overridePendingTransition(0, 0);
+                        return true;
+                    case R.id.reportar:
+                        startActivity(new Intent(getApplicationContext()
+                                , MenuReportes.class));
+                        overridePendingTransition(0, 0);
+                        return true;
                     case R.id.perfil:
                         return true;
                 }

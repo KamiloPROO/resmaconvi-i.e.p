@@ -7,6 +7,7 @@ import android.annotation.SuppressLint;
 import android.app.ProgressDialog;
 import android.content.Intent;
 import android.os.Bundle;
+import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
 import android.widget.AdapterView;
@@ -22,7 +23,7 @@ import com.google.android.gms.tasks.OnSuccessListener;
 import com.google.android.material.bottomnavigation.BottomNavigationView;
 import com.google.firebase.firestore.DocumentReference;
 import com.google.firebase.firestore.FirebaseFirestore;
-import com.google.firebase.ktx.Firebase;
+
 
 import java.security.PublicKey;
 import java.util.HashMap;
@@ -123,6 +124,9 @@ public class AgregarDocentes extends AppCompatActivity {
 
                     pd.setTitle("Por favor ingresa todos los datos para poder continuar...");
 
+                    pd.show();
+
+
                 }else {
 
                     subimosFirebase(nombreDocente,numDocumentoDocente,fechaNacimientoDocente,generoDocente,cargoDocente,sedeDocente,especialidadDocente,nivelEnsenianzaDocente,recidenciaDocente,numTelefonoDocente,correoDocente);
@@ -168,6 +172,9 @@ public class AgregarDocentes extends AppCompatActivity {
 
                 Toast.makeText(AgregarDocentes.this, "Docente Agregado Correctamente", Toast.LENGTH_SHORT).show();
 
+                Intent intent = new Intent( AgregarDocentes.this, Administrador.class );
+                startActivity(intent);
+
             }
         }).addOnFailureListener(new OnFailureListener() {
             @Override
@@ -188,7 +195,7 @@ public class AgregarDocentes extends AppCompatActivity {
         BottomNavigationView bottomNavigationView = findViewById(R.id.bottomNavigationView);
 
 
-        bottomNavigationView.setSelectedItemId(R.id.inicio);
+        bottomNavigationView.setSelectedItemId(R.id.admin);
 
         bottomNavigationView.setOnNavigationItemSelectedListener(new BottomNavigationView.OnNavigationItemSelectedListener() {
             @Override
@@ -199,10 +206,21 @@ public class AgregarDocentes extends AppCompatActivity {
                                 , Perfil.class));
                         overridePendingTransition(0, 0);
                         return true;
+                    case R.id.admin:
+                        startActivity(new Intent(getApplicationContext()
+                                , Administrador.class));
+                        overridePendingTransition(0, 0);
+                        return true;
                     case R.id.inicio:
                         startActivity(new Intent(getApplicationContext()
                                 , Inicio.class));
                         overridePendingTransition(0, 0);
+                        return true;
+                    case R.id.reportar:
+                        startActivity(new Intent(getApplicationContext()
+                                , MenuReportes.class));
+                        overridePendingTransition(0, 0);
+                        return true;
                 }
 
                 return false;

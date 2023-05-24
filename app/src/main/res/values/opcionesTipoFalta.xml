@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string-array name="TipoFaltas">
+
+        <item>Selecionar Tipo de Falta</item>
+        <item>Situaciones Tipo 1</item>
+        <item>Situaciones Tipo 2</item>
+        <item>Situaciones Tipo 3</item>
+
+
+    </string-array>
+
+</resources>

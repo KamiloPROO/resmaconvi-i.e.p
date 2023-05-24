@@ -4,7 +4,13 @@
     <item android:title="Inicio"
         android:icon="@drawable/baseline_home_24"
         android:id="@+id/inicio"/>
+    <item android:title="Reportar"
+        android:icon="@drawable/baseline_reportar"
+        android:id="@+id/reportar"/>
     <item android:title="Perfil"
         android:icon="@drawable/baseline_person_24"
         android:id="@+id/perfil"/>
+    <item android:title="Admin"
+        android:icon="@drawable/baseline_admin_panel_settings_24"
+        android:id="@+id/admin"/>
 </menu>

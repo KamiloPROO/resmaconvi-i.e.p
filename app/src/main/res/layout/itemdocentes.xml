@@ -1,0 +1,246 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    app:cardCornerRadius="3dp"
+    app:cardElevation="3dp"
+    app:cardUseCompatPadding="true">
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="10dp"
+        android:orientation="vertical"
+        >
+
+        <TextView
+            android:id="@+id/nombreDocente"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Nombre Docente"
+            android:textColor="@color/morado"
+            >
+
+        </TextView>
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content">
+            <TextView
+
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="C.C: "
+                android:textSize="10sp"
+                android:textColor="@color/morado"
+                tools:ignore="SmallSp">
+
+            </TextView>
+            <TextView
+                android:id="@+id/numDocumentoDocente"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="1007095671"
+                android:textSize="10sp"
+                tools:ignore="SmallSp">
+
+            </TextView>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content">
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                >
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp">
+                    <TextView
+
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Correo: "
+                        android:textColor="@color/morado"
+                        android:textSize="10sp"
+                        tools:ignore="SmallSp">
+
+                    </TextView>
+                    <TextView
+                        android:id="@+id/correoDocente"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="fotocopiasa100@gmail.com"
+                        android:textSize="10sp"
+                        tools:ignore="SmallSp">
+
+                    </TextView>
+
+
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="5dp"
+                    android:orientation="horizontal">
+                    <TextView
+
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Celular: "
+                        android:textColor="@color/morado"
+                        android:textSize="10sp"
+                        tools:ignore="SmallSp">
+
+                    </TextView>
+
+                    <TextView
+                        android:id="@+id/numTeleDocente"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:text="3137572888"
+                        android:textSize="10sp"
+                        tools:ignore="SmallSp">
+
+                    </TextView>
+
+
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="5dp">
+                    <TextView
+
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Nivel Enseñanza: "
+                        android:textColor="@color/morado"
+                        android:textSize="10sp"
+                        tools:ignore="SmallSp">
+
+                    </TextView>
+                    <TextView
+                        android:id="@+id/nivelEnseñanzaDocente"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Basica Secundaria y Media"
+                        android:textSize="10sp"
+                        tools:ignore="SmallSp">
+
+                    </TextView>
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="5dp">
+                    <TextView
+
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Especialidad: "
+                        android:textColor="@color/morado"
+                        android:textSize="10sp"
+                        tools:ignore="SmallSp">
+
+                    </TextView>
+                    <TextView
+                        android:id="@+id/especialidadDocente"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Especialidad Basica Primaria"
+                        android:textSize="10sp"
+                        tools:ignore="SmallSp">
+
+                    </TextView>
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="5dp">
+                    <TextView
+
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Sede: "
+                        android:textColor="@color/morado"
+                        android:textSize="10sp"
+                        tools:ignore="SmallSp">
+
+                    </TextView>
+                    <TextView
+                        android:id="@+id/sedeDocente"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Principal"
+                        android:textSize="10sp"
+                        tools:ignore="SmallSp">
+
+                    </TextView>
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="5dp">
+                    <TextView
+
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Cargo: "
+                        android:textColor="@color/morado"
+                        android:textSize="10sp"
+                        tools:ignore="SmallSp">
+
+                    </TextView>
+                    <TextView
+                        android:id="@+id/cargoDocente"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Docente"
+                        android:textSize="10sp"
+                        tools:ignore="SmallSp">
+
+                    </TextView>
+
+                </LinearLayout>
+
+
+            </LinearLayout>
+
+
+
+
+        </LinearLayout>
+
+
+
+
+
+
+
+
+    </LinearLayout>
+
+    
+
+</androidx.cardview.widget.CardView>

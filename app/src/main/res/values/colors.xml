@@ -12,4 +12,16 @@
 
     <color name="morado">#1F1E58</color>
     <color name="azulsuave">#E1D5F6FB</color>
+    <color name="morado_pastel">#8E65CC</color>
+    <color name="morado_pastel_2">#b186f1</color>
+    <color name="amarillo_pastel">#CFAC38</color>
+    <color name="verde">#3D8A3D</color>
+    <color name="azul">#3A76C1</color>
+    <color name="rojo">#C13A3A</color>
+    <color name="amarillo_pastel_1">#fdfd96</color>
+    <color name="rosa_pastel">#fdcae1</color>
+    <color name="rosa">#E174A5</color>
+    <color name="rojo_pastel">#ff6961</color>
+
+
 </resources>

@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".AgregarEstudiantes">
+    tools:context=".AgregarTiposDeFalta">
 
 
     <ScrollView
@@ -49,7 +49,7 @@
                 android:layout_height="wrap_content"
                 android:layout_gravity="center"
                 android:layout_marginTop="20dp"
-                android:text="@string/ingrese_nombre_completo_del_estudiante"
+                android:text="@string/ingrese_nombre_completo_de_la_tipo_de_falta"
                 android:textColor="@color/black"
                 android:textSize="18sp"
                 app:layout_constraintEnd_toEndOf="parent"
@@ -59,23 +59,19 @@
 
             </TextView>
 
-
             <com.google.android.material.textfield.TextInputLayout
                 android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+
+            <Spinner
+                android:id="@+id/idSpinnerTipoFalta"
+                android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_gravity="center">
+                android:layout_marginStart="28dp"
+                android:layout_marginTop="20dp"
 
-                <EditText
-                    android:id="@+id/editNombreEstudiante"
-                    android:layout_width="360dp"
-                    android:layout_height="48dp"
-                    android:layout_gravity="center"
-                    android:textColorHint="@color/morado"
-                    android:hint="@string/ingresa_el_nombre_completo"
-                    android:inputType="text"
-                    tools:ignore="Autofill">
-
-                </EditText>
+                />
 
             </com.google.android.material.textfield.TextInputLayout>
 
@@ -84,66 +80,11 @@
                 android:layout_height="wrap_content">
 
                 <EditText
-                    android:id="@+id/editNumDocuEstudiante"
+                    android:id="@+id/editDescriFalta"
                     android:layout_width="360dp"
-                    android:layout_height="48dp"
+                    android:layout_height="wrap_content"
                     android:layout_gravity="center"
-                    android:hint="@string/numero_de_documento"
-                    android:inputType="number"
-                    app:layout_constraintEnd_toEndOf="parent"
-                    app:layout_constraintHorizontal_bias="0.431"
-                    app:layout_constraintStart_toStartOf="parent"
-                    app:layout_constraintTop_toBottomOf="@+id/txtIngresarNombreDocente"
-                    tools:ignore="Autofill"/>
-
-            </com.google.android.material.textfield.TextInputLayout>
-
-
-            <Spinner
-                android:id="@+id/idSpinnerCurso"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginStart="28dp"
-                android:layout_marginTop="20dp"
-
-                />
-
-            <!-- <com.google.android.material.textfield.TextInputLayout
-                 android:layout_width="match_parent"
-                 android:layout_height="wrap_content">
-
-                 <EditText
-                     android:id="@+id/editGeneroDocente"
-                     android:layout_width="360dp"
-                     android:layout_height="48dp"
-                     android:layout_gravity="center"
-
-                     android:hint="@string/ingresa_su_genero"
-                     android:inputType="text"
-                     app:layout_constraintEnd_toEndOf="parent"
-                     app:layout_constraintHorizontal_bias="0.431"
-                     app:layout_constraintStart_toStartOf="parent"
-                     tools:ignore="Autofill"
-                     app:layout_constraintTop_toBottomOf="@+id/txtIngresarNombreDocente">
-
-                 </EditText>
-
-             </com.google.android.material.textfield.TextInputLayout>             </com.google.android.material.textfield.TextInputLayout>
--->
-
-
-            <com.google.android.material.textfield.TextInputLayout
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_marginTop="20dp">
-
-                <EditText
-                    android:id="@+id/editSedeEstudiante"
-                    android:layout_width="360dp"
-                    android:layout_height="48dp"
-                    android:layout_gravity="center"
-
-                    android:hint="@string/ingresa_la_sede_del_estudiante"
+                    android:hint="@string/ingrese_la_descripci_n"
                     android:inputType="text"
                     app:layout_constraintEnd_toEndOf="parent"
                     app:layout_constraintHorizontal_bias="0.431"
@@ -158,7 +99,7 @@
 
 
             <Button
-                android:id="@+id/btnAgregarEstudianteForm"
+                android:id="@+id/btnAgregarTipoFalta"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_gravity="center"

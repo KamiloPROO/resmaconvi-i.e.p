@@ -3,7 +3,6 @@ package com.kamiloinc.resmaconviiep;
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 
-import android.annotation.SuppressLint;
 import android.app.ProgressDialog;
 import android.content.Intent;
 import android.os.Bundle;
@@ -22,43 +21,38 @@ import com.google.android.material.bottomnavigation.BottomNavigationView;
 import com.google.firebase.firestore.DocumentReference;
 import com.google.firebase.firestore.FirebaseFirestore;
 
-import org.checkerframework.checker.units.qual.A;
-
 import java.util.HashMap;
 import java.util.Map;
 import java.util.UUID;
 
-public class AgregarEstudiantes extends AppCompatActivity {
+public class AgregarTiposDeFalta extends AppCompatActivity {
 
-    Button agregarEstudiante;
+    Button agregarFaltas;
 
-    EditText nombre,numDocumento,sede ;
+    EditText descripcion;
 
-    Spinner spinnerCurso;
+    Spinner spinerFalta;
 
-    String cursoSpinner;
+    String faltaSpinner;
 
     FirebaseFirestore firebaseFirestore;
 
     ProgressDialog pd;
 
-
-    @SuppressLint("MissingInflatedId")
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_agregar_estudiante);
+        setContentView(R.layout.activity_agregar_tipo_de_falta);
 
-        agregarEstudiante = findViewById(R.id.btnAgregarEstudianteForm);
-
-        nombre = findViewById(R.id.editNombreEstudiante);
-        numDocumento = findViewById(R.id.editNumDocuEstudiante);
-        sede = findViewById(R.id.editSedeEstudiante);
-        spinnerCurso = findViewById(R.id.idSpinnerCurso);
 
         pd= new ProgressDialog(this);
 
         firebaseFirestore = FirebaseFirestore.getInstance();
+
+        agregarFaltas = findViewById(R.id.btnAgregarTipoFalta);
+        descripcion = findViewById(R.id.editDescriFalta);
+        spinerFalta = findViewById(R.id.idSpinnerTipoFalta);
+
 
         referenciar();
         referenciar2();
@@ -69,13 +63,13 @@ public class AgregarEstudiantes extends AppCompatActivity {
 
         ArrayAdapter<CharSequence> adapter = ArrayAdapter.createFromResource(this,R.array.Cursos, android.R.layout.simple_spinner_item);
 
-        spinnerCurso.setAdapter(adapter);
+        spinerFalta.setAdapter(adapter);
 
-        spinnerCurso.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
+        spinerFalta.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
             @Override
             public void onItemSelected(AdapterView<?> adapterView, View view, int i, long l) {
 
-                cursoSpinner = adapterView.getItemAtPosition(i).toString();
+                faltaSpinner = adapterView.getItemAtPosition(i).toString();
 
 
             }
@@ -87,18 +81,17 @@ public class AgregarEstudiantes extends AppCompatActivity {
         });
 
 
-        agregarEstudiante.setOnClickListener(new View.OnClickListener() {
+        agregarFaltas.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
 
-                String nombreEstudiante = nombre.getText().toString().trim();
-                String numDocuEstudiante = numDocumento.getText().toString().trim();
-                String cursoEstudiante = cursoSpinner.trim();
-                String sedeEstudiante = sede.getText().toString().trim();
+
+                String tipoFalta = faltaSpinner.trim();
+                String descriFalta = descripcion.getText().toString().trim();
 
 
 
-                if (nombreEstudiante.isEmpty() && numDocuEstudiante.isEmpty() && sedeEstudiante.isEmpty() && cursoEstudiante.isEmpty() ) {
+                if (descriFalta.isEmpty() && tipoFalta.isEmpty()) {
 
 
                     pd.setTitle("Por favor ingresa todos los datos para poder continuar...");
@@ -109,18 +102,16 @@ public class AgregarEstudiantes extends AppCompatActivity {
 
                 }else {
 
-                    subimosFirebase(nombreEstudiante,numDocuEstudiante,cursoEstudiante,sedeEstudiante);
-
-                    //subimosPersonal(nombreEstudiante,numDocuEstudiante,cursoEstudiante,sedeEstudiante);
+                    subimosFirebase(tipoFalta,descriFalta);
 
                 }
 
 
             }
 
-            private void subimosFirebase(String nombreEstudiante, String numDocuEstudiante, String cursoEstudiante, String sedeEstudiante) {
+            private void subimosFirebase(String tipoFalta, String descriFalta) {
 
-                pd.setTitle("Añadiendo Estudiante...");
+                pd.setTitle("Añadiendo Tipo de Falta...");
 
                 pd.show();
 
@@ -129,19 +120,18 @@ public class AgregarEstudiantes extends AppCompatActivity {
                 Map<String, Object> map = new HashMap<>();
 
                 map.put("id", id);
-                map.put("nombre", nombreEstudiante);
-                map.put("numDocumento", numDocuEstudiante);
-                map.put("curso", cursoEstudiante);
-                map.put("sede", sedeEstudiante);
+                map.put("tipoFalta", tipoFalta);
+                map.put("descripcion", descriFalta);
 
 
-                firebaseFirestore.collection(cursoEstudiante).add(map).addOnSuccessListener(new OnSuccessListener<DocumentReference>() {
+
+                firebaseFirestore.collection(tipoFalta).add(map).addOnSuccessListener(new OnSuccessListener<DocumentReference>() {
                     @Override
                     public void onSuccess(DocumentReference documentReference) {
 
                         pd.dismiss();
 
-                        Toast.makeText(AgregarEstudiantes.this, "Estudiante Agregado Correctamente", Toast.LENGTH_SHORT).show();
+                        Toast.makeText(AgregarTiposDeFalta.this, "Tipo de falta Agregada Correctamente", Toast.LENGTH_SHORT).show();
 
                     }
                 }).addOnFailureListener(new OnFailureListener() {
@@ -150,7 +140,7 @@ public class AgregarEstudiantes extends AppCompatActivity {
 
                         pd.dismiss();
 
-                        Toast.makeText(AgregarEstudiantes.this, "Error Al Agregar Estudiante", Toast.LENGTH_SHORT).show();
+                        Toast.makeText(AgregarTiposDeFalta.this, "Error Al Agregar Tipo de Falta", Toast.LENGTH_SHORT).show();
 
 
                     }
@@ -163,50 +153,6 @@ public class AgregarEstudiantes extends AppCompatActivity {
 
 
     }
-
-    /* private void subimosPersonal(String nombreEstudiante, String numDocuEstudiante, String cursoEstudiante, String sedeEstudiante) {
-
-        pd.setTitle("Añadiendo Estudiante...");
-
-        pd.show();
-
-        String id = UUID.randomUUID().toString();
-
-        Map<String, Object> map = new HashMap<>();
-
-        map.put("id", id);
-        map.put("nombre", nombreEstudiante);
-        map.put("numDocumento", numDocuEstudiante);
-        map.put("curso", cursoEstudiante);
-        map.put("sede", sedeEstudiante);
-
-
-        firebaseFirestore.collection("personal").add(map).addOnSuccessListener(new OnSuccessListener<DocumentReference>() {
-            @Override
-            public void onSuccess(DocumentReference documentReference) {
-
-                pd.dismiss();
-
-                Toast.makeText(AgregarEstudiantes.this, "Estudiante Agregado Correctamente", Toast.LENGTH_SHORT).show();
-
-                Intent intent = new Intent( AgregarEstudiantes.this, Administrador.class );
-                startActivity(intent);
-
-            }
-        }).addOnFailureListener(new OnFailureListener() {
-            @Override
-            public void onFailure(@NonNull Exception e) {
-
-                pd.dismiss();
-
-                Toast.makeText(AgregarEstudiantes.this, "Error Al Agregar Estudiante", Toast.LENGTH_SHORT).show();
-
-
-            }
-        });
-
-
-    }*/
 
     private void referenciar2() {
 
@@ -239,11 +185,11 @@ public class AgregarEstudiantes extends AppCompatActivity {
                                 , MenuReportes.class));
                         overridePendingTransition(0, 0);
                         return true;
-
                 }
 
                 return false;
             }
         });
     }
+
 }
