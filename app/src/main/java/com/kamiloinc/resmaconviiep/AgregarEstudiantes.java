@@ -143,6 +143,9 @@ public class AgregarEstudiantes extends AppCompatActivity {
 
                         Toast.makeText(AgregarEstudiantes.this, "Estudiante Agregado Correctamente", Toast.LENGTH_SHORT).show();
 
+                        Intent intent = new Intent( AgregarEstudiantes.this, Administrador.class );
+                        startActivity(intent);
+
                     }
                 }).addOnFailureListener(new OnFailureListener() {
                     @Override

@@ -11,92 +11,49 @@ import android.widget.Button;
 
 import com.google.android.material.bottomnavigation.BottomNavigationView;
 
-public class Administrador extends AppCompatActivity {
+public class MenuEstudiantes extends AppCompatActivity {
 
-    Button agregarDocente, agregarEstudiante, agregarManual, irAMenuReportes, verDocentes, verEstudiantes;
-
+    Button prescolar, primero;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_administrador);
+        setContentView(R.layout.activity_menu_estudiantes);
 
-        referenciar2();
+
+       prescolar = findViewById(R.id.btn_gradoPrescolar);
+       primero = findViewById(R.id.btn_gradoPrimero);
+
         conexiones();
-
+        referenciar2();
     }
 
     private void conexiones() {
 
-        agregarDocente = findViewById(R.id.btn_agregarDocente);
-        agregarEstudiante = findViewById(R.id.btn_agregarEstudiante);
-        agregarManual = findViewById(R.id.btn_agregarManual);
-        irAMenuReportes = findViewById(R.id.btn_verReportes);
-        verDocentes = findViewById(R.id.btn_verDocentes);
-        verEstudiantes = findViewById(R.id.btn_verEstudiantes);
-
-        agregarDocente.setOnClickListener(new View.OnClickListener() {
+        prescolar.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
 
-                Intent intent = new Intent( Administrador.this, AgregarDocentes.class );
+                Intent intent = new Intent(MenuEstudiantes.this, VerEstudiantes.class);
+                intent.putExtra("curso", "PreEscolar");
                 startActivity(intent);
 
             }
         });
 
-        agregarEstudiante.setOnClickListener(new View.OnClickListener() {
+        primero.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
 
-                Intent intent = new Intent( Administrador.this, AgregarEstudiantes.class );
+                Intent intent = new Intent(MenuEstudiantes.this, VerEstudiantes.class);
+                intent.putExtra("curso", "Primero");
                 startActivity(intent);
 
             }
         });
-
-        agregarManual.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-
-                Intent intent = new Intent( Administrador.this, AgregarTiposDeFalta.class );
-                startActivity(intent);
-
-            }
-        });
-
-        irAMenuReportes.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-
-                Intent intent = new Intent( Administrador.this, MenuReportes.class );
-                startActivity(intent);
-
-            }
-        });
-
-        verDocentes.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-
-                Intent intent = new Intent( Administrador.this, VerDocentes.class );
-                startActivity(intent);
-
-            }
-        });
-
-        verEstudiantes.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-
-                Intent intent = new Intent( Administrador.this, MenuEstudiantes.class );
-                startActivity(intent);
-
-            }
-        });
-
 
     }
+
 
     private void referenciar2() {
 
@@ -134,4 +91,5 @@ public class Administrador extends AppCompatActivity {
             }
         });
     }
+
 }

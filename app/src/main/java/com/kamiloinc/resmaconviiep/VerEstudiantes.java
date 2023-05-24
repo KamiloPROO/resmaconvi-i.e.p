@@ -3,31 +3,22 @@ package com.kamiloinc.resmaconviiep;
 import static android.content.ContentValues.TAG;
 
 import androidx.annotation.NonNull;
-import androidx.annotation.RequiresApi;
 import androidx.appcompat.app.AppCompatActivity;
-import androidx.core.content.ContextCompat;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 import androidx.swiperefreshlayout.widget.SwipeRefreshLayout;
 
 import android.annotation.SuppressLint;
 import android.content.Intent;
-import android.content.pm.PackageManager;
-import android.os.Build;
 import android.os.Bundle;
 import android.util.Log;
-import android.view.LayoutInflater;
 import android.view.MenuItem;
-import android.view.View;
-import android.view.ViewGroup;
 import android.widget.ImageView;
 import android.widget.TextView;
-import android.widget.Toast;
 
 import com.google.android.gms.tasks.OnCompleteListener;
 import com.google.android.gms.tasks.Task;
 import com.google.android.material.bottomnavigation.BottomNavigationView;
-import com.google.android.material.floatingactionbutton.FloatingActionButton;
 import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.auth.FirebaseUser;
 import com.google.firebase.firestore.FirebaseFirestore;
@@ -36,19 +27,20 @@ import com.google.firebase.firestore.QueryDocumentSnapshot;
 import com.google.firebase.firestore.QuerySnapshot;
 import com.google.firebase.storage.FirebaseStorage;
 import com.kamiloinc.resmaconviiep.Model.DataDocentes;
+import com.kamiloinc.resmaconviiep.Model.DataEstudiantes;
 
 import java.util.ArrayList;
-import java.util.Date;
 import java.util.List;
 
-public class VerDocentes extends AppCompatActivity {
+public class VerEstudiantes extends AppCompatActivity {
 
-
-    List<DataDocentes> listDatos;
-    AdaptadorDocentes adaptadorDocentes;
+    List<DataEstudiantes> listDatos;
+    AdaptadorEstudiantes adaptadorEstudiantes;
     FirebaseStorage storageRef;
     FirebaseFirestore db;
     RecyclerView recyclerView;
+
+    Bundle data;
 
     TextView txttoast;
 
@@ -65,42 +57,31 @@ public class VerDocentes extends AppCompatActivity {
     String admin = "stevenarb98@gmail.com";
 
 
-
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_ver_docentes);
+        setContentView(R.layout.activity_ver_estudiantes);
+
+        data = getIntent().getExtras();
 
         db = FirebaseFirestore.getInstance();
         storageRef = FirebaseStorage.getInstance();
-        recyclerView = findViewById(R.id.rcVerDocentes);
+        recyclerView = findViewById(R.id.rcVerEstudiantes);
         recyclerView.setHasFixedSize(true);
         recyclerView.setLayoutManager(new LinearLayoutManager(this));
-        listDatos = new ArrayList<DataDocentes>();
+        listDatos = new ArrayList<DataEstudiantes>();
 
-        referenciar2();
+
         llenarLista();
-        //permisos();
+        referenciar2();
     }
-
- /*   private void permisos() {
-
-        int PermisoCamara = ContextCompat.checkSelfPermission(this, Manifest.permission.CAMERA);
-        int PermisoAlmacenamiento = ContextCompat.checkSelfPermission(this, Manifest.permission.WRITE_EXTERNAL_STORAGE);
-
-        if (PermisoCamara == PackageManager.PERMISSION_GRANTED && PermisoAlmacenamiento == PackageManager.PERMISSION_GRANTED) {
-
-
-        } else {
-            requestPermissions(new String[]{Manifest.permission.CAMERA, Manifest.permission.WRITE_EXTERNAL_STORAGE}, REQUEST_CODE);
-        }
-
-    }*/
-
 
     private void llenarLista() {
 
-        db.collection("Docentes").orderBy("nombre", Query.Direction.ASCENDING).get()
+        String grado = data.getString("curso");
+
+
+        db.collection(grado).orderBy("nombre", Query.Direction.ASCENDING).get()
                 .addOnCompleteListener(new OnCompleteListener<QuerySnapshot>() {
                     @Override
                     public void onComplete(@NonNull Task<QuerySnapshot> task) {
@@ -111,19 +92,16 @@ public class VerDocentes extends AppCompatActivity {
 
                                 String cadenaNombre = document.getString("nombre");
                                 String cadenaNumDocumen = document.getString("numDocumento");
-                                String cadenaCorreo = document.getString("correo");
+                                String cadenaCurso = document.getString("curso");
                                 String cadenaSede = document.getString("sede");
-                                String cadenaCargo = document.getString("cargo");
-                                String cadenanespecialidad = document.getString("especialidad");
-                                String cadenaNivelEnseñanza = document.getString("nivelDeEnsenianza");
-                                String cadenaNumTelefono = document.getString("numTelefono");
 
 
-                                DataDocentes datos = new DataDocentes(cadenaNombre, cadenaNumDocumen, cadenaCorreo, cadenaCargo, cadenaSede, cadenanespecialidad, cadenaNivelEnseñanza, cadenaNumTelefono);
+
+                                DataEstudiantes datos = new DataEstudiantes(cadenaNombre, cadenaNumDocumen, cadenaCurso,cadenaSede);
                                 listDatos.add(datos);
 
-                                adaptadorDocentes = new AdaptadorDocentes(VerDocentes.this, listDatos);
-                                recyclerView.setAdapter(adaptadorDocentes);
+                                adaptadorEstudiantes = new AdaptadorEstudiantes(VerEstudiantes.this, listDatos);
+                                recyclerView.setAdapter(adaptadorEstudiantes);
 
                             }
                         } else {
@@ -132,38 +110,6 @@ public class VerDocentes extends AppCompatActivity {
                     }
                 });
     }
-
-    private void referenciar3() {
-        txttoast = findViewById(R.id.toasttxt);
-        imgtoast = findViewById(R.id.imgtoast);
-
-       // refreshLayout2 = findViewById(R.id.refresh2);
-        refreshLayout2.setOnRefreshListener(new SwipeRefreshLayout.OnRefreshListener() {
-            @SuppressLint("UseCompatLoadingForDrawables")
-            @Override
-            public void onRefresh() {
-
-                number++;
-                Toast toast3 = new Toast(getApplicationContext());
-
-                LayoutInflater inflater = getLayoutInflater();
-                View layout = inflater.inflate(R.layout.toast_layout,
-                        (ViewGroup) findViewById(R.id.lytLayout));
-
-                TextView txtMsg = (TextView) layout.findViewById(R.id.toasttxt);
-                txtMsg.setText("Actualizado");
-                toast3.setDuration(Toast.LENGTH_SHORT);
-                toast3.setView(layout);
-                toast3.show();
-
-                refreshLayout2.setRefreshing(false);
-
-            }
-        });
-
-    }
-
-
     private void referenciar2() {
 
         BottomNavigationView bottomNavigationView = findViewById(R.id.bottomNavigationView);
@@ -190,14 +136,15 @@ public class VerDocentes extends AppCompatActivity {
                         overridePendingTransition(0, 0);
                         return true;
                     case R.id.admin:
+                        startActivity(new Intent(getApplicationContext()
+                                , Administrador.class));
+                        overridePendingTransition(0, 0);
                         return true;
                 }
 
                 return false;
             }
         });
-
-
-
     }
+
 }

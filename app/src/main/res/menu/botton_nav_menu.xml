@@ -5,7 +5,7 @@
         android:icon="@drawable/baseline_home_24"
         android:id="@+id/inicio"/>
     <item android:title="Reportar"
-        android:icon="@drawable/baseline_reportar"
+        android:icon="@drawable/baseline_reportar_v2"
         android:id="@+id/reportar"/>
     <item android:title="Perfil"
         android:icon="@drawable/baseline_person_24"

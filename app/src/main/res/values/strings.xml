@@ -63,5 +63,21 @@
     <string name="ver_faltas_tipo_3">Ver Faltas Tipo 3</string>
     <string name="ver_reportes">Ver Reportes</string>
     <string name="ver_docentes">Ver Docentes</string>
+    <string name="ver_estudiantes">ver estudiantes</string>
+    <string name="grados_escolares">Grados Escolares</string>
+    <string name="preescolar">preescolar</string>
+    <string name="primero">primero</string>
+    <string name="segundo">segundo</string>
+    <string name="tercero">Tercero</string>
+    <string name="cuarto">Cuarto</string>
+    <string name="quinto">Quinto</string>
+    <string name="decimo_b">Decimo b</string>
+    <string name="decimo_a">Decimo A</string>
+    <string name="noveno">noveno</string>
+    <string name="octavo">octavo</string>
+    <string name="septimo">septimo</string>
+    <string name="sexto">sexto</string>
+    <string name="once_a">once a</string>
+    <string name="once_b">once b</string>
 
 </resources>
