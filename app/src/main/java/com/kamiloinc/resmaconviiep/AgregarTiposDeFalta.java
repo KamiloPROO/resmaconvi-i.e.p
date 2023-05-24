@@ -61,7 +61,7 @@ public class AgregarTiposDeFalta extends AppCompatActivity {
 
     private void referenciar() {
 
-        ArrayAdapter<CharSequence> adapter = ArrayAdapter.createFromResource(this,R.array.Cursos, android.R.layout.simple_spinner_item);
+        ArrayAdapter<CharSequence> adapter = ArrayAdapter.createFromResource(this,R.array.TipoFaltas, android.R.layout.simple_spinner_item);
 
         spinerFalta.setAdapter(adapter);
 
@@ -132,6 +132,9 @@ public class AgregarTiposDeFalta extends AppCompatActivity {
                         pd.dismiss();
 
                         Toast.makeText(AgregarTiposDeFalta.this, "Tipo de falta Agregada Correctamente", Toast.LENGTH_SHORT).show();
+
+                        Intent intent = new Intent(AgregarTiposDeFalta.this, Administrador.class);
+                        startActivity(intent);
 
                     }
                 }).addOnFailureListener(new OnFailureListener() {

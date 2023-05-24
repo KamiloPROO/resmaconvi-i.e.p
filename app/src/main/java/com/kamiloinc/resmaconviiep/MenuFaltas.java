@@ -5,39 +5,75 @@ import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.Intent;
 import android.os.Bundle;
-import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
 import android.widget.Button;
 
 import com.google.android.material.bottomnavigation.BottomNavigationView;
 
-public class MenuReportes extends AppCompatActivity {
+public class MenuFaltas extends AppCompatActivity {
 
-
-
+    Button verSituacione1,verSituacione2,verSituacione3;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_menu_reportes);
+        setContentView(R.layout.activity_menu_faltas);
+
+        verSituacione1 = findViewById(R.id.btn_verSituaciones1);
+        verSituacione2 = findViewById(R.id.btn_verSituaciones2);
+        verSituacione3 = findViewById(R.id.btn_verSituaciones3);
 
 
-
-
-
+        conexiones();
         referenciar2();
+
     }
 
+    private void conexiones() {
+
+        verSituacione1.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+
+                Intent intent = new Intent(MenuFaltas.this, VerTipoDeFaltas.class);
+                intent.putExtra("tipoFalta","Situaciones Tipo 1");
+                startActivity(intent);
+
+            }
+        });
+
+        verSituacione2.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+
+                Intent intent = new Intent(MenuFaltas.this, VerTipoDeFaltas.class);
+                intent.putExtra("tipoFalta","Situaciones Tipo 2");
+                startActivity(intent);
+
+            }
+        });
 
 
+        verSituacione3.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+
+                Intent intent = new Intent(MenuFaltas.this, VerTipoDeFaltas.class);
+                intent.putExtra("tipoFalta","Situaciones Tipo 2");
+                startActivity(intent);
+
+            }
+        });
+
+    }
 
     private void referenciar2() {
 
         BottomNavigationView bottomNavigationView = findViewById(R.id.bottomNavigationView);
 
 
-        bottomNavigationView.setSelectedItemId(R.id.reportar);
+        bottomNavigationView.setSelectedItemId(R.id.admin);
 
         bottomNavigationView.setOnNavigationItemSelectedListener(new BottomNavigationView.OnNavigationItemSelectedListener() {
             @Override
@@ -69,4 +105,5 @@ public class MenuReportes extends AppCompatActivity {
             }
         });
     }
+
 }

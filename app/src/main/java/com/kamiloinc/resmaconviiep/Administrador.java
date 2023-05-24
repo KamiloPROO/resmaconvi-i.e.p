@@ -13,7 +13,7 @@ import com.google.android.material.bottomnavigation.BottomNavigationView;
 
 public class Administrador extends AppCompatActivity {
 
-    Button agregarDocente, agregarEstudiante, agregarManual, irAMenuReportes, verDocentes, verEstudiantes;
+    Button agregarDocente, agregarEstudiante, agregarManual, irAMenuReportes, verDocentes, verEstudiantes, verFaltas;
 
 
     @Override
@@ -34,6 +34,7 @@ public class Administrador extends AppCompatActivity {
         irAMenuReportes = findViewById(R.id.btn_verReportes);
         verDocentes = findViewById(R.id.btn_verDocentes);
         verEstudiantes = findViewById(R.id.btn_verEstudiantes);
+        verFaltas = findViewById(R.id.btn_verFaltas);
 
         agregarDocente.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -90,6 +91,16 @@ public class Administrador extends AppCompatActivity {
             public void onClick(View view) {
 
                 Intent intent = new Intent( Administrador.this, MenuEstudiantes.class );
+                startActivity(intent);
+
+            }
+        });
+
+        verFaltas.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+
+                Intent intent = new Intent( Administrador.this, MenuFaltas.class );
                 startActivity(intent);
 
             }

@@ -25,19 +25,20 @@ public class Inicio extends AppCompatActivity {
         faltas2 = findViewById(R.id.btnSituaciones2);
         faltas3 = findViewById(R.id.btnSituaciones3);
 
-        //referenciar();
+        referenciar();
         referenciar2();
 
 
     }
 
-    /*private void referenciar() {
+    private void referenciar() {
 
         faltas1.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
 
-                Intent intent = new Intent(Inicio.this, VerFaltas);
+                Intent intent = new Intent(Inicio.this, VerTipoDeFaltas.class);
+                intent.putExtra("tipoFalta","Situaciones Tipo 1");
                 startActivity(intent);
 
             }
@@ -47,7 +48,8 @@ public class Inicio extends AppCompatActivity {
             @Override
             public void onClick(View view) {
 
-                Intent intent = new Intent(Inicio.this, VerFaltas);
+                Intent intent = new Intent(Inicio.this, VerTipoDeFaltas.class);
+                intent.putExtra("tipoFalta","Situaciones Tipo 2");
                 startActivity(intent);
 
             }
@@ -57,14 +59,15 @@ public class Inicio extends AppCompatActivity {
             @Override
             public void onClick(View view) {
 
-                Intent intent = new Intent(Inicio.this, VerFaltas);
+                Intent intent = new Intent(Inicio.this, VerTipoDeFaltas.class);
+                intent.putExtra("tipoFalta","Situaciones Tipo 3");
                 startActivity(intent);
 
             }
         });
 
     }
-    */
+
 
 
     private void referenciar2() {

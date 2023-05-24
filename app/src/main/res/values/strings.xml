@@ -79,5 +79,8 @@
     <string name="sexto">sexto</string>
     <string name="once_a">once a</string>
     <string name="once_b">once b</string>
+    <string name="tipo_de_situaciones">Tipo de Situaciones</string>
+    <string name="ver_situaciones_tipo_1">Ver Situaciones Tipo 1</string>
+    <string name="ver_tipo_de_faltas">Ver Tipo de faltas</string>
 
 </resources>
