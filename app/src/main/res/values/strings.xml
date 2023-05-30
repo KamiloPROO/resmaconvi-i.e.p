@@ -82,5 +82,9 @@
     <string name="tipo_de_situaciones">Tipo de Situaciones</string>
     <string name="ver_situaciones_tipo_1">Ver Situaciones Tipo 1</string>
     <string name="ver_tipo_de_faltas">Ver Tipo de faltas</string>
+    <string name="generar_reporte">Generar Reporte</string>
+    <string name="reportar_docente">reportar Docente</string>
+    <string name="reportar_estudiante">reportar Estudiante</string>
+    <string name="reportar_anonimamente">Reportar Anonimamente</string>
 
 </resources>

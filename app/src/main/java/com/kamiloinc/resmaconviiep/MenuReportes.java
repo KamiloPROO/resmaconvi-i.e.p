@@ -12,9 +12,11 @@ import android.widget.Button;
 
 import com.google.android.material.bottomnavigation.BottomNavigationView;
 
+import org.checkerframework.checker.units.qual.s;
+
 public class MenuReportes extends AppCompatActivity {
 
-
+   Button reportDocente, reportEstudiante, reportAnonimo;
 
 
     @Override
@@ -23,13 +25,30 @@ public class MenuReportes extends AppCompatActivity {
         setContentView(R.layout.activity_menu_reportes);
 
 
+        reportDocente = findViewById(R.id.btn_reportarDocente);
+        reportEstudiante = findViewById(R.id.btn_reportarEstudiante);
+        reportAnonimo = findViewById(R.id.btn_reportarAnonimamente);
 
 
-
+        conexiones();
         referenciar2();
     }
 
+    private void conexiones() {
 
+        reportDocente.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+
+                Intent intent = new Intent(MenuReportes.this,ReportarDocente.class);
+                startActivity(intent);
+
+
+            }
+        });
+
+
+    }
 
 
     private void referenciar2() {
