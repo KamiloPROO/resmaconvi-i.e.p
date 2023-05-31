@@ -6,34 +6,168 @@
     android:layout_height="match_parent"
     tools:context=".ReportarDocente">
 
-    <TextView
-        android:id="@+id/textView"
+    <ScrollView
+        android:id="@+id/scrollForm"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:fontFamily="casual"
-        android:text="Reportar Docente"
-        android:textAlignment="center"
-        android:textColor="@color/morado"
-        android:textSize="20sp"
-        android:textStyle="bold"
+        android:orientation="vertical"
         app:layout_constraintBottom_toTopOf="@+id/bottomNavigationView"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.051"
-        tools:layout_editor_absoluteX="0dp">
-
-    </TextView>
-
-
-    <Spinner
-        android:id="@+id/idSpinnerReportDocente"
-        android:layout_width="340dp"
-        android:layout_height="wrap_content"
-        app:layout_constraintBottom_toBottomOf="@+id/bottomNavigationView"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.492"
+        app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textView"
-        app:layout_constraintVertical_bias="0.057" />
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.0">
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+
+            <TextView
+                android:id="@+id/textView"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:fontFamily="casual"
+                android:text="@string/repoDocente"
+                android:textAlignment="center"
+                android:textColor="@color/morado"
+                android:textSize="20sp"
+                android:textStyle="bold"
+                android:layout_marginTop="20dp"
+                app:layout_constraintBottom_toTopOf="@+id/bottomNavigationView"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintVertical_bias="0.051"
+                tools:layout_editor_absoluteX="0dp">
+
+            </TextView>
+
+
+            <TextView
+                android:id="@+id/textSelecDocen"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="casual"
+                android:text="@string/seleccionar_docente"
+                android:textAlignment="center"
+                android:textColor="@color/morado"
+                android:textSize="17sp"
+                android:textStyle="bold"
+                android:layout_marginTop="20dp"
+                android:layout_marginStart="10dp"
+                app:layout_constraintBottom_toTopOf="@+id/bottomNavigationView"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.069"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintVertical_bias="0.142"
+                tools:ignore="MissingConstraints">
+
+            </TextView>
+
+            <Spinner
+                android:id="@+id/idSpinnerReportDocente"
+                android:layout_width="340dp"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                app:layout_constraintBottom_toBottomOf="@+id/bottomNavigationView"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.225"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/textView"
+                app:layout_constraintVertical_bias="0.09" />
+
+            <TextView
+                android:id="@+id/textSelecFalta"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="casual"
+                android:text="@string/selecionar_tipo_de_falta"
+                android:textAlignment="center"
+                android:textColor="@color/morado"
+                android:textSize="17sp"
+                android:textStyle="bold"
+                android:layout_marginTop="20dp"
+                android:layout_marginStart="10dp"
+                app:layout_constraintBottom_toTopOf="@+id/bottomNavigationView"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.069"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintVertical_bias="0.289"
+                tools:ignore="MissingConstraints">
+
+            </TextView>
+
+            <Spinner
+                android:id="@+id/idSpinnerTipoFal"
+                android:layout_width="340dp"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                app:layout_constraintBottom_toBottomOf="@+id/bottomNavigationView"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.225"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/textView"
+                app:layout_constraintVertical_bias="0.234" />
+
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginTop="10dp"
+                app:layout_constraintBottom_toTopOf="@+id/bottomNavigationView"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintVertical_bias="0.501"
+                tools:layout_editor_absoluteX="0dp">
+
+                <EditText
+                    android:id="@+id/editReportDocente"
+                    android:layout_width="360dp"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:gravity="top"
+                    android:hint="@string/describir_falta"
+                    android:inputType="textMultiLine"
+                    android:lines="6"
+                    android:layout_marginTop="10dp"
+                    android:layout_marginStart="12dp"
+                    android:layout_marginEnd="12dp"
+                    style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                    android:overScrollMode="always"
+                    android:scrollbars="vertical"
+                    android:scrollbarStyle="insideInset"
+                    android:scrollHorizontally="false"
+                    tools:ignore="Autofill">
+
+                </EditText>
+
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <Button
+                android:id="@+id/btnReportarDocente"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginTop="20dp"
+                android:layout_marginBottom="70dp"
+                android:background="@drawable/border_button"
+                android:text="@string/reportar"
+                android:textColor="@color/white">
+
+            </Button>
+
+        </LinearLayout>
+
+
+
+    </ScrollView>
+
+
+
+
 
     <com.google.android.material.bottomnavigation.BottomNavigationView
         android:id="@+id/bottomNavigationView"

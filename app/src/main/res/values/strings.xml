@@ -86,5 +86,10 @@
     <string name="reportar_docente">reportar Docente</string>
     <string name="reportar_estudiante">reportar Estudiante</string>
     <string name="reportar_anonimamente">Reportar Anonimamente</string>
+    <string name="seleccionar_docente">Seleccionar Docente</string>
+    <string name="selecionar_tipo_de_falta">Selecionar Tipo de Falta</string>
+    <string name="describir_falta">Describir Falta</string>
+    <string name="repoDocente">Reportar Docente</string>
+    <string name="reportar">reportar</string>
 
 </resources>
