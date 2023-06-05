@@ -13,7 +13,7 @@
         android:layout_height="wrap_content"
         android:layout_gravity="center"
         android:layout_marginTop="16dp"
-        android:fontFamily="casual"
+        android:fontFamily="monospace"
         android:text="Estudiantes"
         android:textColor="@color/morado"
         android:textSize="20sp"

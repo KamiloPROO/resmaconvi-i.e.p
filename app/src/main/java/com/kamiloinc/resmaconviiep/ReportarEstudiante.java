@@ -347,16 +347,23 @@ public class ReportarEstudiante extends AppCompatActivity {
 
         Map<String, Object> map = new HashMap<>();
 
-        map.put("id", id);
-        map.put("cursoSeleccionado", cursoSeleccionado);
-        map.put("estudianteSeleccionado", estudianteSeleccionado);
-        map.put("tipoFaltaSeleccionado", tipoFaltaSeleccionado);
-        map.put("faltaCometida", faltaCometida);
-        map.put("compromisoEstudiante", compromisoEstudiante);
+
         map.put("idUser",idUser);
         map.put("correoUser",correoUser);
         map.put("nombreUser",nombreUser);
         map.put("imgCorreo",imgCorreo);
+
+        map.put("id", id);
+        map.put("año",anio);
+        map.put("tipoFaltaSeleccionado", tipoFaltaSeleccionado);
+
+
+
+        map.put("cursoSeleccionado", cursoSeleccionado);
+        map.put("faltaCometida", faltaCometida);
+        map.put("personaReportada", estudianteSeleccionado);
+        map.put("compromisoEstudiante", compromisoEstudiante);
+
 
         firebaseFirestore.collection(anio).add(map).addOnSuccessListener(new OnSuccessListener<DocumentReference>() {
             @Override
@@ -403,16 +410,21 @@ public class ReportarEstudiante extends AppCompatActivity {
 
         Map<String, Object> map = new HashMap<>();
 
-        map.put("id", id);
-        map.put("cursoSeleccionado", cursoSeleccionado);
-        map.put("estudianteSeleccionado", estudianteSeleccionado);
-        map.put("tipoFaltaSeleccionado", tipoFaltaSeleccionado);
-        map.put("faltaCometida", faltaCometida);
-        map.put("compromisoEstudiante", compromisoEstudiante);
         map.put("idUser",idUser);
         map.put("correoUser",correoUser);
         map.put("nombreUser",nombreUser);
         map.put("imgCorreo",imgCorreo);
+
+        map.put("id", id);
+        map.put("año",anio);
+        map.put("tipoFaltaSeleccionado", tipoFaltaSeleccionado);
+
+
+
+        map.put("cursoSeleccionado", cursoSeleccionado);
+        map.put("faltaCometida", faltaCometida);
+        map.put("personaReportada", estudianteSeleccionado);
+        map.put("compromisoEstudiante", compromisoEstudiante);
 
         firebaseFirestore.collection(nombreUser).add(map).addOnSuccessListener(new OnSuccessListener<DocumentReference>() {
             @Override

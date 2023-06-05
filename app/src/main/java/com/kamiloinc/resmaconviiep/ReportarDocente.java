@@ -225,15 +225,22 @@ public class ReportarDocente extends AppCompatActivity {
 
         Map<String, Object> map = new HashMap<>();
 
-        map.put("id", id);
-        map.put("tipoFalta", tipoFalta);
-        map.put("docenteSeleccionado", docenteSelectEspinner);
-        map.put("descripcionFalta",descriReporte);
-        map.put("año",anio);
+
         map.put("idUser",idUser);
         map.put("correoUser",correoUser);
         map.put("nombreUser",nombreUser);
         map.put("imgCorreo",imgCorreo);
+
+        map.put("id", id);
+        map.put("año",anio);
+        map.put("tipoFaltaSeleccionado", tipoFalta);
+
+
+
+        map.put("cursoSeleccionado", "No Aplica");
+        map.put("faltaCometida", descriReporte);
+        map.put("personaReportada", docenteSelectEspinner);
+        map.put("compromisoEstudiante", "No Aplica");
 
 
 
@@ -284,15 +291,22 @@ public class ReportarDocente extends AppCompatActivity {
 
         Map<String, Object> map = new HashMap<>();
 
-        map.put("id", id);
-        map.put("tipoFalta", tipoFalta);
-        map.put("docenteSeleccionado", docenteSelectEspinner);
-        map.put("descripcionFalta",descriReporte);
-        map.put("año",anio);
         map.put("idUser",idUser);
         map.put("correoUser",correoUser);
         map.put("nombreUser",nombreUser);
         map.put("imgCorreo",imgCorreo);
+
+        map.put("id", id);
+        map.put("año",anio);
+        map.put("tipoFaltaSeleccionado", tipoFalta);
+
+
+
+        map.put("cursoSeleccionado", "No Aplica");
+        map.put("faltaCometida", descriReporte);
+        map.put("personaReportada", docenteSelectEspinner);
+        map.put("compromisoEstudiante", "No Aplica");
+
 
 
 
