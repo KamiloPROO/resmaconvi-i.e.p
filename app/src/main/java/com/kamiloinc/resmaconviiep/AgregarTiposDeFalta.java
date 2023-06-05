@@ -61,7 +61,7 @@ public class AgregarTiposDeFalta extends AppCompatActivity {
 
     private void referenciar() {
 
-        ArrayAdapter<CharSequence> adapter = ArrayAdapter.createFromResource(this,R.array.TipoFaltas, android.R.layout.simple_spinner_item);
+        ArrayAdapter<CharSequence> adapter = ArrayAdapter.createFromResource(this,R.array.TipoFaltas, R.layout.styli_spiner);
 
         spinerFalta.setAdapter(adapter);
 

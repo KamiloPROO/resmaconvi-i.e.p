@@ -39,17 +39,18 @@
 
     <TextView
         android:id="@+id/textNom"
-        android:layout_width="327dp"
-        android:layout_height="69dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
         android:fontFamily="monospace"
-        android:text="@string/enBlanco"
+        android:text="@string/juan_camilo_rodriguez_gomez"
         android:textAlignment="center"
-        android:textSize="30sp"
+        android:textSize="20sp"
         app:layout_constraintBottom_toTopOf="@+id/bottomNavigationView"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/imagenUser"
-        app:layout_constraintVertical_bias="0.236" />
+        app:layout_constraintVertical_bias="0.0" />
 
     <TextView
         android:id="@+id/textView5"
@@ -63,7 +64,7 @@
         app:layout_constraintHorizontal_bias="0.075"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.262"
+        app:layout_constraintVertical_bias="0.258"
         tools:ignore="SmallSp" />
 
     <TextView
@@ -79,23 +80,22 @@
         app:layout_constraintHorizontal_bias="0.075"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.289"
+        app:layout_constraintVertical_bias="0.285"
         tools:ignore="SmallSp" />
 
     <TextView
         android:id="@+id/textCorreo"
         android:layout_width="wrap_content"
-        android:layout_height="27dp"
-        android:layout_marginTop="92dp"
-        android:text=""
+        android:layout_height="wrap_content"
+        android:text="fotocopiasa100@gmail.com"
         android:textAlignment="center"
-        android:textSize="20sp"
+        android:textSize="10sp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.442"
+        app:layout_constraintHorizontal_bias="0.498"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.142"
+        app:layout_constraintVertical_bias="0.256"
         tools:ignore="SpUsage" />
 
     <ImageButton

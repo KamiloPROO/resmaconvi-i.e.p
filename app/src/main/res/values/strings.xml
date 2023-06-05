@@ -84,12 +84,20 @@
     <string name="ver_tipo_de_faltas">Ver Tipo de faltas</string>
     <string name="generar_reporte">Generar Reporte</string>
     <string name="reportar_docente">reportar Docente</string>
-    <string name="reportar_estudiante">reportar Estudiante</string>
+    <string name="reportar_estudiante">Reportar Estudiante</string>
     <string name="reportar_anonimamente">Reportar Anonimamente</string>
     <string name="seleccionar_docente">Seleccionar Docente</string>
     <string name="selecionar_tipo_de_falta">Selecionar Tipo de Falta</string>
     <string name="describir_falta">Describir Falta</string>
     <string name="repoDocente">Reportar Docente</string>
     <string name="reportar">reportar</string>
+    <string name="seleccionar_a_o">Seleccionar Año</string>
+    <string name="descri_año">Antes de continuar selecciona el año en el cual vamos a generar el reporte.</string>
+    <string name="continuar">continuar</string>
+    <string name="juan_camilo_rodriguez_gomez">Juan Camilo Rodriguez Gomez</string>
+    <string name="seleccionar_estudiante">Seleccionar Estudiante</string>
+    <string name="seleccionar_curso">Seleccionar CUrso</string>
+    <string name="seleccionar_falta_cometida">Seleccionar Falta Cometida</string>
+    <string name="compromiso_del_estudiante">Compromiso Del Estudiante</string>
 
 </resources>

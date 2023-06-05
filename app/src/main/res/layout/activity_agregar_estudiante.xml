@@ -103,7 +103,8 @@
                 android:id="@+id/idSpinnerCurso"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_marginStart="28dp"
+                android:layout_gravity="center"
+                android:background="@drawable/style_spinner"
                 android:layout_marginTop="20dp"
 
                 />

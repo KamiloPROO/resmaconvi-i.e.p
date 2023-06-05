@@ -67,7 +67,7 @@ public class AgregarEstudiantes extends AppCompatActivity {
 
     private void referenciar() {
 
-        ArrayAdapter<CharSequence> adapter = ArrayAdapter.createFromResource(this,R.array.Cursos, android.R.layout.simple_spinner_item);
+        ArrayAdapter<CharSequence> adapter = ArrayAdapter.createFromResource(this,R.array.Cursos, R.layout.styli_spiner);
 
         spinnerCurso.setAdapter(adapter);
 

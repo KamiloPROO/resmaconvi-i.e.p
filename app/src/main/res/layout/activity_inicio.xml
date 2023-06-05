@@ -255,11 +255,11 @@
                 android:text="@string/tipo1_text"
                 android:textSize="20sp"
                 android:textStyle="normal"
-                android:layout_marginTop="1dp"
+                android:layout_marginTop="5dp"
                 android:textAlignment="center"
-                android:textColor="@color/black"
+                android:textColor="@color/amarillo_pastel"
                 android:layout_gravity="center"
-                android:background="@color/amarillo_pastel"
+
 
                 />
 
@@ -293,11 +293,11 @@
                 android:text="@string/tipo2_text1"
                 android:textSize="20sp"
                 android:textStyle="normal"
-                android:layout_marginTop="1dp"
+                android:layout_marginTop="5dp"
                 android:textAlignment="center"
-                android:textColor="@color/black"
+                android:textColor="@color/rosa"
                 android:layout_gravity="center"
-                android:background="@color/rosa_pastel"
+
 
                 />
             <TextView
@@ -307,9 +307,9 @@
                 android:textSize="20sp"
                 android:textStyle="normal"
                 android:textAlignment="center"
-                android:textColor="@color/black"
+                android:textColor="@color/rosa"
                 android:layout_gravity="center"
-                android:background="@color/rosa_pastel"
+
 
                 />
             <TextView
@@ -319,9 +319,9 @@
                 android:textSize="20sp"
                 android:textStyle="normal"
                 android:textAlignment="center"
-                android:textColor="@color/black"
+                android:textColor="@color/rosa"
                 android:layout_gravity="center"
-                android:background="@color/rosa_pastel"
+
 
                 />
 
@@ -355,11 +355,11 @@
                 android:text="@string/tipo3_text"
                 android:textSize="20sp"
                 android:textStyle="normal"
-                android:layout_marginTop="1dp"
+                android:layout_marginTop="5dp"
                 android:textAlignment="center"
-                android:textColor="@color/black"
+                android:textColor="@color/rojo"
                 android:layout_gravity="center"
-                android:background="@color/rojo_pastel"
+
 
 
                 />

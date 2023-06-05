@@ -81,7 +81,7 @@ public class AgregarDocentes extends AppCompatActivity {
 
     private void referenciar() {
 
-        ArrayAdapter<CharSequence> adapter = ArrayAdapter.createFromResource(this,R.array.Generos, android.R.layout.simple_spinner_item);
+        ArrayAdapter<CharSequence> adapter = ArrayAdapter.createFromResource(this,R.array.Generos, R.layout.styli_spiner);
 
         spinnerGenero.setAdapter(adapter);
 

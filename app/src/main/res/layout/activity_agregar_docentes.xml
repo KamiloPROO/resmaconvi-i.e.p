@@ -121,11 +121,11 @@
 
             <Spinner
                 android:id="@+id/idSpinnerGenero"
+                android:background="@drawable/style_spinner"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_marginStart="28dp"
                 android:layout_marginTop="20dp"
-
+                android:layout_gravity="center"
                 />
 
             <!-- <com.google.android.material.textfield.TextInputLayout

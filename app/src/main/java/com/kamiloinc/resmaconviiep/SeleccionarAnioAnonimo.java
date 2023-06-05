@@ -5,73 +5,70 @@ import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.Intent;
 import android.os.Bundle;
-import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
+import android.widget.AdapterView;
+import android.widget.ArrayAdapter;
 import android.widget.Button;
+import android.widget.Spinner;
 
 import com.google.android.material.bottomnavigation.BottomNavigationView;
 
-import org.checkerframework.checker.units.qual.s;
+public class SeleccionarAnioAnonimo extends AppCompatActivity {
 
-public class MenuReportes extends AppCompatActivity {
+    Button continuarAnimo;
 
-   Button reportDocente, reportEstudiante, reportAnonimo;
+    Spinner aniosSeleccion;
 
+    String anioSeleccionado;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_menu_reportes);
+        setContentView(R.layout.activity_seleccionar_anio_anonimo);
 
+        continuarAnimo = findViewById(R.id.btnContinuarAnonimo);
+        aniosSeleccion = findViewById(R.id.idSpinnerAniosAnonimo);
 
-        reportDocente = findViewById(R.id.btn_reportarDocente);
-        reportEstudiante = findViewById(R.id.btn_reportarEstudiante);
-        reportAnonimo = findViewById(R.id.btn_reportarAnonimamente);
-
-
-        conexiones();
+        referenciar();
         referenciar2();
-    }
-
-    private void conexiones() {
-
-        reportDocente.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-
-                Intent intent = new Intent(MenuReportes.this,SeleccionarAnioDocente.class);
-                startActivity(intent);
-
-
-            }
-        });
-
-        reportEstudiante.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-
-                Intent intent = new Intent(MenuReportes.this,SeleccionarAnioEstudiante.class);
-                startActivity(intent);
-
-
-            }
-        });
-
-        reportAnonimo.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-
-                Intent intent = new Intent(MenuReportes.this,SeleccionarAnioAnonimo.class);
-                startActivity(intent);
-
-
-            }
-        });
-
 
     }
 
+    private void referenciar() {
+
+        ArrayAdapter<CharSequence> adapter = ArrayAdapter.createFromResource(this,R.array.AniosReporte, R.layout.styli_spiner);
+
+        aniosSeleccion.setAdapter(adapter);
+
+        aniosSeleccion.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
+            @Override
+            public void onItemSelected(AdapterView<?> adapterView, View view, int i, long l) {
+
+                anioSeleccionado = adapterView.getItemAtPosition(i).toString();
+
+
+            }
+
+            @Override
+            public void onNothingSelected(AdapterView<?> adapterView) {
+
+            }
+        });
+
+
+        continuarAnimo.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+
+                Intent intent = new Intent( SeleccionarAnioAnonimo.this, ReportarAnonimo.class );
+                intent.putExtra("añoSeleccionado",anioSeleccionado);
+                startActivity(intent);
+
+            }
+        });
+
+    }
 
     private void referenciar2() {
 
@@ -110,4 +107,5 @@ public class MenuReportes extends AppCompatActivity {
             }
         });
     }
+
 }

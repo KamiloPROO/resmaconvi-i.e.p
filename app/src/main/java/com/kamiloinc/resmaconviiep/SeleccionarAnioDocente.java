@@ -1,74 +1,78 @@
 package com.kamiloinc.resmaconviiep;
 
+import static android.content.ContentValues.TAG;
+
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.Intent;
 import android.os.Bundle;
-import android.view.Menu;
+import android.util.Log;
 import android.view.MenuItem;
 import android.view.View;
+import android.widget.AdapterView;
+import android.widget.ArrayAdapter;
 import android.widget.Button;
+import android.widget.Spinner;
 
 import com.google.android.material.bottomnavigation.BottomNavigationView;
 
-import org.checkerframework.checker.units.qual.s;
+public class SeleccionarAnioDocente extends AppCompatActivity {
 
-public class MenuReportes extends AppCompatActivity {
+    Button continuarDocente;
 
-   Button reportDocente, reportEstudiante, reportAnonimo;
+    Spinner aniosSeleccion;
 
+    String anioSeleccionado;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_menu_reportes);
+        setContentView(R.layout.activity_seleccionar_anio_docente);
+
+        continuarDocente = findViewById(R.id.btnContinuarDocente);
+        aniosSeleccion = findViewById(R.id.idSpinnerAnios);
 
 
-        reportDocente = findViewById(R.id.btn_reportarDocente);
-        reportEstudiante = findViewById(R.id.btn_reportarEstudiante);
-        reportAnonimo = findViewById(R.id.btn_reportarAnonimamente);
-
-
-        conexiones();
+        referenciar();
         referenciar2();
+
     }
 
-    private void conexiones() {
+    private void referenciar() {
 
-        reportDocente.setOnClickListener(new View.OnClickListener() {
+        ArrayAdapter<CharSequence> adapter = ArrayAdapter.createFromResource(this,R.array.AniosReporte, R.layout.styli_spiner);
+
+        aniosSeleccion.setAdapter(adapter);
+
+        aniosSeleccion.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
             @Override
-            public void onClick(View view) {
+            public void onItemSelected(AdapterView<?> adapterView, View view, int i, long l) {
 
-                Intent intent = new Intent(MenuReportes.this,SeleccionarAnioDocente.class);
-                startActivity(intent);
+                anioSeleccionado = adapterView.getItemAtPosition(i).toString();
 
+
+            }
+
+            @Override
+            public void onNothingSelected(AdapterView<?> adapterView) {
 
             }
         });
 
-        reportEstudiante.setOnClickListener(new View.OnClickListener() {
+
+        continuarDocente.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
 
-                Intent intent = new Intent(MenuReportes.this,SeleccionarAnioEstudiante.class);
-                startActivity(intent);
+                Intent intent = new Intent( SeleccionarAnioDocente.this, ReportarDocente.class );
+                intent.putExtra("anioSeleccionadoDocente",anioSeleccionado);
+                Log.d(TAG, "Año Seleccionado"+ anioSeleccionado);
 
+                startActivity(intent);
 
             }
         });
-
-        reportAnonimo.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-
-                Intent intent = new Intent(MenuReportes.this,SeleccionarAnioAnonimo.class);
-                startActivity(intent);
-
-
-            }
-        });
-
 
     }
 

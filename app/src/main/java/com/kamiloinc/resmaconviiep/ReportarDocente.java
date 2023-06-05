@@ -57,10 +57,14 @@ public class ReportarDocente extends AppCompatActivity {
 
     Button agregarReporte;
 
+    Bundle data;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_reportar_docente);
+
+        data = getIntent().getExtras();
 
         listDocentes = findViewById(R.id.idSpinnerReportDocente);
         firebaseFirestore = FirebaseFirestore.getInstance();
@@ -113,7 +117,7 @@ public class ReportarDocente extends AppCompatActivity {
                                 DataSliderDocentes datos = new DataSliderDocentes(cadenaNombre);
                                 docentes.add(datos);
 
-                                ArrayAdapter<DataSliderDocentes> arrayAdapter = new ArrayAdapter<>(ReportarDocente.this, android.R.layout.simple_dropdown_item_1line, docentes);
+                                ArrayAdapter<DataSliderDocentes> arrayAdapter = new ArrayAdapter<>(ReportarDocente.this, R.layout.styli_spiner, docentes);
                                 listDocentes.setAdapter(arrayAdapter);
 
                             }
@@ -134,7 +138,7 @@ public class ReportarDocente extends AppCompatActivity {
 
     private void subirFirestore() {
 
-        ArrayAdapter<CharSequence> adapter = ArrayAdapter.createFromResource(this,R.array.TipoFaltas, android.R.layout.simple_spinner_item);
+        ArrayAdapter<CharSequence> adapter = ArrayAdapter.createFromResource(this,R.array.TipoFaltas, R.layout.styli_spiner);
 
         spinnerFaltas.setAdapter(adapter);
 
@@ -207,6 +211,8 @@ public class ReportarDocente extends AppCompatActivity {
 
     private void subimosFirestore(String tipoFalta, String docenteSelectEspinner, String descriReporte) {
 
+        String anio = data.getString("anioSeleccionadoDocente");
+
         pd.setTitle("Reportando Docente...");
 
         pd.show();
@@ -223,6 +229,7 @@ public class ReportarDocente extends AppCompatActivity {
         map.put("tipoFalta", tipoFalta);
         map.put("docenteSeleccionado", docenteSelectEspinner);
         map.put("descripcionFalta",descriReporte);
+        map.put("año",anio);
         map.put("idUser",idUser);
         map.put("correoUser",correoUser);
         map.put("nombreUser",nombreUser);
@@ -230,7 +237,7 @@ public class ReportarDocente extends AppCompatActivity {
 
 
 
-        firebaseFirestore.collection("Reportes").add(map).addOnSuccessListener(new OnSuccessListener<DocumentReference>() {
+        firebaseFirestore.collection(anio).add(map).addOnSuccessListener(new OnSuccessListener<DocumentReference>() {
             @Override
             public void onSuccess(DocumentReference documentReference) {
 
@@ -263,6 +270,8 @@ public class ReportarDocente extends AppCompatActivity {
 
     private void subimosPersonal(String tipoFalta, String docenteSelectEspinner, String descriReporte) {
 
+        String anio = data.getString("anioSeleccionadoDocente");
+
         pd.setTitle("Reportando Docente...");
 
         pd.show();
@@ -279,6 +288,7 @@ public class ReportarDocente extends AppCompatActivity {
         map.put("tipoFalta", tipoFalta);
         map.put("docenteSeleccionado", docenteSelectEspinner);
         map.put("descripcionFalta",descriReporte);
+        map.put("año",anio);
         map.put("idUser",idUser);
         map.put("correoUser",correoUser);
         map.put("nombreUser",nombreUser);
