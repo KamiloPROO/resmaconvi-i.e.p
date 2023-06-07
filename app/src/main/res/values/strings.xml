@@ -34,7 +34,7 @@
     <string name="ruta_de_atenci_n_integral_para_la_convivencia_escolar">Ruta de atención Integral para la CONVIVENCIA ESCOLAR</string>
     <string name="promocion_text">Fomentar el mejoramiento de la convivencia y el clima escolar con el fin de generar un entorno favorable para el ejercico real y efectivo de los Derechos Humanos, sexuales y reproductivos.</string>
     <string name="prevencion_text">Intervenir oportunamente en los comportamientos que podrian afectar la realización efectiva de los derechos humanos, sexuales y reproductivos en el contexto escolar.</string>
-    <string name="atencion_text">Asistir oportunamente a los miembros de la comunidad educativa frente a las situaciones que afectan la Convivencia Escolar y el ejercicio de los Derechos Humanos, Sexuales y Reproductivos.</string>
+    <string name="atencion_text">Asistir oportunamente a los miembros de la comunidad educativa frente a las situaciones que afectan la Convivencia Escolar y vulneración de los Derechos Humanos, Sexuales y Reproductivos.</string>
     <string name="seguimiento_text">Seguimiento y evaluación de las estrategias y acciones de promoción, prevención y atención desarrolladas por los actores e instancias del Sistema Nacional de Convivencia Escolar.</string>
     <string name="tipo1_text">Conflictos manejados inadecuadamente y situaciones esporádicas que inciden negativamente en el clima escolar.
     No generan daños al cuerpo o a la salud fisica o mental.
@@ -54,7 +54,7 @@
     <string name="atencion">ATENCIÓN</string>
     <string name="seguimiento">SEGUIMIENTO</string>
     <string name="situaciones1">SITUACIONES TIPO 1</string>
-    <string name="situaciones_que_afectan_la_convivencia_escolar_y_el_ejercicio_de_los_derechos_humanos_sexuales_y_reproductivos">SITUACIONES QUE AFECTAN LA CONVIVENCIA ESCOLAR Y EL EJERCICIO DE LOS DERECHOS HUMANOS, SEXUALES Y REPRODUCTIVOS.</string>
+    <string name="situaciones_que_afectan_la_convivencia_escolar_y_el_ejercicio_de_los_derechos_humanos_sexuales_y_reproductivos">SITUACIONES QUE AFECTAN LA CONVIVENCIA ESCOLAR Y VULNERACION DE LOS DERECHOS HUMANOS, SEXUALES Y REPRODUCTIVOS.</string>
     <string name="situaciones2">SITUACIONES TIPO 2</string>
     <string name="situaciones3">SITUACIONES TIPO 3</string>
     <string name="ingrese_la_descripci_n">Ingrese la descripción</string>
@@ -99,5 +99,8 @@
     <string name="seleccionar_curso">Seleccionar CUrso</string>
     <string name="seleccionar_falta_cometida">Seleccionar Falta Cometida</string>
     <string name="compromiso_del_estudiante">Compromiso Del Estudiante</string>
+    <string name="reporte_para">Reporte Para:</string>
+    <string name="estamos_melos">Estamos melos</string>
+    <string name="situaciones_tipo_1">Situaciones Tipo 1</string>
 
 </resources>

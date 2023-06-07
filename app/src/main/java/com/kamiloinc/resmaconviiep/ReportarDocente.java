@@ -36,6 +36,7 @@ import com.kamiloinc.resmaconviiep.Model.DataDocentes;
 import com.kamiloinc.resmaconviiep.Model.DataSliderDocentes;
 
 import java.util.ArrayList;
+import java.util.Date;
 import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
@@ -223,6 +224,9 @@ public class ReportarDocente extends AppCompatActivity {
         String nombreUser = user.getDisplayName();
         String imgCorreo = user.getPhotoUrl().toString();
 
+        Date date = new Date();
+        String fecha = date.toString();
+
         Map<String, Object> map = new HashMap<>();
 
 
@@ -233,6 +237,7 @@ public class ReportarDocente extends AppCompatActivity {
 
         map.put("id", id);
         map.put("año",anio);
+        map.put("fecha", fecha);
         map.put("tipoFaltaSeleccionado", tipoFalta);
 
 
@@ -289,7 +294,11 @@ public class ReportarDocente extends AppCompatActivity {
         String nombreUser = user.getDisplayName();
         String imgCorreo = user.getPhotoUrl().toString();
 
+        Date date = new Date();
+        String fecha = date.toString();
+
         Map<String, Object> map = new HashMap<>();
+
 
         map.put("idUser",idUser);
         map.put("correoUser",correoUser);
@@ -298,15 +307,15 @@ public class ReportarDocente extends AppCompatActivity {
 
         map.put("id", id);
         map.put("año",anio);
+        map.put("fecha", fecha);
         map.put("tipoFaltaSeleccionado", tipoFalta);
 
 
 
-        map.put("cursoSeleccionado", "No Aplica");
+        map.put("cursoSeleccionado", "Docente");
         map.put("faltaCometida", descriReporte);
         map.put("personaReportada", docenteSelectEspinner);
-        map.put("compromisoEstudiante", "No Aplica");
-
+        map.put("compromisoEstudiante", "No Aplica Para Docentes");
 
 
 

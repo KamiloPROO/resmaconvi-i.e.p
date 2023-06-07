@@ -1,7 +1,11 @@
 package com.kamiloinc.resmaconviiep;
 
+import static android.content.ContentValues.TAG;
+
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.recyclerview.widget.LinearLayoutManager;
+import androidx.recyclerview.widget.RecyclerView;
 
 import android.content.Intent;
 import android.os.Bundle;
@@ -26,6 +30,15 @@ import com.google.firebase.auth.AuthCredential;
 import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.auth.FirebaseUser;
 import com.google.firebase.auth.GoogleAuthProvider;
+import com.google.firebase.firestore.FirebaseFirestore;
+import com.google.firebase.firestore.Query;
+import com.google.firebase.firestore.QueryDocumentSnapshot;
+import com.google.firebase.firestore.QuerySnapshot;
+import com.google.firebase.storage.FirebaseStorage;
+import com.kamiloinc.resmaconviiep.Model.DataVerTodosLosReportes;
+
+import java.util.ArrayList;
+import java.util.List;
 
 public class Perfil extends AppCompatActivity {
 
@@ -40,10 +53,28 @@ public class Perfil extends AppCompatActivity {
     private ImageView imagenUser;
 
 
+    List<DataVerTodosLosReportes> listDatos;
+    AdaptadorVerReportes adaptadorEstudiantes;
+    FirebaseStorage storageRef;
+    FirebaseFirestore db;
+    RecyclerView recyclerView;
+
+    FirebaseUser user;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_perfil);
+
+        db = FirebaseFirestore.getInstance();
+        storageRef = FirebaseStorage.getInstance();
+        recyclerView = findViewById(R.id.rcVerReportesPersonales);
+        recyclerView.setHasFixedSize(true);
+        recyclerView.setLayoutManager(new LinearLayoutManager(this));
+        listDatos = new ArrayList<DataVerTodosLosReportes>();
+        user = FirebaseAuth.getInstance().getCurrentUser();
+
+        llenarLista();
 
         referenciar2();
         imagenUser = findViewById(R.id.imagenUser);
@@ -130,6 +161,48 @@ public class Perfil extends AppCompatActivity {
                 }
             }
         });
+
+    }
+
+    private void llenarLista() {
+
+        String nombreUser = user.getDisplayName();
+
+
+
+        db.collection(nombreUser).orderBy("fecha", Query.Direction.DESCENDING).get()
+                .addOnCompleteListener(new OnCompleteListener<QuerySnapshot>() {
+                    @Override
+                    public void onComplete(@NonNull Task<QuerySnapshot> task) {
+                        if (task.isSuccessful()) {
+                            for (QueryDocumentSnapshot document : task.getResult()) {
+
+                                Log.d(TAG, document.getId() + " => " + document.getData());
+
+                                String cadenaNombreUser = document.getString("nombreUser");
+                                String cadenaImgCorreo = document.getString("imgCorreo");
+                                String cadenaAnio = document.getString("año");
+                                String cadenatipoFaltaSeleccionado = document.getString("tipoFaltaSeleccionado");
+                                String cadenacursoSeleccionado = document.getString("cursoSeleccionado");
+                                String cadenafaltaCometida = document.getString("faltaCometida");
+                                String cadenapersonaReportada = document.getString("personaReportada");
+                                String cadenacompromisoEstudiante = document.getString("compromisoEstudiante");
+
+
+
+
+                                DataVerTodosLosReportes datos = new DataVerTodosLosReportes(cadenaNombreUser, cadenaImgCorreo, cadenaAnio,cadenatipoFaltaSeleccionado,cadenacursoSeleccionado,cadenafaltaCometida,cadenapersonaReportada,cadenacompromisoEstudiante);
+                                listDatos.add(datos);
+
+                                adaptadorEstudiantes = new AdaptadorVerReportes(Perfil.this, listDatos);
+                                recyclerView.setAdapter(adaptadorEstudiantes);
+
+                            }
+                        } else {
+                            Log.w(TAG, "Error getting documents.", task.getException());
+                        }
+                    }
+                });
 
     }
 

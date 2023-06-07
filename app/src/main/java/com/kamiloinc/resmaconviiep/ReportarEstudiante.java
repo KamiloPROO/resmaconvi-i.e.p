@@ -35,9 +35,12 @@ import com.kamiloinc.resmaconviiep.Model.DataSliderDocentes;
 import com.kamiloinc.resmaconviiep.Model.DataSpinnerEstudiante;
 import com.kamiloinc.resmaconviiep.Model.DataSpinnerFaltasCometidas;
 
+import java.text.SimpleDateFormat;
 import java.util.ArrayList;
+import java.util.Date;
 import java.util.HashMap;
 import java.util.List;
+import java.util.Locale;
 import java.util.Map;
 import java.util.UUID;
 
@@ -345,6 +348,10 @@ public class ReportarEstudiante extends AppCompatActivity {
         String nombreUser = user.getDisplayName();
         String imgCorreo = user.getPhotoUrl().toString();
 
+
+        Date date = new Date();
+        String fecha = date.toString();
+
         Map<String, Object> map = new HashMap<>();
 
 
@@ -355,6 +362,7 @@ public class ReportarEstudiante extends AppCompatActivity {
 
         map.put("id", id);
         map.put("año",anio);
+        map.put("fecha", fecha);
         map.put("tipoFaltaSeleccionado", tipoFaltaSeleccionado);
 
 
@@ -395,7 +403,7 @@ public class ReportarEstudiante extends AppCompatActivity {
 
     private void subimosDataPersonal(String cursoSeleccionado, String estudianteSeleccionado, String tipoFaltaSeleccionado, String faltaCometida, String compromisoEstudiante) {
 
-        String anio = data.getString("añoSeleccionado");
+        String anio = data.getString("anioSeleccionadoEstudiante");
 
         pd.setTitle("Reportando Estudiante...");
 
@@ -408,7 +416,12 @@ public class ReportarEstudiante extends AppCompatActivity {
         String nombreUser = user.getDisplayName();
         String imgCorreo = user.getPhotoUrl().toString();
 
+
+        Date date = new Date();
+        String fecha = date.toString();
+
         Map<String, Object> map = new HashMap<>();
+
 
         map.put("idUser",idUser);
         map.put("correoUser",correoUser);
@@ -417,6 +430,7 @@ public class ReportarEstudiante extends AppCompatActivity {
 
         map.put("id", id);
         map.put("año",anio);
+        map.put("fecha", fecha);
         map.put("tipoFaltaSeleccionado", tipoFaltaSeleccionado);
 
 

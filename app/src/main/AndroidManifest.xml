@@ -30,6 +30,9 @@
         android:theme="@style/Theme.AppCompat.Light.NoActionBar"
         tools:targetApi="31">
         <activity
+            android:name=".VerReportes"
+            android:exported="false" />
+        <activity
             android:name=".ReportarAnonimo"
             android:exported="false" />
         <activity
