@@ -184,6 +184,7 @@ public class Perfil extends AppCompatActivity {
                                 String cadenaAnio = document.getString("año");
                                 String cadenatipoFaltaSeleccionado = document.getString("tipoFaltaSeleccionado");
                                 String cadenacursoSeleccionado = document.getString("cursoSeleccionado");
+                                String cadenaPeriodo = document.getString("periodoAcademico");
                                 String cadenafaltaCometida = document.getString("faltaCometida");
                                 String cadenapersonaReportada = document.getString("personaReportada");
                                 String cadenacompromisoEstudiante = document.getString("compromisoEstudiante");
@@ -191,7 +192,7 @@ public class Perfil extends AppCompatActivity {
 
 
 
-                                DataVerTodosLosReportes datos = new DataVerTodosLosReportes(cadenaNombreUser, cadenaImgCorreo, cadenaAnio,cadenatipoFaltaSeleccionado,cadenacursoSeleccionado,cadenafaltaCometida,cadenapersonaReportada,cadenacompromisoEstudiante);
+                                DataVerTodosLosReportes datos = new DataVerTodosLosReportes(cadenaNombreUser, cadenaImgCorreo, cadenaAnio,cadenatipoFaltaSeleccionado,cadenacursoSeleccionado,cadenaPeriodo,cadenafaltaCometida,cadenapersonaReportada,cadenacompromisoEstudiante);
                                 listDatos.add(datos);
 
                                 adaptadorEstudiantes = new AdaptadorVerReportes(Perfil.this, listDatos);

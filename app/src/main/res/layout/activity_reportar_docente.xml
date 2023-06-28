@@ -43,6 +43,40 @@
 
             </TextView>
 
+            <TextView
+                android:id="@+id/textPeriodo"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="casual"
+                android:text="Seleccionar Periodo Academico"
+                android:layout_gravity="center"
+                android:textColor="@color/morado"
+                android:textSize="17sp"
+                android:textStyle="bold"
+                android:layout_marginTop="20dp"
+                app:layout_constraintBottom_toTopOf="@+id/bottomNavigationView"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.069"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintVertical_bias="0.142"
+                tools:ignore="MissingConstraints">
+
+            </TextView>
+
+            <Spinner
+                android:id="@+id/idSpinnerPeriodos"
+                android:background="@drawable/style_spinner"
+                android:layout_width="340dp"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                app:layout_constraintBottom_toBottomOf="@+id/bottomNavigationView"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.225"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/textView"
+                app:layout_constraintVertical_bias="0.09" />
+
 
             <TextView
                 android:id="@+id/textSelecDocen"
@@ -83,7 +117,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:fontFamily="casual"
-                android:text="@string/selecionar_tipo_de_falta"
+                android:text="Incumplimiento A Sus Obligaciones"
                 android:layout_gravity="center"
                 android:textColor="@color/morado"
                 android:textSize="17sp"
@@ -129,7 +163,7 @@
                     android:layout_height="wrap_content"
                     android:layout_gravity="center"
                     android:gravity="top"
-                    android:hint="@string/describir_falta"
+                    android:hint="@string/compromiso_del_docente"
                     android:inputType="textMultiLine"
                     android:lines="6"
                     android:layout_marginTop="10dp"

@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string-array name="FaltasDocentes">
+
+        <item>1. El docente no logra mantener la disciplina en el salón.</item>
+        <item>2. El docente no mantiene buena disciplina en el salón de clase y espacios pedagógicos.</item>
+        <item>3. No participa en las actividades institucionales.</item>
+        <item>4. No ejerce dirección de grupo.</item>
+        <item>5. No cumple con su jornada laboral.</item>
+        <item>6. No cumple con el acompañamiento, en el receso escolar.</item>
+        <item>7. No atiende a los padres se.familia en horas programadas.</item>
+        <item>8. No responde por el uso adecuado, mantenimiento y seguridad de los equipos.</item>
+        <item>9. No promueve en el análisis de las situaciones conflictivas de los estudiantes.</item>
+        <item>10. No lleva el observador al dia.</item>
+        <item>11. No da a conocer su metodología oportunamente al estudiante.</item>
+        <item>12. No elabora guías y material didáctico para los estudiantes con dificultades académicas.</item>
+        <item>13. El docente no cumple con su tiempo de disciplina en los descansos.</item>
+
+
+    </string-array>
+
+</resources>

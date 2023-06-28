@@ -8,6 +8,8 @@ public class DataVerTodosLosReportes {
             anio,
             tipoFaltaSeleccionado,
             cursoSeleccionado,
+
+            periodoReporte,
             faltaCometida,
             personaReportada,
             compromisoEstudiante;
@@ -16,12 +18,13 @@ public class DataVerTodosLosReportes {
     public DataVerTodosLosReportes() {
     }
 
-    public DataVerTodosLosReportes(String nombreUser, String imgCorreo, String anio, String tipoFaltaSeleccionado, String cursoSeleccionado, String faltaCometida, String personaReportada, String compromisoEstudiante) {
+    public DataVerTodosLosReportes(String nombreUser, String imgCorreo, String anio, String tipoFaltaSeleccionado, String cursoSeleccionado, String periodoReporte, String faltaCometida, String personaReportada, String compromisoEstudiante) {
         this.nombreUser = nombreUser;
         this.imgCorreo = imgCorreo;
         this.anio = anio;
         this.tipoFaltaSeleccionado = tipoFaltaSeleccionado;
         this.cursoSeleccionado = cursoSeleccionado;
+        this.periodoReporte = periodoReporte;
         this.faltaCometida = faltaCometida;
         this.personaReportada = personaReportada;
         this.compromisoEstudiante = compromisoEstudiante;
@@ -65,6 +68,14 @@ public class DataVerTodosLosReportes {
 
     public void setCursoSeleccionado(String cursoSeleccionado) {
         this.cursoSeleccionado = cursoSeleccionado;
+    }
+
+    public String getPeriodoReporte() {
+        return periodoReporte;
+    }
+
+    public void setPeriodoReporte(String periodoReporte) {
+        this.periodoReporte = periodoReporte;
     }
 
     public String getFaltaCometida() {

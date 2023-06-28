@@ -20,13 +20,12 @@ import com.google.firebase.firestore.Query;
 import com.google.firebase.firestore.QueryDocumentSnapshot;
 import com.google.firebase.firestore.QuerySnapshot;
 import com.google.firebase.storage.FirebaseStorage;
-import com.kamiloinc.resmaconviiep.Model.DataEstudiantes;
 import com.kamiloinc.resmaconviiep.Model.DataVerTodosLosReportes;
 
 import java.util.ArrayList;
 import java.util.List;
 
-public class VerReportes extends AppCompatActivity {
+public class VerReportesDocentes extends AppCompatActivity {
 
     List<DataVerTodosLosReportes> listDatos;
     AdaptadorVerReportes adaptadorEstudiantes;
@@ -40,14 +39,13 @@ public class VerReportes extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_ver_reportes);
+        setContentView(R.layout.activity_ver_reportes_docentes);
 
         data = getIntent().getExtras();
 
-
         db = FirebaseFirestore.getInstance();
         storageRef = FirebaseStorage.getInstance();
-        recyclerView = findViewById(R.id.rcVerTodosLosReportes);
+        recyclerView = findViewById(R.id.rcVerReportesDocentes);
         recyclerView.setHasFixedSize(true);
         recyclerView.setLayoutManager(new LinearLayoutManager(this));
         listDatos = new ArrayList<DataVerTodosLosReportes>();
@@ -59,11 +57,12 @@ public class VerReportes extends AppCompatActivity {
 
     private void llenarLista() {
 
-        String anio = data.getString("anioVerTodos");
-        String periodo = data.getString("periodoVerTodos");
-        String todo = "Todos";
+        String anio = data.getString("anioVerDocente");
+        String periodo = data.getString("periodoVerDocente");
+        String docen = "Docente";
 
-        String guardarCollecion =  periodo +" "+ anio +" "+ todo;
+        String guardarCollecion =  periodo +" "+ anio +" "+ docen;
+
 
 
         db.collection(guardarCollecion).orderBy("fecha", Query.Direction.DESCENDING).get()
@@ -91,7 +90,7 @@ public class VerReportes extends AppCompatActivity {
                                 DataVerTodosLosReportes datos = new DataVerTodosLosReportes(cadenaNombreUser, cadenaImgCorreo, cadenaAnio,cadenatipoFaltaSeleccionado,cadenacursoSeleccionado,cadenaPeriodo,cadenafaltaCometida,cadenapersonaReportada,cadenacompromisoEstudiante);
                                 listDatos.add(datos);
 
-                                adaptadorEstudiantes = new AdaptadorVerReportes(VerReportes.this, listDatos);
+                                adaptadorEstudiantes = new AdaptadorVerReportes(VerReportesDocentes.this, listDatos);
                                 recyclerView.setAdapter(adaptadorEstudiantes);
 
                             }
@@ -137,5 +136,4 @@ public class VerReportes extends AppCompatActivity {
             }
         });
     }
-
 }

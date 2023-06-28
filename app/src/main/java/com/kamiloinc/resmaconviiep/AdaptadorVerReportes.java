@@ -49,6 +49,7 @@ public class AdaptadorVerReportes extends RecyclerView.Adapter<AdaptadorVerRepor
 
         holder.personaReportada.setText(datos.getPersonaReportada());
         holder.cursoPersonaReportada.setText(datos.getCursoSeleccionado());
+        holder.periodo.setText(datos.getPeriodoReporte());
         holder.tipoFaltaReportada.setText(datos.getTipoFaltaSeleccionado());
         holder.faltaCometidaPersonaReportada.setText(datos.getFaltaCometida());
         holder.compromisoPersonaReportada.setText(datos.getCompromisoEstudiante());
@@ -62,7 +63,7 @@ public class AdaptadorVerReportes extends RecyclerView.Adapter<AdaptadorVerRepor
 
     public class ViewHolder extends RecyclerView.ViewHolder {
 
-        TextView nombreUser,anioReport, personaReportada, cursoPersonaReportada, tipoFaltaReportada,faltaCometidaPersonaReportada,compromisoPersonaReportada;
+        TextView nombreUser,anioReport, personaReportada, cursoPersonaReportada, periodo, tipoFaltaReportada,faltaCometidaPersonaReportada,compromisoPersonaReportada;
 
         ImageView perfil;
 
@@ -77,6 +78,7 @@ public class AdaptadorVerReportes extends RecyclerView.Adapter<AdaptadorVerRepor
             tipoFaltaReportada = itemView.findViewById(R.id.tipoFaltaReportada);
             faltaCometidaPersonaReportada = itemView.findViewById(R.id.faltaCometidaPersonaReportada);
             compromisoPersonaReportada = itemView.findViewById(R.id.compromisoPersonaReportada);
+            periodo = itemView.findViewById(R.id.periodoPersonaReportada);
 
         }
     }

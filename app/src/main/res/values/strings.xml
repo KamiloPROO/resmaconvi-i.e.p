@@ -102,5 +102,9 @@
     <string name="reporte_para">Reporte Para:</string>
     <string name="estamos_melos">Estamos melos</string>
     <string name="situaciones_tipo_1">Situaciones Tipo 1</string>
+    <string name="compromiso_del_docente">Compromiso Del Docente</string>
+    <string name="txtVerReportes">Ver Reportes</string>
+    <string name="ver_reportes_docentes">Ver Reportes Docentes</string>
+    <string name="ver_todos_los_reportes">ver todos los reportes</string>
 
 </resources>

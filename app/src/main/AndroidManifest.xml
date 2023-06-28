@@ -30,6 +30,18 @@
         android:theme="@style/Theme.AppCompat.Light.NoActionBar"
         tools:targetApi="31">
         <activity
+            android:name=".VerTodosReportesMenu"
+            android:exported="false" />
+        <activity
+            android:name=".VerReportesMenuDocentes"
+            android:exported="false" />
+        <activity
+            android:name=".VerReportesDocentes"
+            android:exported="false" />
+        <activity
+            android:name=".MenuVerReportes"
+            android:exported="false" />
+        <activity
             android:name=".VerReportes"
             android:exported="false" />
         <activity

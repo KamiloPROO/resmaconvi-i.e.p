@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string-array name="PeriodosAcademicos">
+
+        <item>Primer Periodo</item>
+        <item>Segundo Periodo</item>
+        <item>Tercer Periodo</item>
+        <item>Cuarto Periodo</item>
+
+
+    </string-array>
+
+</resources>

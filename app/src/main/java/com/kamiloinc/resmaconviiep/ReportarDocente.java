@@ -44,7 +44,7 @@ import java.util.UUID;
 
 public class ReportarDocente extends AppCompatActivity {
 
-    Spinner listDocentes, spinnerFaltas;
+    Spinner listDocentes, spinnerFaltas, spinnerPeriodos;
 
     ProgressDialog pd;
 
@@ -52,7 +52,7 @@ public class ReportarDocente extends AppCompatActivity {
 
     FirebaseUser user;
 
-    String faltaSelect, docenteSelect;
+    String faltaSelect, docenteSelect, periodoSelect;
 
     EditText editDescriReporte;
 
@@ -70,6 +70,7 @@ public class ReportarDocente extends AppCompatActivity {
         listDocentes = findViewById(R.id.idSpinnerReportDocente);
         firebaseFirestore = FirebaseFirestore.getInstance();
         spinnerFaltas = findViewById(R.id.idSpinnerTipoFal);
+        spinnerPeriodos = findViewById(R.id.idSpinnerPeriodos);
         editDescriReporte = findViewById(R.id.editReportDocente);
         agregarReporte = findViewById(R.id.btnReportarDocente);
 
@@ -139,7 +140,7 @@ public class ReportarDocente extends AppCompatActivity {
 
     private void subirFirestore() {
 
-        ArrayAdapter<CharSequence> adapter = ArrayAdapter.createFromResource(this,R.array.TipoFaltas, R.layout.styli_spiner);
+        ArrayAdapter<CharSequence> adapter = ArrayAdapter.createFromResource(this,R.array.FaltasDocentes, R.layout.styli_spiner);
 
         spinnerFaltas.setAdapter(adapter);
 
@@ -148,6 +149,24 @@ public class ReportarDocente extends AppCompatActivity {
             public void onItemSelected(AdapterView<?> adapterView, View view, int i, long l) {
 
                 faltaSelect = adapterView.getItemAtPosition(i).toString();
+
+            }
+
+            @Override
+            public void onNothingSelected(AdapterView<?> adapterView) {
+
+            }
+        });
+
+        ArrayAdapter<CharSequence> adapterPeriodos = ArrayAdapter.createFromResource(this,R.array.PeriodosAcademicos, R.layout.styli_spiner);
+
+        spinnerPeriodos.setAdapter(adapterPeriodos);
+
+        spinnerPeriodos.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
+            @Override
+            public void onItemSelected(AdapterView<?> adapterView, View view, int i, long l) {
+
+                periodoSelect = adapterView.getItemAtPosition(i).toString();
 
             }
 
@@ -180,10 +199,11 @@ public class ReportarDocente extends AppCompatActivity {
 
                 String tipoFalta = faltaSelect.trim();
                 String docenteSelectEspinner = docenteSelect.trim();
+                String periodoSelectEspinner = periodoSelect.trim();
                 String descriReporte = editDescriReporte.getText().toString().trim();
 
 
-                if (tipoFalta.isEmpty() && docenteSelectEspinner.isEmpty() && descriReporte.isEmpty()){
+                if (tipoFalta.isEmpty() && docenteSelectEspinner.isEmpty() && descriReporte.isEmpty() && periodoSelectEspinner.isEmpty()){
 
                     pd.setTitle("Por favor ingresa todos los datos para poder continuar...");
 
@@ -192,8 +212,8 @@ public class ReportarDocente extends AppCompatActivity {
 
                 }else{
 
-                subimosFirestore(tipoFalta,docenteSelectEspinner,descriReporte);
-                subimosPersonal(tipoFalta,docenteSelectEspinner,descriReporte);
+                subimosFirestore(periodoSelectEspinner,tipoFalta,docenteSelectEspinner,descriReporte);
+                subimosPersonal(periodoSelectEspinner,tipoFalta,docenteSelectEspinner,descriReporte);
 
                 }
 
@@ -210,9 +230,12 @@ public class ReportarDocente extends AppCompatActivity {
 
 
 
-    private void subimosFirestore(String tipoFalta, String docenteSelectEspinner, String descriReporte) {
+    private void subimosFirestore(String periodoSelectEspinner,String tipoFalta, String docenteSelectEspinner, String descriReporte) {
 
         String anio = data.getString("anioSeleccionadoDocente");
+        String docen = "Docente";
+
+        String guardarCollecion =  periodoSelectEspinner +" "+ anio +" "+ docen ;
 
         pd.setTitle("Reportando Docente...");
 
@@ -238,18 +261,19 @@ public class ReportarDocente extends AppCompatActivity {
         map.put("id", id);
         map.put("año",anio);
         map.put("fecha", fecha);
-        map.put("tipoFaltaSeleccionado", tipoFalta);
+        map.put("tipoFaltaSeleccionado", "Incumplimiento a sus Obligaciones");
+        map.put("periodoAcademico", periodoSelectEspinner);
 
 
 
-        map.put("cursoSeleccionado", "No Aplica");
-        map.put("faltaCometida", descriReporte);
+        map.put("cursoSeleccionado", "Docente");
+        map.put("faltaCometida", tipoFalta);
         map.put("personaReportada", docenteSelectEspinner);
-        map.put("compromisoEstudiante", "No Aplica");
+        map.put("compromisoEstudiante", descriReporte);
 
 
 
-        firebaseFirestore.collection(anio).add(map).addOnSuccessListener(new OnSuccessListener<DocumentReference>() {
+        firebaseFirestore.collection(guardarCollecion).add(map).addOnSuccessListener(new OnSuccessListener<DocumentReference>() {
             @Override
             public void onSuccess(DocumentReference documentReference) {
 
@@ -280,7 +304,7 @@ public class ReportarDocente extends AppCompatActivity {
 
     }
 
-    private void subimosPersonal(String tipoFalta, String docenteSelectEspinner, String descriReporte) {
+    private void subimosPersonal(String periodoSelectEspinner, String tipoFalta, String docenteSelectEspinner, String descriReporte) {
 
         String anio = data.getString("anioSeleccionadoDocente");
 
@@ -308,14 +332,17 @@ public class ReportarDocente extends AppCompatActivity {
         map.put("id", id);
         map.put("año",anio);
         map.put("fecha", fecha);
-        map.put("tipoFaltaSeleccionado", tipoFalta);
+        map.put("tipoFaltaSeleccionado", "Incumplimiento a sus Obligaciones");
+        map.put("periodoAcademico", periodoSelectEspinner);
+
 
 
 
         map.put("cursoSeleccionado", "Docente");
-        map.put("faltaCometida", descriReporte);
+        map.put("faltaCometida", tipoFalta);
         map.put("personaReportada", docenteSelectEspinner);
-        map.put("compromisoEstudiante", "No Aplica Para Docentes");
+        map.put("compromisoEstudiante", descriReporte);
+
 
 
 

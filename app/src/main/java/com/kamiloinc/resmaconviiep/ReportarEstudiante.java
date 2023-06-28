@@ -47,7 +47,7 @@ import java.util.UUID;
 public class ReportarEstudiante extends AppCompatActivity {
 
 
-    Spinner ListCursos, ListEstudiantes, ListTipoDeFalta, ListFaltas;
+    Spinner ListCursos, ListEstudiantes, ListTipoDeFalta, ListFaltas, peridos;
 
     TextView selectEstudiante, SelecFaltaTipo, SelecFaltaCometida;
 
@@ -57,7 +57,7 @@ public class ReportarEstudiante extends AppCompatActivity {
 
     FirebaseUser user;
 
-    String cursoSelect, estudianteSelect, tipoFaltaSelect, faltaSelect;
+    String cursoSelect, estudianteSelect, tipoFaltaSelect, faltaSelect ,periSelect;
 
     EditText editCompromisoEstudiante;
 
@@ -82,6 +82,7 @@ public class ReportarEstudiante extends AppCompatActivity {
         ListEstudiantes = findViewById(R.id.idSpinnerSeleEstudiante);
         ListTipoDeFalta = findViewById(R.id.idSpinnerSeleFaltaTipoDeFalta);
         ListFaltas = findViewById(R.id.idSpinnerSeleFalta);
+        peridos = findViewById(R.id.idSpinnerSelePeriodos);
 
         editCompromisoEstudiante = findViewById(R.id.editCompromisoEstudiante);
         reportarEstudiante = findViewById(R.id.btnReportarEstudiante);
@@ -124,6 +125,24 @@ public class ReportarEstudiante extends AppCompatActivity {
                     ListEstudiantes.setVisibility(View.VISIBLE);
                 }
 
+
+            }
+
+            @Override
+            public void onNothingSelected(AdapterView<?> adapterView) {
+
+            }
+        });
+
+        ArrayAdapter<CharSequence> adapterPeri = ArrayAdapter.createFromResource(this,R.array.PeriodosAcademicos, R.layout.styli_spiner);
+
+        peridos.setAdapter(adapterPeri);
+
+        peridos.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
+            @Override
+            public void onItemSelected(AdapterView<?> adapterView, View view, int i, long l) {
+
+                periSelect = adapterView.getItemAtPosition(i).toString();
 
             }
 
@@ -306,6 +325,7 @@ public class ReportarEstudiante extends AppCompatActivity {
             @Override
             public void onClick(View view) {
 
+                String periodoSeleccionado = periSelect.trim();
                 String cursoSeleccionado = cursoSelect.trim();
                 String estudianteSeleccionado = estudianteSelect.trim();
                 String tipoFaltaSeleccionado = tipoFaltaSelect.trim();
@@ -320,8 +340,8 @@ public class ReportarEstudiante extends AppCompatActivity {
 
                 }else{
 
-                    subimosDataFirestore(cursoSeleccionado,estudianteSeleccionado,tipoFaltaSeleccionado,faltaCometida,compromisoEstudiante);
-                    subimosDataPersonal(cursoSeleccionado,estudianteSeleccionado,tipoFaltaSeleccionado,faltaCometida,compromisoEstudiante);
+                    subimosDataFirestore(periodoSeleccionado,cursoSeleccionado,estudianteSeleccionado,tipoFaltaSeleccionado,faltaCometida,compromisoEstudiante);
+                    subimosDataPersonal(periodoSeleccionado,cursoSeleccionado,estudianteSeleccionado,tipoFaltaSeleccionado,faltaCometida,compromisoEstudiante);
 
                 }
 
@@ -333,9 +353,12 @@ public class ReportarEstudiante extends AppCompatActivity {
 
 
 
-    private void subimosDataFirestore(String cursoSeleccionado, String estudianteSeleccionado, String tipoFaltaSeleccionado, String faltaCometida, String compromisoEstudiante) {
+    private void subimosDataFirestore(String periodoSeleccionado,String cursoSeleccionado, String estudianteSeleccionado, String tipoFaltaSeleccionado, String faltaCometida, String compromisoEstudiante) {
 
         String anio = data.getString("anioSeleccionadoEstudiante");
+        String todo = "Todos";
+
+        String MeloFirestore = periodoSeleccionado +" "+ anio + " " + todo;
 
         pd.setTitle("Reportando Estudiante...");
 
@@ -366,14 +389,14 @@ public class ReportarEstudiante extends AppCompatActivity {
         map.put("tipoFaltaSeleccionado", tipoFaltaSeleccionado);
 
 
-
+        map.put("periodoAcademico",periodoSeleccionado);
         map.put("cursoSeleccionado", cursoSeleccionado);
         map.put("faltaCometida", faltaCometida);
         map.put("personaReportada", estudianteSeleccionado);
         map.put("compromisoEstudiante", compromisoEstudiante);
 
 
-        firebaseFirestore.collection(anio).add(map).addOnSuccessListener(new OnSuccessListener<DocumentReference>() {
+        firebaseFirestore.collection(MeloFirestore).add(map).addOnSuccessListener(new OnSuccessListener<DocumentReference>() {
             @Override
             public void onSuccess(DocumentReference documentReference) {
 
@@ -401,7 +424,7 @@ public class ReportarEstudiante extends AppCompatActivity {
     }
 
 
-    private void subimosDataPersonal(String cursoSeleccionado, String estudianteSeleccionado, String tipoFaltaSeleccionado, String faltaCometida, String compromisoEstudiante) {
+    private void subimosDataPersonal(String periodoSeleccionado,String cursoSeleccionado, String estudianteSeleccionado, String tipoFaltaSeleccionado, String faltaCometida, String compromisoEstudiante) {
 
         String anio = data.getString("anioSeleccionadoEstudiante");
 
@@ -434,7 +457,7 @@ public class ReportarEstudiante extends AppCompatActivity {
         map.put("tipoFaltaSeleccionado", tipoFaltaSeleccionado);
 
 
-
+        map.put("periodoAcademico",periodoSeleccionado);
         map.put("cursoSeleccionado", cursoSeleccionado);
         map.put("faltaCometida", faltaCometida);
         map.put("personaReportada", estudianteSeleccionado);

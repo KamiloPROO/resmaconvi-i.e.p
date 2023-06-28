@@ -97,6 +97,16 @@
             >
 
         </TextView>
+        <TextView
+            android:id="@+id/periodoPersonaReportada"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Primer Periodo"
+            android:textSize="12sp"
+
+            >
+
+        </TextView>
 
         <TextView
             android:id="@+id/tipoFaltaReportada"

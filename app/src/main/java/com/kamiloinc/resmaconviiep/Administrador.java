@@ -70,7 +70,7 @@ public class Administrador extends AppCompatActivity {
             @Override
             public void onClick(View view) {
 
-                    Intent intent = new Intent( Administrador.this, VerReportes.class );
+                    Intent intent = new Intent( Administrador.this, MenuVerReportes.class );
                 startActivity(intent);
 
             }
