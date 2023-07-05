@@ -15,6 +15,8 @@ public class Inicio extends AppCompatActivity {
 
    Button faltas1, faltas2, faltas3;
 
+   Button derechosEstudiante,deberesEstudiante,derechosDocente,deberesDocente;
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -24,6 +26,12 @@ public class Inicio extends AppCompatActivity {
         faltas1 = findViewById(R.id.btnSituaciones1);
         faltas2 = findViewById(R.id.btnSituaciones2);
         faltas3 = findViewById(R.id.btnSituaciones3);
+
+        derechosEstudiante = findViewById(R.id.btnVerDerechosEstudiantes);
+        deberesEstudiante = findViewById(R.id.btnVerDeberesEstudiantes);
+        derechosDocente = findViewById(R.id.btnVerDerechosDocentes);
+        deberesDocente = findViewById(R.id.btnVerDeberesDocentes);
+
 
         referenciar();
         referenciar2();
@@ -63,6 +71,42 @@ public class Inicio extends AppCompatActivity {
                 intent.putExtra("tipoFalta","Situaciones Tipo 3");
                 startActivity(intent);
 
+            }
+        });
+
+        derechosEstudiante.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intent = new Intent(Inicio.this, VerDeberesDerechos.class);
+                intent.putExtra("tipoFalta","Derechos Estudiantes");
+                startActivity(intent);
+            }
+        });
+
+        deberesEstudiante.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intent = new Intent(Inicio.this, VerDeberesDerechos.class);
+                intent.putExtra("tipoFalta","Deberes Estudiantes");
+                startActivity(intent);
+            }
+        });
+
+        derechosDocente.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intent = new Intent(Inicio.this, VerDeberesDerechos.class);
+                intent.putExtra("tipoFalta","Derechos Docentes");
+                startActivity(intent);
+            }
+        });
+
+        deberesDocente.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intent = new Intent(Inicio.this, VerDeberesDerechos.class);
+                intent.putExtra("tipoFalta","Deberes Docentes");
+                startActivity(intent);
             }
         });
 

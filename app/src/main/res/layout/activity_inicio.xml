@@ -359,9 +359,6 @@
                 android:textAlignment="center"
                 android:textColor="@color/rojo"
                 android:layout_gravity="center"
-
-
-
                 />
 
             <Button
@@ -373,7 +370,194 @@
                 android:background="@drawable/border_button_rojo"
                 android:layout_marginTop="6dp"
                 android:padding="7dp"
+
+                />
+
+            <TextView
+                android:id="@+id/txtTituFormu2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginTop="25dp"
+                android:fontFamily="casual"
+                android:text="@string/derechos_y_deberes_de_los_estudiantes"
+                android:textColor="@color/morado"
+                android:textSize="18sp"
+                android:textStyle="bold"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.497"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent">
+
+            </TextView>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="DERECHOS ESTUDIANTE"
+                android:textSize="25sp"
+                android:textStyle="bold"
+                android:layout_marginTop="30dp"
+                android:textAlignment="center"
+                android:textColor="@color/azul"
+                android:layout_gravity="center"
+
+                />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/textDerechos1"
+                android:textSize="20sp"
+                android:textStyle="normal"
+                android:layout_marginTop="5dp"
+                android:textAlignment="center"
+                android:textColor="@color/azul"
+                android:layout_gravity="center"
+                />
+
+            <Button
+                android:id="@+id/btnVerDerechosEstudiantes"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:text="@string/ver_derechos"
+                android:background="@drawable/border_button_azul"
+                android:layout_marginTop="10dp"
+                android:padding="7dp"
+
+                />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="DEBERES ESTUDIANTE"
+                android:textSize="25sp"
+                android:textStyle="bold"
+                android:layout_marginTop="30dp"
+                android:textAlignment="center"
+                android:textColor="@color/rojo"
+                android:layout_gravity="center"
+
+                />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/text_deberes_titu"
+                android:textSize="20sp"
+                android:textStyle="normal"
+                android:layout_marginTop="5dp"
+                android:textAlignment="center"
+                android:textColor="@color/rojo"
+                android:layout_gravity="center"
+                />
+
+            <Button
+                android:id="@+id/btnVerDeberesEstudiantes"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:text="@string/ver_deberes"
+                android:background="@drawable/border_button_rojo"
+                android:layout_marginTop="6dp"
+                android:padding="7dp"
+
+                />
+
+            <TextView
+                android:id="@+id/txtTituDeberesDerechos"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginTop="25dp"
+                android:fontFamily="casual"
+                android:text="@string/derechos_y_deberes_de_los_docentes"
+                android:textColor="@color/morado"
+                android:textSize="18sp"
+                android:textStyle="bold"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.497"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent">
+
+            </TextView>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="DERECHOS DOCENTE"
+                android:textSize="25sp"
+                android:textStyle="bold"
+                android:layout_marginTop="30dp"
+                android:textAlignment="center"
+                android:textColor="@color/azul"
+                android:layout_gravity="center"
+
+                />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/textDerechosDocentes"
+                android:textSize="20sp"
+                android:textStyle="normal"
+                android:layout_marginTop="5dp"
+                android:textAlignment="center"
+                android:textColor="@color/azul"
+                android:layout_gravity="center"
+                />
+
+            <Button
+                android:id="@+id/btnVerDerechosDocentes"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:text="@string/ver_derechos"
+                android:background="@drawable/border_button_azul"
+                android:layout_marginTop="10dp"
+                android:padding="7dp"
+
+                />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="DEBERES DOCENTE"
+                android:textSize="25sp"
+                android:textStyle="bold"
+                android:layout_marginTop="30dp"
+                android:textAlignment="center"
+                android:textColor="@color/rojo"
+                android:layout_gravity="center"
+
+                />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/text_deberes_doce"
+                android:textSize="20sp"
+                android:textStyle="normal"
+                android:layout_marginTop="5dp"
+                android:textAlignment="center"
+                android:textColor="@color/rojo"
+                android:layout_gravity="center"
+                />
+
+
+            <Button
+                android:id="@+id/btnVerDeberesDocentes"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:text="@string/ver_deberes"
+                android:background="@drawable/border_button_rojo"
+                android:layout_marginTop="6dp"
+                android:padding="7dp"
                 android:layout_marginBottom="60dp"
+
+
                 />
 
         </LinearLayout>

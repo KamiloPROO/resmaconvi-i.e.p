@@ -13,7 +13,7 @@
     <string name="formulario_de_registro">Formulario de registro</string>
     <string name="ingrese_nombre_completo_del_docente">Antes de continuar no olvides de completar todos los campos con los datos del docente que se va agregar.</string>
     <string name="ingrese_nombre_completo_del_estudiante">Antes de continuar no olvides de completar todos los campos con los datos del estudiante que se va agregar.</string>
-    <string name="ingrese_nombre_completo_de_la_tipo_de_falta">Antes de continuar no olvides de completar todos los campos con los datos de la tipo de falta que se va agregar.</string>
+    <string name="ingrese_nombre_completo_de_la_tipo_de_falta">Antes de continuar no olvides de completar todos los campos con los datos requeridos.</string>
     <string name="completar_campo">completar campo</string>
     <string name="ingresar">ingresar</string>
     <string name="ingresa_el_nombre_completo">Ingresa el nombre completo.</string>
@@ -106,5 +106,15 @@
     <string name="txtVerReportes">Ver Reportes</string>
     <string name="ver_reportes_docentes">Ver Reportes Docentes</string>
     <string name="ver_todos_los_reportes">ver todos los reportes</string>
+    <string name="textDerechos1">Los derechos de los estudiantes están reconocidos dentro del ámbito constitucional, fundamentalmente en su preámbulo y en los derechos fundamentales, sociales, culturales, económicos y ecológicos cuyos principios se fundamentan en el respeto a la dignidad humana. </string>
+    <string name="textDerechos2">Cuando el estudiante se matricula en la Institución Educativa El Paraíso, adquiere los siguientes derechos, Además de los derechos contemplados en los acuerdos Internacionales, en la Constitución Política de Colombia, El Código de la Infancia y la adolescencia 1098 de 2006, la protección que les genera la carta magna, las sentencias de la corte constitucional, la ley 1146 de 2007 y la ley 1620 de 2013, Decreto 1965 de 2013 y Decreto 860 de 2013, y los que le otorga su identidad y dignidad intrínseca y las leyes de la República; cuando el alumno se matricula en nuestra Institución, adquiere y en adelante gozará de los siguientes derechos: </string>
+    <string name="ver_derechos">ver derechos</string>
+    <string name="derechos_y_deberes_de_los_estudiantes">DERECHOS Y DEBERES DE LOS ESTUDIANTES</string>
+    <string name="text_deberes_titu">Los estudiantes de la misma manera que tienen derechos para poder ser cumplidos antes deben cumplir con algunos deberes que fundamentan en el respeto a la dignidad humana.</string>
+    <string name="ver_deberes">ver deberes</string>
+    <string name="derechos_y_deberes_de_los_docentes">DERECHOS Y DEBERES DE LOS DOCENTES</string>
+    <string name="textDerechosDocentes">Los derechos de los docentes y directivos adoptados por la institución, son los contemplados en la Constitución Política, en la ley 734 del Código Único Disciplinario, los Decreto 2277 y 1278 y lo dispuesto en este Manual de Convivencia, los docentes y directivos al servicio del Estado tendrán los siguientes derechos: </string>
+    <string name="text_deberes_doce">Los docentes de la misma manera que tienen derechos para poder ser cumplidos antes deben cumplir con algunos deberes regidos por la institución.</string>
+
 
 </resources>

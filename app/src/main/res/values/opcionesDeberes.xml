@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string-array name="DeberesDerechos">
+
+        <item>Derechos Estudiantes</item>
+        <item>Deberes Estudiantes</item>
+        <item>Derechos Docentes</item>
+        <item>Deberes Docentes</item>
+
+
+    </string-array>
+
+</resources>
