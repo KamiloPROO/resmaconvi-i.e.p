@@ -6,4 +6,383 @@
     android:layout_height="match_parent"
     tools:context=".ReportarAnonimo">
 
+
+    <ScrollView
+        android:id="@+id/scrollForm"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintBottom_toTopOf="@+id/bottomNavigationView"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.0">
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+
+            <TextView
+                android:id="@+id/textView"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="monospace"
+                android:text="Reportar Anonimo"
+                android:layout_gravity="center"
+                android:textColor="@color/morado"
+                android:textSize="20sp"
+                android:textStyle="bold"
+                android:layout_marginTop="20dp"
+                app:layout_constraintBottom_toTopOf="@+id/bottomNavigationView"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintVertical_bias="0.051"
+                tools:layout_editor_absoluteX="0dp">
+
+            </TextView>
+
+            <TextView
+                android:id="@+id/textSelecPeriodo"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="casual"
+                android:text="Seleccionar Periodo"
+                android:layout_gravity="center"
+                android:textColor="@color/morado"
+                android:textSize="17sp"
+                android:textStyle="bold"
+                android:layout_marginTop="20dp"
+                app:layout_constraintBottom_toTopOf="@+id/bottomNavigationView"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.069"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintVertical_bias="0.142"
+                tools:ignore="MissingConstraints">
+
+            </TextView>
+
+            <Spinner
+                android:id="@+id/idSpinnerSelePeriodosAnonimo"
+                android:background="@drawable/style_spinner"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:padding="5dp"
+                app:layout_constraintBottom_toBottomOf="@+id/bottomNavigationView"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.225"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/textView"
+                app:layout_constraintVertical_bias="0.09" />
+
+
+            <TextView
+                android:id="@+id/textSelecAquien"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="casual"
+                android:text="Generar Reporte Para:"
+                android:layout_gravity="center"
+                android:textColor="@color/morado"
+                android:textSize="17sp"
+                android:textStyle="bold"
+                android:layout_marginTop="20dp"
+                app:layout_constraintBottom_toTopOf="@+id/bottomNavigationView"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.069"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintVertical_bias="0.142"
+                tools:ignore="MissingConstraints">
+
+            </TextView>
+
+            <Spinner
+                android:id="@+id/idSpinnerSeleReportePara"
+                android:background="@drawable/style_spinner"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:padding="5dp"
+                app:layout_constraintBottom_toBottomOf="@+id/bottomNavigationView"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.225"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/textView"
+                app:layout_constraintVertical_bias="0.09" />
+
+            <TextView
+                android:id="@+id/textSelecCursosAno"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="casual"
+                android:visibility="gone"
+                android:text="@string/seleccionar_curso"
+                android:layout_gravity="center"
+                android:textColor="@color/morado"
+                android:textSize="17sp"
+                android:textStyle="bold"
+                android:layout_marginTop="20dp"
+                app:layout_constraintBottom_toTopOf="@+id/bottomNavigationView"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.069"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintVertical_bias="0.142"
+                tools:ignore="MissingConstraints">
+
+            </TextView>
+
+            <Spinner
+                android:id="@+id/idSpinnerSeleCursosAnonimo"
+                android:background="@drawable/style_spinner"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:padding="5dp"
+                android:visibility="gone"
+                app:layout_constraintBottom_toBottomOf="@+id/bottomNavigationView"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.225"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/textView"
+                app:layout_constraintVertical_bias="0.09" />
+
+
+
+            <TextView
+                android:id="@+id/textSelecEstudianteAnonimo"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="casual"
+                android:text="@string/seleccionar_estudiante"
+                android:layout_gravity="center"
+                android:visibility="gone"
+                android:textColor="@color/morado"
+                android:textSize="17sp"
+                android:textStyle="bold"
+                android:layout_marginTop="20dp"
+                app:layout_constraintBottom_toTopOf="@+id/bottomNavigationView"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.069"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintVertical_bias="0.289"
+                tools:ignore="MissingConstraints">
+
+            </TextView>
+
+            <Spinner
+                android:id="@+id/idSpinnerSeleEstudianteAnonimo"
+                android:background="@drawable/style_spinner"
+                android:layout_width="340dp"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:visibility="gone"
+                app:layout_constraintBottom_toBottomOf="@+id/bottomNavigationView"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.225"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/textView"
+                app:layout_constraintVertical_bias="0.234" />
+
+            <TextView
+                android:id="@+id/textSelecDocenteAnonimo"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="casual"
+                android:text="@string/seleccionar_docente"
+                android:visibility="gone"
+                android:layout_gravity="center"
+                android:textColor="@color/morado"
+                android:textSize="17sp"
+                android:textStyle="bold"
+                android:layout_marginTop="20dp"
+                app:layout_constraintBottom_toTopOf="@+id/bottomNavigationView"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.069"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintVertical_bias="0.289"
+                tools:ignore="MissingConstraints">
+
+            </TextView>
+
+            <Spinner
+                android:id="@+id/idSpinnerSeleDocenteAnonimo"
+                android:background="@drawable/style_spinner"
+                android:layout_width="340dp"
+                android:layout_height="wrap_content"
+                android:visibility="gone"
+                android:layout_gravity="center"
+                app:layout_constraintBottom_toBottomOf="@+id/bottomNavigationView"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.225"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/textView"
+                app:layout_constraintVertical_bias="0.234" />
+
+            <TextView
+                android:id="@+id/textSelecFaltaTipoAnonimo"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="casual"
+                android:text="@string/selecionar_tipo_de_falta"
+                android:layout_gravity="center"
+                android:visibility="gone"
+                android:textColor="@color/morado"
+                android:textSize="17sp"
+                android:textStyle="bold"
+                android:layout_marginTop="20dp"
+                app:layout_constraintBottom_toTopOf="@+id/bottomNavigationView"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.069"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintVertical_bias="0.289"
+                tools:ignore="MissingConstraints">
+
+            </TextView>
+
+            <Spinner
+                android:id="@+id/idSpinnerSeleFaltaTipoDeFaltaAnonimo"
+                android:background="@drawable/style_spinner"
+                android:layout_width="340dp"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:visibility="gone"
+                app:layout_constraintBottom_toBottomOf="@+id/bottomNavigationView"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.225"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/textView"
+                app:layout_constraintVertical_bias="0.234" />
+
+            <TextView
+                android:id="@+id/textSelecFaltaCometidaAnonimo"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="casual"
+                android:text="@string/seleccionar_falta_cometida"
+                android:layout_gravity="center"
+                android:textColor="@color/morado"
+                android:textSize="17sp"
+                android:visibility="gone"
+                android:textStyle="bold"
+                android:layout_marginTop="20dp"
+                app:layout_constraintBottom_toTopOf="@+id/bottomNavigationView"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.069"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintVertical_bias="0.289"
+                tools:ignore="MissingConstraints">
+
+            </TextView>
+
+            <Spinner
+                android:id="@+id/idSpinnerSeleFaltaAnonimo"
+                android:background="@drawable/style_spinner"
+                android:layout_width="340dp"
+                android:layout_height="wrap_content"
+                android:visibility="gone"
+                android:layout_gravity="center"
+                app:layout_constraintBottom_toBottomOf="@+id/bottomNavigationView"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.225"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/textView"
+                app:layout_constraintVertical_bias="0.234" />
+
+
+            <Spinner
+                android:id="@+id/idSpinnerSeleFaltaDocenteAnonimo"
+                android:background="@drawable/style_spinner"
+                android:layout_width="340dp"
+                android:layout_height="wrap_content"
+                android:visibility="gone"
+                android:layout_gravity="center"
+                app:layout_constraintBottom_toBottomOf="@+id/bottomNavigationView"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.225"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/textView"
+                app:layout_constraintVertical_bias="0.234" />
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginTop="10dp"
+                app:layout_constraintBottom_toTopOf="@+id/bottomNavigationView"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintVertical_bias="0.501"
+                tools:layout_editor_absoluteX="0dp">
+
+                <EditText
+                    android:id="@+id/editCompromisoEstudianteAnonimo"
+                    android:layout_width="360dp"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:visibility="gone"
+                    android:gravity="top"
+                    android:hint="Compromiso"
+                    android:inputType="textMultiLine"
+                    android:lines="6"
+                    android:layout_marginTop="10dp"
+                    android:layout_marginEnd="12dp"
+                    style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                    android:overScrollMode="always"
+                    android:scrollbars="vertical"
+                    android:scrollbarStyle="insideInset"
+                    android:scrollHorizontally="false"
+                    tools:ignore="Autofill">
+
+                </EditText>
+
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <Button
+                android:id="@+id/btnReportarAnimo"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginTop="20dp"
+                android:visibility="gone"
+                android:padding="10dp"
+                android:layout_marginBottom="70dp"
+                android:background="@drawable/border_button"
+                android:text="@string/reportar"
+                android:textColor="@color/white">
+
+            </Button>
+
+        </LinearLayout>
+
+
+
+    </ScrollView>
+
+
+
+
+
+    <com.google.android.material.bottomnavigation.BottomNavigationView
+        android:id="@+id/bottomNavigationView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:itemIconTint="@drawable/selector"
+        app:itemTextColor="@drawable/selector"
+        android:background="@color/morado"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:menu="@menu/botton_nav_menu" />
+
+
+
 </androidx.constraintlayout.widget.ConstraintLayout>

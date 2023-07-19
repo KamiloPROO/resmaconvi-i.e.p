@@ -62,7 +62,7 @@ public class SeleccionarAnioAnonimo extends AppCompatActivity {
             public void onClick(View view) {
 
                 Intent intent = new Intent( SeleccionarAnioAnonimo.this, ReportarAnonimo.class );
-                intent.putExtra("añoSeleccionado",anioSeleccionado);
+                intent.putExtra("anioSeleccionadoAnonimoReporte",anioSeleccionado);
                 startActivity(intent);
 
             }
