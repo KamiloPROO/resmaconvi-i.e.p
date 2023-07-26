@@ -43,8 +43,22 @@
 
             </TextView>
 
-            <com.airbnb.lottie.LottieAnimationView
+            <Button
+                android:id="@+id/idBtnVerRutaManual"
+                android:layout_gravity="center"
+                android:background="@drawable/border_button"
+                android:text="Revisar Ruta De Atencion Integral"
+                android:textColor="@color/white"
+                android:layout_marginTop="40dp"
+                android:layout_width="wrap_content"
+                android:padding="7dp"
+                android:layout_height="wrap_content">
 
+            </Button>
+
+            <com.airbnb.lottie.LottieAnimationView
+                android:id="@+id/idLottieRutaAprendizaje"
+                android:visibility="gone"
                 android:layout_width="250dp"
                 android:layout_height="160dp"
                 android:layout_gravity="center"
@@ -53,38 +67,41 @@
                 app:lottie_rawRes="@raw/bienvenido" />
 
             <TextView
-                android:id="@+id/txtIngresarNombreDocente"
+                android:id="@+id/idTxtTituloRutaAprendizaje"
+                android:visibility="gone"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_gravity="center"
-                android:textAlignment="center"
-                android:fontFamily="sans-serif-thin"
                 android:layout_marginTop="20dp"
+                android:background="@color/morado"
+                android:fontFamily="sans-serif-thin"
                 android:text="@string/ruta_de_atenci_n_integral_para_la_convivencia_escolar"
+                android:textAlignment="center"
                 android:textColor="@color/white"
                 android:textSize="20sp"
-                android:background="@color/morado"
-                android:textStyle="bold"
-                >
+                android:textStyle="bold">
 
             </TextView>
 
 
             <TextView
+                android:id="@+id/idTxtTituloRutaAprendizaje1"
+                android:visibility="gone"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="@string/promocion"
-                android:textSize="25sp"
-                android:textStyle="bold"
+                android:layout_gravity="center"
                 android:layout_marginTop="40dp"
+                android:text="@string/promocion"
                 android:textAlignment="center"
                 android:textColor="@color/verde"
-                android:layout_gravity="center"
+                android:textSize="25sp"
+                android:textStyle="bold"
 
                 />
 
             <com.airbnb.lottie.LottieAnimationView
-                android:id="@+id/imgSplash"
+                android:id="@+id/idLottieRutaAprendizaje1"
+                android:visibility="gone"
                 android:layout_width="200dp"
                 android:layout_height="120dp"
                 android:layout_gravity="center"
@@ -93,33 +110,38 @@
                 app:lottie_rawRes="@raw/promocion" />
 
             <TextView
+                android:id="@+id/idTxtTituloRutaAprendizaje2"
+                android:visibility="gone"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="@string/promocion_text"
-                android:textSize="20sp"
-                android:textStyle="normal"
+                android:layout_gravity="center"
                 android:layout_marginTop="10dp"
+                android:text="@string/promocion_text"
                 android:textAlignment="center"
                 android:textColor="@color/verde"
-                android:layout_gravity="center"
+                android:textSize="20sp"
+                android:textStyle="normal"
 
                 />
 
             <TextView
+                android:id="@+id/idTxtTituloRutaAprendizaje3"
+                android:visibility="gone"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="@string/prevencion"
-                android:textSize="25sp"
-                android:textStyle="bold"
+                android:layout_gravity="center"
                 android:layout_marginTop="40dp"
+                android:text="@string/prevencion"
                 android:textAlignment="center"
                 android:textColor="@color/azul"
-                android:layout_gravity="center"
+                android:textSize="25sp"
+                android:textStyle="bold"
 
                 />
 
             <com.airbnb.lottie.LottieAnimationView
-
+                android:id="@+id/idLottieRutaAprendizaje2"
+                android:visibility="gone"
                 android:layout_width="200dp"
                 android:layout_height="120dp"
                 android:layout_gravity="center"
@@ -128,33 +150,38 @@
                 app:lottie_rawRes="@raw/prevencion" />
 
             <TextView
+                android:id="@+id/idTxtTituloRutaAprendizaje4"
+                android:visibility="gone"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="@string/prevencion_text"
-                android:textSize="20sp"
-                android:textStyle="normal"
+                android:layout_gravity="center"
                 android:layout_marginTop="10dp"
+                android:text="@string/prevencion_text"
                 android:textAlignment="center"
                 android:textColor="@color/azul"
-                android:layout_gravity="center"
+                android:textSize="20sp"
+                android:textStyle="normal"
 
                 />
 
             <TextView
+                android:id="@+id/idTxtTituloRutaAprendizaje5"
+                android:visibility="gone"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="@string/atencion"
-                android:textSize="25sp"
-                android:textStyle="bold"
+                android:layout_gravity="center"
                 android:layout_marginTop="40dp"
+                android:text="@string/atencion"
                 android:textAlignment="center"
                 android:textColor="@color/rojo"
-                android:layout_gravity="center"
+                android:textSize="25sp"
+                android:textStyle="bold"
 
                 />
 
             <com.airbnb.lottie.LottieAnimationView
-
+                android:id="@+id/idLottieRutaAprendizaje3"
+                android:visibility="gone"
                 android:layout_width="200dp"
                 android:layout_height="120dp"
                 android:layout_gravity="center"
@@ -163,33 +190,38 @@
                 app:lottie_rawRes="@raw/atencion" />
 
             <TextView
+                android:id="@+id/idTxtTituloRutaAprendizaje6"
+                android:visibility="gone"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="@string/atencion_text"
-                android:textSize="20sp"
-                android:textStyle="normal"
+                android:layout_gravity="center"
                 android:layout_marginTop="10dp"
+                android:text="@string/atencion_text"
                 android:textAlignment="center"
                 android:textColor="@color/rojo"
-                android:layout_gravity="center"
+                android:textSize="20sp"
+                android:textStyle="normal"
 
                 />
 
             <TextView
+                android:id="@+id/idTxtTituloRutaAprendizaje7"
+                android:visibility="gone"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="@string/seguimiento"
-                android:textSize="25sp"
-                android:textStyle="bold"
+                android:layout_gravity="center"
                 android:layout_marginTop="40dp"
+                android:text="@string/seguimiento"
                 android:textAlignment="center"
                 android:textColor="@color/amarillo_pastel"
-                android:layout_gravity="center"
+                android:textSize="25sp"
+                android:textStyle="bold"
 
                 />
 
             <com.airbnb.lottie.LottieAnimationView
-
+                android:id="@+id/idLottieRutaAprendizaje4"
+                android:visibility="gone"
                 android:layout_width="200dp"
                 android:layout_height="120dp"
                 android:layout_gravity="center"
@@ -198,37 +230,67 @@
                 app:lottie_rawRes="@raw/seguimiento" />
 
             <TextView
+                android:id="@+id/idTxtTituloRutaAprendizaje8"
+                android:visibility="gone"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="@string/seguimiento_text"
-                android:textSize="20sp"
-                android:textStyle="normal"
+                android:layout_gravity="center"
                 android:layout_marginTop="10dp"
+                android:text="@string/seguimiento_text"
                 android:textAlignment="center"
                 android:textColor="@color/amarillo_pastel"
-                android:layout_gravity="center"
+                android:textSize="20sp"
+                android:textStyle="normal"
 
                 />
 
-            <TextView
+            <Button
+                android:id="@+id/idBtnCerrarRutaAprendizaje"
+                android:visibility="gone"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="5dp"
+                android:layout_gravity="center"
+                android:text="Cerrar"
+                android:background="@drawable/border_button_rojo"
+                />
 
+            <!-- Final de Ruta de Aprendizaje -->
+
+
+            <Button
+                android:id="@+id/idBtnVerSituacionesManual"
+                android:layout_gravity="center"
+                android:background="@drawable/border_button"
+                android:text="Revisar Tipo de faltas manual de convivencia"
+                android:textColor="@color/white"
+                android:layout_marginTop="40dp"
+                android:layout_width="wrap_content"
+                android:padding="7dp"
+                android:layout_height="wrap_content">
+
+            </Button>
+
+            <TextView
+                android:id="@+id/idTxtTituloVerSituaciones"
+                android:visibility="gone"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_gravity="center"
-                android:textAlignment="center"
-                android:fontFamily="sans-serif-thin"
                 android:layout_marginTop="50dp"
-                android:text="@string/situaciones_que_afectan_la_convivencia_escolar_y_el_ejercicio_de_los_derechos_humanos_sexuales_y_reproductivos"
-                android:textColor="@color/white"
                 android:background="@color/rojo"
+                android:fontFamily="sans-serif-thin"
+                android:text="@string/situaciones_que_afectan_la_convivencia_escolar_y_el_ejercicio_de_los_derechos_humanos_sexuales_y_reproductivos"
+                android:textAlignment="center"
+                android:textColor="@color/white"
                 android:textSize="20sp"
-                android:textStyle="bold"
-                >
+                android:textStyle="bold">
 
             </TextView>
 
             <com.airbnb.lottie.LottieAnimationView
-
+                android:id="@+id/idLottieSituaciones"
+                android:visibility="gone"
                 android:layout_width="200dp"
                 android:layout_height="120dp"
                 android:layout_gravity="center"
@@ -237,144 +299,191 @@
                 app:lottie_rawRes="@raw/flechas" />
 
             <TextView
+                android:id="@+id/idTxtTituloVerSituaciones1"
+                android:visibility="gone"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="@string/situaciones1"
-                android:textSize="25sp"
-                android:textStyle="bold"
+                android:layout_gravity="center"
                 android:layout_marginTop="0dp"
+                android:text="@string/situaciones1"
                 android:textAlignment="center"
                 android:textColor="@color/amarillo_pastel"
-                android:layout_gravity="center"
+                android:textSize="25sp"
+                android:textStyle="bold"
 
                 />
 
             <TextView
+                android:id="@+id/idTxtTituloVerSituaciones2"
+                android:visibility="gone"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="@string/tipo1_text"
-                android:textSize="20sp"
-                android:textStyle="normal"
+                android:layout_gravity="center"
                 android:layout_marginTop="5dp"
+                android:text="@string/tipo1_text"
                 android:textAlignment="center"
                 android:textColor="@color/amarillo_pastel"
-                android:layout_gravity="center"
+                android:textSize="20sp"
+                android:textStyle="normal"
 
 
                 />
 
             <Button
                 android:id="@+id/btnSituaciones1"
+                android:visibility="gone"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_gravity="center"
-                android:text="@string/ver_faltas_tipo_1"
-                android:background="@drawable/border_button_amarillo"
                 android:layout_marginTop="6dp"
+                android:background="@drawable/border_button_amarillo"
                 android:padding="7dp"
-                />
+                android:text="@string/ver_faltas_tipo_1" />
 
             <TextView
+                android:id="@+id/idTxtTituloVerSituaciones3"
+                android:visibility="gone"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginTop="30dp"
                 android:text="@string/situaciones2"
+                android:textAlignment="center"
+                android:textColor="@color/rosa"
                 android:textSize="25sp"
                 android:textStyle="bold"
-                android:layout_marginTop="30dp"
-                android:textAlignment="center"
-                android:textColor="@color/rosa"
-                android:layout_gravity="center"
 
                 />
 
             <TextView
+                android:id="@+id/idTxtTituloVerSituaciones4"
+                android:visibility="gone"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="@string/tipo2_text1"
-                android:textSize="20sp"
-                android:textStyle="normal"
+                android:layout_gravity="center"
                 android:layout_marginTop="5dp"
+                android:text="@string/tipo2_text1"
                 android:textAlignment="center"
                 android:textColor="@color/rosa"
-                android:layout_gravity="center"
+                android:textSize="20sp"
+                android:textStyle="normal"
 
 
                 />
+
             <TextView
+                android:id="@+id/idTxtTituloVerSituaciones5"
+                android:visibility="gone"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
+                android:layout_gravity="center"
                 android:text="@string/tipo2_text2"
-                android:textSize="20sp"
-                android:textStyle="normal"
                 android:textAlignment="center"
                 android:textColor="@color/rosa"
-                android:layout_gravity="center"
+                android:textSize="20sp"
+                android:textStyle="normal"
 
 
                 />
+
             <TextView
+                android:id="@+id/idTxtTituloVerSituaciones6"
+                android:visibility="gone"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
+                android:layout_gravity="center"
                 android:text="@string/tipo2_text3"
-                android:textSize="20sp"
-                android:textStyle="normal"
                 android:textAlignment="center"
                 android:textColor="@color/rosa"
-                android:layout_gravity="center"
+                android:textSize="20sp"
+                android:textStyle="normal"
 
 
                 />
 
             <Button
                 android:id="@+id/btnSituaciones2"
+                android:visibility="gone"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_gravity="center"
-                android:text="@string/ver_faltas_tipo_2"
-                android:background="@drawable/border_button_rosa"
                 android:layout_marginTop="6dp"
+                android:background="@drawable/border_button_rosa"
                 android:padding="7dp"
-                />
+                android:text="@string/ver_faltas_tipo_2" />
 
             <TextView
+                android:id="@+id/idTxtTituloVerSituaciones7"
+                android:visibility="gone"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginTop="30dp"
                 android:text="@string/situaciones3"
+                android:textAlignment="center"
+                android:textColor="@color/rojo"
                 android:textSize="25sp"
                 android:textStyle="bold"
-                android:layout_marginTop="30dp"
-                android:textAlignment="center"
-                android:textColor="@color/rojo"
-                android:layout_gravity="center"
 
                 />
 
             <TextView
+                android:id="@+id/idTxtTituloVerSituaciones8"
+                android:visibility="gone"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="@string/tipo3_text"
-                android:textSize="20sp"
-                android:textStyle="normal"
+                android:layout_gravity="center"
                 android:layout_marginTop="5dp"
+                android:text="@string/tipo3_text"
                 android:textAlignment="center"
                 android:textColor="@color/rojo"
-                android:layout_gravity="center"
-                />
+                android:textSize="20sp"
+                android:textStyle="normal" />
 
             <Button
                 android:id="@+id/btnSituaciones3"
+                android:visibility="gone"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_gravity="center"
-                android:text="@string/ver_faltas_tipo_3"
-                android:background="@drawable/border_button_rojo"
                 android:layout_marginTop="6dp"
+                android:background="@drawable/border_button_rojo"
                 android:padding="7dp"
+                android:text="@string/ver_faltas_tipo_3"
 
                 />
 
+            <Button
+                android:id="@+id/idBtnCerrarSituaciones"
+                android:visibility="gone"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginTop="10dp"
+                android:background="@drawable/border_button_rojo"
+                android:padding="7dp"
+                android:text="cerrar"
+
+                />
+
+           <!-- Final Situaciones  -->
+
+            <Button
+                android:id="@+id/idBtnVerDerechosEstudiantes"
+                android:layout_gravity="center"
+                android:background="@drawable/border_button"
+                android:text="Revisar Derechos y Deberes Estudiantes"
+                android:textColor="@color/white"
+                android:layout_marginTop="40dp"
+                android:layout_width="wrap_content"
+                android:padding="7dp"
+                android:layout_height="wrap_content">
+
+            </Button>
+
             <TextView
-                android:id="@+id/txtTituFormu2"
+                android:id="@+id/txtTituVerDerechosEstudiante"
+                android:visibility="gone"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_gravity="center"
@@ -392,81 +501,119 @@
             </TextView>
 
             <TextView
+                android:id="@+id/txtTituVerDerechosEstudiante1"
+                android:visibility="gone"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="DERECHOS ESTUDIANTE"
-                android:textSize="25sp"
-                android:textStyle="bold"
+                android:layout_gravity="center"
                 android:layout_marginTop="30dp"
+                android:text="DERECHOS ESTUDIANTE"
                 android:textAlignment="center"
                 android:textColor="@color/azul"
-                android:layout_gravity="center"
+                android:textSize="25sp"
+                android:textStyle="bold"
 
                 />
 
             <TextView
+                android:id="@+id/txtTituVerDerechosEstudiante2"
+                android:visibility="gone"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="@string/textDerechos1"
-                android:textSize="20sp"
-                android:textStyle="normal"
+                android:layout_gravity="center"
                 android:layout_marginTop="5dp"
+                android:text="@string/textDerechos1"
                 android:textAlignment="center"
                 android:textColor="@color/azul"
-                android:layout_gravity="center"
-                />
+                android:textSize="20sp"
+                android:textStyle="normal" />
 
             <Button
                 android:id="@+id/btnVerDerechosEstudiantes"
+                android:visibility="gone"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_gravity="center"
-                android:text="@string/ver_derechos"
-                android:background="@drawable/border_button_azul"
                 android:layout_marginTop="10dp"
+                android:background="@drawable/border_button_azul"
                 android:padding="7dp"
+                android:text="@string/ver_derechos"
 
                 />
 
             <TextView
+                android:id="@+id/txtTituVerDerechosEstudiante3"
+                android:visibility="gone"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginTop="30dp"
                 android:text="DEBERES ESTUDIANTE"
+                android:textAlignment="center"
+                android:textColor="@color/rojo"
                 android:textSize="25sp"
                 android:textStyle="bold"
-                android:layout_marginTop="30dp"
-                android:textAlignment="center"
-                android:textColor="@color/rojo"
-                android:layout_gravity="center"
 
                 />
 
             <TextView
+                android:id="@+id/txtTituVerDerechosEstudiante4"
+                android:visibility="gone"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="@string/text_deberes_titu"
-                android:textSize="20sp"
-                android:textStyle="normal"
+                android:layout_gravity="center"
                 android:layout_marginTop="5dp"
+                android:text="@string/text_deberes_titu"
                 android:textAlignment="center"
                 android:textColor="@color/rojo"
-                android:layout_gravity="center"
-                />
+                android:textSize="20sp"
+                android:textStyle="normal" />
 
             <Button
                 android:id="@+id/btnVerDeberesEstudiantes"
+                android:visibility="gone"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_gravity="center"
-                android:text="@string/ver_deberes"
-                android:background="@drawable/border_button_rojo"
                 android:layout_marginTop="6dp"
+                android:background="@drawable/border_button_rojo"
                 android:padding="7dp"
+                android:text="@string/ver_deberes"
 
                 />
 
+            <Button
+                android:id="@+id/idBtnCerrarDerechosEstudiantes"
+                android:visibility="gone"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginTop="6dp"
+                android:background="@drawable/border_button_rojo"
+                android:padding="7dp"
+                android:text="cerrar"
+
+                />
+
+            <!-- Final Derechos y deberes Estudiantes -->
+
+            <Button
+                android:id="@+id/idBtnVerDerechosDocentes"
+                android:layout_gravity="center"
+                android:background="@drawable/border_button"
+                android:text="Revisar Derechos y Deberes Docentes"
+                android:textColor="@color/white"
+                android:layout_marginTop="40dp"
+                android:layout_marginBottom="60dp"
+                android:layout_width="wrap_content"
+                android:padding="7dp"
+                android:layout_height="wrap_content">
+
+            </Button>
+
             <TextView
-                android:id="@+id/txtTituDeberesDerechos"
+                android:id="@+id/txtTituVerDerechosDocentes"
+                android:visibility="gone"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_gravity="center"
@@ -484,78 +631,101 @@
             </TextView>
 
             <TextView
+                android:id="@+id/txtTituVerDerechosDocentes1"
+                android:visibility="gone"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="DERECHOS DOCENTE"
-                android:textSize="25sp"
-                android:textStyle="bold"
+                android:layout_gravity="center"
                 android:layout_marginTop="30dp"
+                android:text="DERECHOS DOCENTE"
                 android:textAlignment="center"
                 android:textColor="@color/azul"
-                android:layout_gravity="center"
+                android:textSize="25sp"
+                android:textStyle="bold"
 
                 />
 
             <TextView
+                android:id="@+id/txtTituVerDerechosDocentes2"
+                android:visibility="gone"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="@string/textDerechosDocentes"
-                android:textSize="20sp"
-                android:textStyle="normal"
+                android:layout_gravity="center"
                 android:layout_marginTop="5dp"
+                android:text="@string/textDerechosDocentes"
                 android:textAlignment="center"
                 android:textColor="@color/azul"
-                android:layout_gravity="center"
-                />
+                android:textSize="20sp"
+                android:textStyle="normal" />
 
             <Button
                 android:id="@+id/btnVerDerechosDocentes"
+                android:visibility="gone"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_gravity="center"
-                android:text="@string/ver_derechos"
-                android:background="@drawable/border_button_azul"
                 android:layout_marginTop="10dp"
+                android:background="@drawable/border_button_azul"
                 android:padding="7dp"
+                android:text="@string/ver_derechos"
 
                 />
 
             <TextView
+                android:id="@+id/txtTituVerDerechosDocentes3"
+                android:visibility="gone"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginTop="30dp"
                 android:text="DEBERES DOCENTE"
+                android:textAlignment="center"
+                android:textColor="@color/rojo"
                 android:textSize="25sp"
                 android:textStyle="bold"
-                android:layout_marginTop="30dp"
-                android:textAlignment="center"
-                android:textColor="@color/rojo"
-                android:layout_gravity="center"
 
                 />
 
             <TextView
+                android:id="@+id/txtTituVerDerechosDocentes4"
+                android:visibility="gone"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="@string/text_deberes_doce"
-                android:textSize="20sp"
-                android:textStyle="normal"
+                android:layout_gravity="center"
                 android:layout_marginTop="5dp"
+                android:text="@string/text_deberes_doce"
                 android:textAlignment="center"
                 android:textColor="@color/rojo"
-                android:layout_gravity="center"
-                />
+                android:textSize="20sp"
+                android:textStyle="normal" />
 
 
             <Button
                 android:id="@+id/btnVerDeberesDocentes"
+                android:visibility="gone"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_gravity="center"
-                android:text="@string/ver_deberes"
-                android:background="@drawable/border_button_rojo"
                 android:layout_marginTop="6dp"
+                android:layout_marginBottom="0dp"
+                android:background="@drawable/border_button_rojo"
                 android:padding="7dp"
+                android:text="@string/ver_deberes"
+
+
+                />
+
+            <Button
+                android:id="@+id/idBtnCerrarDerechosDocentes"
+                android:visibility="gone"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginTop="6dp"
                 android:layout_marginBottom="60dp"
+                android:background="@drawable/border_button_rojo"
+                android:padding="7dp"
+                android:text="cerrar"
 
 
                 />
