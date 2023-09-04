@@ -11,6 +11,8 @@ import android.view.View;
 import android.widget.Button;
 
 import com.google.android.material.bottomnavigation.BottomNavigationView;
+import com.google.firebase.auth.FirebaseAuth;
+import com.google.firebase.auth.FirebaseUser;
 
 import org.checkerframework.checker.units.qual.s;
 
@@ -18,20 +20,60 @@ public class MenuReportes extends AppCompatActivity {
 
    Button reportDocente, reportEstudiante, reportAnonimo;
 
+    String UsuarioAdmin;
+
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_menu_reportes);
 
+        UsuarioAdmin = "depresivo";
+
 
         reportDocente = findViewById(R.id.btn_reportarDocente);
         reportEstudiante = findViewById(R.id.btn_reportarEstudiante);
         reportAnonimo = findViewById(R.id.btn_reportarAnonimamente);
 
+       // reportDocente.setVisibility(View.GONE);
+      //  reportAnonimo.setVisibility(View.GONE);
 
+
+        roles();
         conexiones();
-        referenciar2();
+        referenciar2Admin();
+        referenciar2User();
+    }
+
+    private void roles() {
+
+        FirebaseUser usuarioLogin = FirebaseAuth.getInstance().getCurrentUser();
+
+
+        if (usuarioLogin.getEmail().equals(UsuarioAdmin)) {
+
+            BottomNavigationView bottomNavigationViewAdmin = findViewById(R.id.bottomNavigationViewAdmin);
+            BottomNavigationView bottomNavigationViewUser = findViewById(R.id.bottomNavigationView);
+
+
+            bottomNavigationViewAdmin.setVisibility(View.VISIBLE);
+            bottomNavigationViewUser.setVisibility(View.GONE);
+
+
+
+        }else {
+
+            BottomNavigationView bottomNavigationViewAdmin = findViewById(R.id.bottomNavigationViewAdmin);
+            BottomNavigationView bottomNavigationViewUser = findViewById(R.id.bottomNavigationView);
+
+
+            bottomNavigationViewAdmin.setVisibility(View.GONE);
+            bottomNavigationViewUser.setVisibility(View.VISIBLE);
+
+        }
+
+
     }
 
     private void conexiones() {
@@ -73,9 +115,9 @@ public class MenuReportes extends AppCompatActivity {
     }
 
 
-    private void referenciar2() {
+    private void referenciar2Admin() {
 
-        BottomNavigationView bottomNavigationView = findViewById(R.id.bottomNavigationView);
+        BottomNavigationView bottomNavigationView = findViewById(R.id.bottomNavigationViewAdmin);
 
 
         bottomNavigationView.setSelectedItemId(R.id.reportar);
@@ -103,6 +145,42 @@ public class MenuReportes extends AppCompatActivity {
                         startActivity(new Intent(getApplicationContext()
                                 , MenuReportes.class));
                         overridePendingTransition(0, 0);
+                        return true;
+                }
+
+                return false;
+            }
+        });
+    }
+
+    private void referenciar2User() {
+
+        BottomNavigationView bottomNavigationView = findViewById(R.id.bottomNavigationView);
+
+        bottomNavigationView.setSelectedItemId(R.id.reportar);
+
+
+
+        bottomNavigationView.setOnNavigationItemSelectedListener(new BottomNavigationView.OnNavigationItemSelectedListener() {
+            @Override
+            public boolean onNavigationItemSelected(@NonNull MenuItem item) {
+                switch (item.getItemId()) {
+                    case R.id.perfil:
+                        startActivity(new Intent(getApplicationContext()
+                                , Perfil.class));
+                        overridePendingTransition(0, 0);
+                        return true;
+                    case R.id.admin:
+                        startActivity(new Intent(getApplicationContext()
+                                , Administrador.class));
+                        overridePendingTransition(0, 0);
+                        return true;
+                    case R.id.inicio:
+                        startActivity(new Intent(getApplicationContext()
+                                , Inicio.class));
+                        overridePendingTransition(0, 0);
+                        return true;
+                    case R.id.reportar:
                         return true;
                 }
 

@@ -13,6 +13,8 @@ import android.widget.Button;
 import android.widget.Spinner;
 
 import com.google.android.material.bottomnavigation.BottomNavigationView;
+import com.google.firebase.auth.FirebaseAuth;
+import com.google.firebase.auth.FirebaseUser;
 
 public class SeleccionarAnioEstudiante extends AppCompatActivity {
 
@@ -22,19 +24,56 @@ public class SeleccionarAnioEstudiante extends AppCompatActivity {
 
     String anioSeleccionado;
 
+    String UsuarioAdmin;
+
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_seleccionar_anio_estudiante);
 
+        UsuarioAdmin = "depresivo";
+
+
         continuarEstudiante = findViewById(R.id.btnContinuarEstudiante);
         aniosSeleccion = findViewById(R.id.idSpinnerAniosEstudiante);
 
+        roles();
         referenciar();
-        referenciar2();
+        referenciar2Admin();
+        referenciar2User();
 
     }
 
+    private void roles() {
+
+        FirebaseUser usuarioLogin = FirebaseAuth.getInstance().getCurrentUser();
+
+
+        if (usuarioLogin.getEmail().equals(UsuarioAdmin)) {
+
+            BottomNavigationView bottomNavigationViewAdmin = findViewById(R.id.bottomNavigationViewAdmin);
+            BottomNavigationView bottomNavigationViewUser = findViewById(R.id.bottomNavigationView);
+
+
+            bottomNavigationViewAdmin.setVisibility(View.VISIBLE);
+            bottomNavigationViewUser.setVisibility(View.GONE);
+
+
+
+        }else {
+
+            BottomNavigationView bottomNavigationViewAdmin = findViewById(R.id.bottomNavigationViewAdmin);
+            BottomNavigationView bottomNavigationViewUser = findViewById(R.id.bottomNavigationView);
+
+
+            bottomNavigationViewAdmin.setVisibility(View.GONE);
+            bottomNavigationViewUser.setVisibility(View.VISIBLE);
+
+        }
+
+
+    }
     private void referenciar() {
 
         ArrayAdapter<CharSequence> adapter = ArrayAdapter.createFromResource(this,R.array.AniosReporte, R.layout.styli_spiner);
@@ -70,9 +109,9 @@ public class SeleccionarAnioEstudiante extends AppCompatActivity {
 
     }
 
-    private void referenciar2() {
+    private void referenciar2Admin() {
 
-        BottomNavigationView bottomNavigationView = findViewById(R.id.bottomNavigationView);
+        BottomNavigationView bottomNavigationView = findViewById(R.id.bottomNavigationViewAdmin);
 
 
         bottomNavigationView.setSelectedItemId(R.id.reportar);
@@ -101,6 +140,44 @@ public class SeleccionarAnioEstudiante extends AppCompatActivity {
                                 , MenuReportes.class));
                         overridePendingTransition(0, 0);
                         return true;
+                }
+
+                return false;
+            }
+        });
+    }
+
+    private void referenciar2User() {
+
+        BottomNavigationView bottomNavigationView = findViewById(R.id.bottomNavigationView);
+
+        bottomNavigationView.setSelectedItemId(R.id.reportar);
+
+
+
+        bottomNavigationView.setOnNavigationItemSelectedListener(new BottomNavigationView.OnNavigationItemSelectedListener() {
+            @Override
+            public boolean onNavigationItemSelected(@NonNull MenuItem item) {
+                switch (item.getItemId()) {
+                    case R.id.perfil:
+                        startActivity(new Intent(getApplicationContext()
+                                , Perfil.class));
+                        overridePendingTransition(0, 0);
+                        return true;
+                    case R.id.admin:
+                        startActivity(new Intent(getApplicationContext()
+                                , Administrador.class));
+                        overridePendingTransition(0, 0);
+                        return true;
+                    case R.id.inicio:
+                        startActivity(new Intent(getApplicationContext()
+                                , Inicio.class));
+                        overridePendingTransition(0, 0);
+                        return true;
+                    case R.id.reportar:
+                        startActivity(new Intent(getApplicationContext()
+                                , MenuReportes.class));
+                        overridePendingTransition(0, 0);;
                 }
 
                 return false;

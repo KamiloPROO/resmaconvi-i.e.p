@@ -85,8 +85,10 @@ public class ReportarEstudiante extends AppCompatActivity {
     AdaptadorVerReportes adaptadorEstudiantes;
     FirebaseStorage storageRef;
     FirebaseFirestore db;
+
     RecyclerView recyclerView;
 
+    String UsuarioAdmin;
 
 
 
@@ -96,6 +98,8 @@ public class ReportarEstudiante extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_reportar_estudiante);
+
+        UsuarioAdmin = "depresivo";
 
         data = getIntent().getExtras();
 
@@ -167,15 +171,46 @@ public class ReportarEstudiante extends AppCompatActivity {
         historialEstudiante.setLayoutManager(new LinearLayoutManager(this));
         listDatos = new ArrayList<DataVerTodosLosReportes>();
 
-
+        roles();
         llenarSpinerCursos();
         subimosFirestore();
-        referenciar2();
+        referenciar2Admin();
+        referenciar2User();
         funcionesBtnNuevasFaltas();
         llenarSpinnerTipoDeFaltasNumero2();
         llenarSpinerTipoFaltasNumero3();
         llenarSpinnerTipoFaltasProtocolo();
 
+
+
+    }
+
+    private void roles() {
+
+        FirebaseUser usuarioLogin = FirebaseAuth.getInstance().getCurrentUser();
+
+
+        if (usuarioLogin.getEmail().equals(UsuarioAdmin)) {
+
+            BottomNavigationView bottomNavigationViewAdmin = findViewById(R.id.bottomNavigationViewAdmin);
+            BottomNavigationView bottomNavigationViewUser = findViewById(R.id.bottomNavigationView);
+
+
+            bottomNavigationViewAdmin.setVisibility(View.VISIBLE);
+            bottomNavigationViewUser.setVisibility(View.GONE);
+
+
+
+        }else {
+
+            BottomNavigationView bottomNavigationViewAdmin = findViewById(R.id.bottomNavigationViewAdmin);
+            BottomNavigationView bottomNavigationViewUser = findViewById(R.id.bottomNavigationView);
+
+
+            bottomNavigationViewAdmin.setVisibility(View.GONE);
+            bottomNavigationViewUser.setVisibility(View.VISIBLE);
+
+        }
 
 
     }
@@ -1137,9 +1172,9 @@ public class ReportarEstudiante extends AppCompatActivity {
 
     }
 
-    private void referenciar2() {
+    private void referenciar2Admin() {
 
-        BottomNavigationView bottomNavigationView = findViewById(R.id.bottomNavigationView);
+        BottomNavigationView bottomNavigationView = findViewById(R.id.bottomNavigationViewAdmin);
 
 
         bottomNavigationView.setSelectedItemId(R.id.reportar);
@@ -1168,6 +1203,44 @@ public class ReportarEstudiante extends AppCompatActivity {
                                 , MenuReportes.class));
                         overridePendingTransition(0, 0);
                         return true;
+                }
+
+                return false;
+            }
+        });
+    }
+
+    private void referenciar2User() {
+
+        BottomNavigationView bottomNavigationView = findViewById(R.id.bottomNavigationView);
+
+        bottomNavigationView.setSelectedItemId(R.id.reportar);
+
+
+
+        bottomNavigationView.setOnNavigationItemSelectedListener(new BottomNavigationView.OnNavigationItemSelectedListener() {
+            @Override
+            public boolean onNavigationItemSelected(@NonNull MenuItem item) {
+                switch (item.getItemId()) {
+                    case R.id.perfil:
+                        startActivity(new Intent(getApplicationContext()
+                                , Perfil.class));
+                        overridePendingTransition(0, 0);
+                        return true;
+                    case R.id.admin:
+                        startActivity(new Intent(getApplicationContext()
+                                , Administrador.class));
+                        overridePendingTransition(0, 0);
+                        return true;
+                    case R.id.inicio:
+                        startActivity(new Intent(getApplicationContext()
+                                , Inicio.class));
+                        overridePendingTransition(0, 0);
+                        return true;
+                    case R.id.reportar:
+                        startActivity(new Intent(getApplicationContext()
+                                , MenuReportes.class));
+                        overridePendingTransition(0, 0);
                 }
 
                 return false;
