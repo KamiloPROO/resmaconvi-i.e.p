@@ -13,6 +13,7 @@ import android.widget.TextView;
 import com.airbnb.lottie.LottieAnimationView;
 import com.google.android.material.bottomnavigation.BottomNavigationView;
 
+import java.util.List;
 import java.util.concurrent.TimeUnit;
 
 public class Inicio extends AppCompatActivity {
@@ -32,6 +33,8 @@ public class Inicio extends AppCompatActivity {
     LottieAnimationView lottieRuta, lottieRuta1, lottieRuta2, lottieRuta3, lottieRuta4, lottieSituaciones;
 
    Button derechosEstudiante,deberesEstudiante,derechosDocente,deberesDocente;
+
+
 
 
     @Override

@@ -3,39 +3,34 @@ package com.kamiloinc.resmaconviiep.Model;
 public class DataVerTodosLosReportes {
 
 
-    String  nombreUser,
-            imgCorreo ,
+    String  imgCorreo ,
+            nombreUser,
             anio,
-            tipoFaltaSeleccionado,
-            cursoSeleccionado,
-
-            periodoReporte,
-            faltaCometida,
             personaReportada,
-            compromisoEstudiante;
+            cursoSeleccionado,
+            periodoReporte,
+            docenteQRP,
+            faltaCometidaN1,
+            faltaCometidaN2,
+            faltaCometidaN3,
+            correctivoEstudiante;
 
 
     public DataVerTodosLosReportes() {
     }
 
-    public DataVerTodosLosReportes(String nombreUser, String imgCorreo, String anio, String tipoFaltaSeleccionado, String cursoSeleccionado, String periodoReporte, String faltaCometida, String personaReportada, String compromisoEstudiante) {
-        this.nombreUser = nombreUser;
+    public DataVerTodosLosReportes(String imgCorreo, String nombreUser, String anio, String personaReportada, String cursoSeleccionado, String periodoReporte, String docenteQRP, String faltaCometidaN1, String faltaCometidaN2, String faltaCometidaN3, String correctivoEstudiante) {
         this.imgCorreo = imgCorreo;
+        this.nombreUser = nombreUser;
         this.anio = anio;
-        this.tipoFaltaSeleccionado = tipoFaltaSeleccionado;
+        this.personaReportada = personaReportada;
         this.cursoSeleccionado = cursoSeleccionado;
         this.periodoReporte = periodoReporte;
-        this.faltaCometida = faltaCometida;
-        this.personaReportada = personaReportada;
-        this.compromisoEstudiante = compromisoEstudiante;
-    }
-
-    public String getNombreUser() {
-        return nombreUser;
-    }
-
-    public void setNombreUser(String nombreUser) {
-        this.nombreUser = nombreUser;
+        this.docenteQRP = docenteQRP;
+        this.faltaCometidaN1 = faltaCometidaN1;
+        this.faltaCometidaN2 = faltaCometidaN2;
+        this.faltaCometidaN3 = faltaCometidaN3;
+        this.correctivoEstudiante = correctivoEstudiante;
     }
 
     public String getImgCorreo() {
@@ -46,6 +41,14 @@ public class DataVerTodosLosReportes {
         this.imgCorreo = imgCorreo;
     }
 
+    public String getNombreUser() {
+        return nombreUser;
+    }
+
+    public void setNombreUser(String nombreUser) {
+        this.nombreUser = nombreUser;
+    }
+
     public String getAnio() {
         return anio;
     }
@@ -54,12 +57,12 @@ public class DataVerTodosLosReportes {
         this.anio = anio;
     }
 
-    public String getTipoFaltaSeleccionado() {
-        return tipoFaltaSeleccionado;
+    public String getPersonaReportada() {
+        return personaReportada;
     }
 
-    public void setTipoFaltaSeleccionado(String tipoFaltaSeleccionado) {
-        this.tipoFaltaSeleccionado = tipoFaltaSeleccionado;
+    public void setPersonaReportada(String personaReportada) {
+        this.personaReportada = personaReportada;
     }
 
     public String getCursoSeleccionado() {
@@ -78,27 +81,59 @@ public class DataVerTodosLosReportes {
         this.periodoReporte = periodoReporte;
     }
 
-    public String getFaltaCometida() {
-        return faltaCometida;
+    public String getDocenteQRP() {
+        return docenteQRP;
     }
 
-    public void setFaltaCometida(String faltaCometida) {
-        this.faltaCometida = faltaCometida;
+    public void setDocenteQRP(String docenteQRP) {
+        this.docenteQRP = docenteQRP;
     }
 
-    public String getPersonaReportada() {
-        return personaReportada;
+    public String getFaltaCometidaN1() {
+        return faltaCometidaN1;
     }
 
-    public void setPersonaReportada(String personaReportada) {
-        this.personaReportada = personaReportada;
+    public void setFaltaCometidaN1(String faltaCometidaN1) {
+        this.faltaCometidaN1 = faltaCometidaN1;
     }
 
-    public String getCompromisoEstudiante() {
-        return compromisoEstudiante;
+    public String getFaltaCometidaN2() {
+        return faltaCometidaN2;
     }
 
-    public void setCompromisoEstudiante(String compromisoEstudiante) {
-        this.compromisoEstudiante = compromisoEstudiante;
+    public void setFaltaCometidaN2(String faltaCometidaN2) {
+        this.faltaCometidaN2 = faltaCometidaN2;
+    }
+
+    public String getFaltaCometidaN3() {
+        return faltaCometidaN3;
+    }
+
+    public void setFaltaCometidaN3(String faltaCometidaN3) {
+        this.faltaCometidaN3 = faltaCometidaN3;
+    }
+
+    public String getCorrectivoEstudiante() {
+        return correctivoEstudiante;
+    }
+
+    public void setCorrectivoEstudiante(String correctivoEstudiante) {
+        this.correctivoEstudiante = correctivoEstudiante;
+    }
+
+    @Override
+    public String toString() {
+        return
+                imgCorreo
+                +nombreUser
+                + anio
+                +personaReportada
+                + cursoSeleccionado
+                + periodoReporte
+                + docenteQRP
+                + faltaCometidaN1
+                + faltaCometidaN2
+                + faltaCometidaN3
+                + correctivoEstudiante;
     }
 }

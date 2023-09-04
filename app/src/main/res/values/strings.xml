@@ -115,6 +115,107 @@
     <string name="derechos_y_deberes_de_los_docentes">DERECHOS Y DEBERES DE LOS DOCENTES</string>
     <string name="textDerechosDocentes">Los derechos de los docentes y directivos adoptados por la institución, son los contemplados en la Constitución Política, en la ley 734 del Código Único Disciplinario, los Decreto 2277 y 1278 y lo dispuesto en este Manual de Convivencia, los docentes y directivos al servicio del Estado tendrán los siguientes derechos: </string>
     <string name="text_deberes_doce">Los docentes de la misma manera que tienen derechos para poder ser cumplidos antes deben cumplir con algunos deberes regidos por la institución.</string>
+    <string name="txtProtocolo1">Este protocolo se activará por los docentes con intervenciones pedagógicas entendidas estas como las acciones que tienen la intención de hacer de los procesos disciplinarios y de convivencia, parte de la labor formativa de la institución para lograr la educación integral, así: </string>
+    <string name="txtProtocolo2">
+        <![CDATA[
+1. Primera vez que incurre en situaciones tipo I: Llamado de atención verbal para invitar al estudiante a reflexionar sobre la acción, realizado por el docente o directivo que observe la falta. previniendo al estudiante que la reincidencia en esta conducta o cualquier otra que contravenga el manual de convivencia, dará lugar a una información  mayor. <br><br>
+2. Segunda vez que incurre en situaciones tipo I: Reflexión individual y/o grupal con respecto al conocimiento y aplicación del Manual de Convivencia. Asignando exposiciones, talleres y socialización de temas de crecimiento personal relacionados con la situación ocurrida. Lo realiza el director de grupo acompañado del coordinador. <br><br>
+3. Tercera vez que incurre en situaciones tipo I: Citación al padre de familia para ponerlo en conocimiento de la situación cometida, anotación en el observador del estudiante,  compromiso pedagógico con seguimiento en los 20 días siguientes, además resarcir el daño.Lo realiza el director de grupo acompañado del coordinador. <br><br>
+4. Cuarta vez que incurre en situaciones tipo I: Citación al padre de familia para ponerlo en conocimiento de la situación cometida, anotación en el observador del estudiante, suspensión de actividades pedagógicas en el aula de clase (debe permanecer donde la docente orientadora o directivos le asignen actividades) por un día y compromiso pedagógico con seguimiento en los 15 días siguientes, además resarcir el daño causado. Lo realiza el director de grupo acompañado del coordinador. <br><br>
+5. Quinta vez de recurrencia situaciones tipo I: Citación al padre de familia para ponerlo en conocimiento de la situación cometida, anotación en el observador del estudiante, suspensión de actividades pedagógicas por dos días y compromiso pedagógico con seguimiento en los 10 días siguientes, además resarcir el daño.Lo realiza el director de grupo acompañado del coordinador. <br><br>
+6. Sexta vez de recurrencia situaciones tipo I: Citación al padre de familia para ponerlo en conocimiento de la situación cometida, anotación en el observador del estudiante, suspensión de actividades pedagógicas por 4 días y compromiso pedagógico con seguimiento en los 5 días siguientes, además resarcir el daño.Lo realiza el director de grupo acompañado del coordinador.
+]]>
+    </string>
+
+    <string name="txtProtocolo3">A. Cuando se considere necesario se solicitará a los padres de familia y/o acudientes incluyan a su hijo o acudido en un programa de tratamiento psicológico o a una determinada evaluación o asistencia profesional que se requiera para que el estudiante mejore su comportamiento. \n\n
+B. El educador que haya recibido el reporte de la situación tipo I o la haya presenciado, será el encargado de aplicar el protocolo. \n\n
+C. El estudiante tiene derecho a escribir los descargos correspondientes antes de firmar la anotación. \n\n
+D. El estudiante y/o su acudiente, pueden apelar el correctivo impuesto. \n\n
+E. De persistir el estudiante en cometer situaciones tipo I y de acuerdo al seguimiento se definirá si se requiere acudir a los protocolos de atención de las situaciones tipo  II o Situaciones tipo III. \n\n
+F. Los estudiantes que sean sancionados con suspensión de actividades pedagógicas, tendrán derecho a presentar las actividades realizadas durante este periodo, siempre y cuando este y su acudiente busquen al docente correspondiente durante los diez días siguientes después de cumplida la sanción.
+    </string>
+    <string name="txtProtocoloTipo2">1. En caso de daño al cuerpo o a la salud, garantizar la atención inmediata en salud física y mental de los involucrados, mediante la remisión a las entidades competentes, actuación de la cual dejará constancia. (formato de remisión).\n\n
+2. Cuando se requieran medidas de restablecimiento de derechos, remitir la situación a las autoridades competentes administrativas, en el marco de la Ley 1098 de 2006, actuación de la cual se dejará constancia. (formato de remisión) .\n\n
+3. Adoptar las medidas para proteger a los involucrados en la situación de posibles acciones en su contra, actuación de la cual se dejará constancia. (formato de atención y mediación).\n\n
+4. Informar de manera inmediata a los padres, madres o acudientes de todos los estudiantes involucrados, actuación que se dejará constancia. (formato de comunicación) .\n\n
+5. Generar espacios en los que las partes involucradas y los padres, madres o acudientes de los estudiantes, puedan exponer y precisar lo acontecido, preservando en cualquier caso, el derecho a la intimidad, confidencialidad y demás derechos. (formato de atención y mediación - formato de descargos) .\n\n
+6. Determinar las acciones restaurativas que busquen la reparación de los daños causados el restablecimiento del derecho y la reconciliación dentro de un clima de relaciones constructivas en el establecimiento educativo; así como las consecuencias aplicables a quienes han promovido, contribuido o participado en la situación reportada.\n\n
+7. El presidente del Comité de Convivencia informará a los demás integrantes de este Comité, sobre la situación ocurrida y las medidas adoptadas. El Comité adoptará el análisis y seguimiento, a fin de verificar si la situación fue efectiva o si se requiere acudir al protocolo consagrado en el artículo 44 del decreto reglamentario 1965 de 2013. (formato de seguimiento).\n\n
+8. El Comité Escolar de Convivencia dejará constancia en el acta de todo lo ocurrido y de las decisiones adoptadas, la cual será suscrita por todos los integrantes e intervinientes. (Actas del comité de convivencia).\n\n
+9. El presidente del Comité Escolar de Convivencia reportará la información del caso al aplicativo que para el efecto se haya implementado en el Sistema de Información Unificado de Convivencia Escolar.
+    </string>
+    <string name="txtProtocoloTipo3">1. Informe Inicial: Quien conozca de la comisión de una situación Tipo II debe comunicar inmediatamente en el formato de atención y mediación a la coordinación, además, realizar la anotación en el observador del estudiante.\n\n
+2. Informe a rectoría: El coordinador remitirá el caso, mediante copia del formato de atención y mediación.\n\n
+3. Activación de la ruta de atención: El rector o directivo docente encargado mediante informe remisorio activará la ruta de atención integral y enviará el informe de cada situación al sistema unificado de convivencia escolar. (formato de remisión).\n\n
+4. Citación del padre de familia y/o acudiente: Quien conozca de la situación citará por escrito al padre de familia y al educando, de manera inmediata, para recibir descargos y analizar en primera instancia lo sucedido.(formato de descargos).\n\n
+5. Remisión al Comité de Convivencia: El coordinador pondrá en conocimiento al Comité de Convivencia Escolar las situaciones tipo II que se presenten en el establecimiento educativo, el cual desarrollará acciones para la promoción y fortalecimiento de la formación para la ciudadanía y el ejercicio de los derechos humanos, sexuales y reproductivos; para la prevención y mitigación de la violencia escolar y el embarazo en la adolescencia; y para la atención de las situaciones que afectan la convivencia escolar y el ejercicio de los derechos humanos, sexuales y reproductivos a partir de la implementación, desarrollo y aplicación de las estrategias y programas trazados por el Comité Nacional de Convivencia Escolar.\n\n
+6. Citación al Comité y/o comisión Escolar de Convivencia: El rector citará a los integrantes del Comité y/o la comisión, para escuchar, analizar y valorar lo sucedido. Se tomarán decisiones para presentarlas a rectoría, las cuales quedarán consignadas en un acta con la firma de los asistentes.\n\n
+7. Decisión: El directivo docente rector, acompañado del coordinador, mediante “Resolución Rectoral” emitirá la sanción correspondiente observando las formalidades del debido proceso.\n\n
+8. Notificación: El directivo docente rector, acompañado del coordinador, notificará personalmente la sanción al padre de familia o acudiente y al estudiante.\n\n
+9. Recursos: Contra la resolución rectoral que notifique la decisión, procederá el recurso de Reposición y Apelación, dentro de los tres (3) días siguientes a la notificación. La rectoría resolverá el recurso dentro de los cinco (5) días hábiles siguientes a la interposición del mismo y se pronunciará mediante resolución motivada.
+    </string>
+    <string name="txtProtocoloTipo4">1. Primera vez que incurre en situaciones tipo II: Suspensión de 5 días de las actividades pedagógicas y disminución en la calificación de conducta y comportamiento a nivel BÁSICO.\n\n
+2. Segunda vez que incurre en situaciones tipo II: Suspensión de 6 días de las actividades pedagógicas y disminución en la calificación de conducta y comportamiento a nivel BAJO.\n\n
+3. Tercera vez que incurre en situaciones tipo II: Suspensión de 7 días de las actividades pedagógicas y continúa comportamiento en nivel BAJO.\n\n
+4. Cuarta vez de recurrencia situaciones tipo II: Suspensión de 10 días de las actividades pedagógicas y continúa comportamiento en nivel BAJO.\n\n
+5. Quinta vez de recurrencia situaciones tipo II: Desescolarización de actividades pedagógicas por 9 semanas académicas con talleres en casa y continúa comportamiento en nivel BAJO.\n\n
+6. Sexta vez de recurrencia en situaciones tipo II: Cancelación del contrato de matrícula en cualquier época del año.\n\n
+7. Cuando se considere necesario se solicitará a los padres de familia y/o acudientes incluyan a su hijo o acudido en un programa de tratamiento psicológico o a una determinada evaluación o asistencia profesional que se requiera para que el estudiante mejore su conducta y comportamiento.\n\n
+8. El educador que haya recibido el reporte de la situación tipo II o la haya presenciado, será el encargado de aplicar el protocolo.\n\n
+9. El estudiante tiene derecho a escribir los descargos correspondientes antes de firmar la anotación.\n\n
+10. El estudiante y/o su acudiente, pueden apelar el correctivo impuesto.\n\n
+11. Los estudiantes que sean sancionados con suspensión de actividades pedagógicas, tendrán derecho a presentar las actividades realizadas durante este periodo, siempre y cuando este y su acudiente busquen al docente correspondiente durante los diez días siguientes después de cumplida la sanción.\n\n
+12. El educador que aun evidenciando la conducta y comportamiento negativo con situaciones tipo II de un estudiante y no informe se hará merecedor de un llamado de atención verbal y de ser necesario un memorando con copia a su hoja de vida.
+  </string>
+    <string name="revisar_historial_del_estudiante">Revisar Historial Del estudiante</string>
+    <string name="txtProtocoloTipo3N1">1. En caso de daño de cuerpo o a la salud, garantizar la atención inmediata en salud física y mental de los involucrados, mediante la remisión a las entidades competentes, actuación de la cual deja constancia.\n\n
+2. Informar de manera inmediata a los padres, madres o acudientes de todos los estudiantes involucrados, actuación de la cual se deja constancia.\n\n
+3. El presidente del Comité Escolar de Convivencia de manera inmediata y por el medio más expedito, pondrá la situación en conocimiento de la Policía Nacional, comisaría de familia (en el caso que sean menores de 14 años), actuación de la cual se deja constancia.\n\n
+4. No obstante, lo dispuesto en el numeral anterior, se citará a los integrantes del Comité Escolar de Convivencia en los términos fijados en el manual de convivencia. De la citación se dejará constancia. \n\n
+5. El presidente del Comité Escolar de Convivencia informará a los participantes en el Comité, de los hechos que dieron lugar a la convocatoria, guardando reserva de aquella información que pueda atentar contra el derecho a la intimidad y confidencialidad de las partes involucradas, así como del reporte realizado antes las autoridades competentes.\n\n
+6. Pese a que una situación se haya puesto en conocimiento de las autoridades competentes, el Comité Escolar de Convivencia adoptará, de manera inmediata, las medidas propias del Establecimiento Educativo, tendiendo a proteger dentro del ámbito de sus competencia a las víctimas, a quien se le atribuye la agresión y a las personas que hayan informado o hagan parte de la situación presentada, actuación de la cual se deja constancia.\n\n
+7. El presidente del Comité de Convivencia Escolar reportará la información del caso al aplicativo que para el efecto se haya implementado en el sistema de información Unificado de Convivencia Escolar. \n\n
+8. Los casos sometidos a este protocolo serán objeto de seguimiento por parte del Comité de Convivencia, de la autoridad que asuma el conocimiento y del Comité Municipal, Distrital o departamental de Convivencia Escolar que ejerza jurisdicción sobre el Establecimiento Educativo en el cual se presentó el hecho.
+    </string>
+
+    <string name="txtProtocoloTipo3N2">Cuando un estudiante incurra en una situación tipo III, el Comité de Convivencia Escolar se reunirá extraordinariamente para analizar la situación y dará un concepto al Consejo Directivo, quien adoptará de manera inmediata las medidas sancionatorias a las que den lugar la falta cometida, que van desde la suspensión de las actividades pedagógicas, mínimo de 12 días, hasta la cancelación del contrato de matrícula en cualquier época del año. </string>
+    <string name="txtProtocoloTipo3N3">1. Primera vez que incurra en situación tipo III: Desescolarización de actividades pedagógicas por 9 semanas académicas con talleres en casa, anotación en el observador del estudiante.\n\n
+2. Segunda vez de recurrencia en situaciones tipo III: Cancelación del contrato de matrícula en cualquier época del año y hasta por seis años.
+    </string>
+
+    <string name="txtProtocoloTipo3N4">1. La circunstancialidad: tiempo, modo y lugar en que se cometió la situación. \n\n
+2. Voluntad de enmienda y de reparación de daños. \n\n
+3. Voluntad de enmienda y de reparación de daños.  \n\n
+4. La edad, desarrollo psicoactivo, mental, las circunstancias personales y familiares del niño, niña o adolescente.\n\n
+5. Haber obrado por motivos nobles o altruistas. \n\n
+6. Haber observado un buen comportamiento anteriormente.\n\n
+7. Aceptar o confesar la situación antes de iniciar el proceso disciplinario. \n\n
+8. Afección sicológica comprobada siempre y cuando la familia y el estudiante se comprometan con un proceso de intervención profesional fuera de la institución. \n\n
+9. Haber sido inducido a cometer la situación por alguien de mayor edad y/o madurez psicoactiva. \n\n
+10. Cometer una situación tipo II en estado de alteración, motivado por circunstancias que le causan dolor físico o psíquico.\n\n
+11. Procurar, a iniciativa propia, resarcir el daño o compensar el perjuicio causado, antes de iniciarse el proceso disciplinario.
+    </string>
+
+    <string name="txtProtocoloTipo3N5">1. El grado de perturbación que la conducta produzca en la comunidad educativa. \n\n
+2. Reincidencia en la comisión de situación. \n\n
+3. La circunstancialidad: tiempo, modo y lugar en que se cometió la situación.\n\n
+4. Grado de afectación del buen nombre e imagen de la institución.\n\n
+5. Premeditación o planeación para cometer la situación. \n\n
+6. Cometer la situación para ocultar o cometer otra.\n\n
+7. Haber mentido en forma oral o escrita en los descargos para justificar la situación. \n\n
+8. Realizar el acto con pleno conocimiento de sus efectos dañinos. \n\n
+9. Cometer la situación con la complicidad o participación de menores o subalternos inducidos a ello. \n\n
+10. No admitir la responsabilidad o atribuírsela a otros.\n\n
+11. Cometer la situación aprovechando condicionesde inferioridad de otras personas.\n\n
+12. Según la clasificación de la situación, el estudiante y su acudiente deberán presentarse ante el estamento indicado por este  Manual.\n\n
+13. El padre o acudiente, deberá ser requerido por escrito mediante citación enviada con el estudiante en el formato de Citación padres de familia. En caso de imposibilidad de la asistencia del acudiente, éste deberá excusarse por escrito (con firma y número de cédula) solicitando fecha y hora en la cual le sea posible acudir a la institución a la mayor brevedad posible.\n\n
+14. El estudiante contará con tres (3) días hábiles a partir de la fecha en que se haya citado el padre de familia o acudiente para la 	notificación, teniendo en cuenta las consideraciones expuestas en el parágrafo anterior.\n\n
+15. Si luego de solicitada o concertada la presencia del acudiente, hasta por segunda vez, éste no asiste a la cita, sin excusa justificable, el análisis comportamental podrá seguir su curso sin considerarse por ello, violado el debido proceso, quedando constancia del hecho con firma de dos testigos. Se enviará copia de lo anterior al defensor de familia.\n\n
+16. Los estudiantes con capacidades diferentes diagnosticadas clínicamente, tienen derecho a que estas sean tenidas en cuenta para la aplicabilidad de la acción pedagógica o de la sanción.\n\n
+17. Cuando  el  Comité  Escolar  de  Convivencia  adopte  como  acciones  o  medidas  la remisión de la situación al  Instituto Colombiano de Bienestar Familiar para el restablecimiento de  derechos,  o  al  Sistema  de  Seguridad  Social  para  la  atención  en  salud  integral,  estas entidades cumplirán con  lo dispuesto en el artículo 45 del Decreto 1965 de 2013.\n\n
+18.Todos los daños y perjuicios ocasionados por un estudiante en muebles, enseres o equipos de la Institución y/o de un miembro de la comunidad educativa, será asumido de manera solidaria por su representante legal o acudiente.
+</string>
+    <string name="cerrar">cerrar</string>
 
 
 </resources>

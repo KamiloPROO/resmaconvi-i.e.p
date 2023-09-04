@@ -75,20 +75,22 @@ public class VerReportes extends AppCompatActivity {
 
                                 Log.d(TAG, document.getId() + " => " + document.getData());
 
-                                String cadenaNombreUser = document.getString("nombreUser");
                                 String cadenaImgCorreo = document.getString("imgCorreo");
+                                String cadenaNombreUser = document.getString("nombreUser");
                                 String cadenaAnio = document.getString("año");
-                                String cadenatipoFaltaSeleccionado = document.getString("tipoFaltaSeleccionado");
+                                String cadenapersonaReportada = document.getString("personaReportada");
                                 String cadenacursoSeleccionado = document.getString("cursoSeleccionado");
                                 String cadenaPeriodo = document.getString("periodoAcademico");
-                                String cadenafaltaCometida = document.getString("faltaCometida");
-                                String cadenapersonaReportada = document.getString("personaReportada");
-                                String cadenacompromisoEstudiante = document.getString("compromisoEstudiante");
+                                String cadenaDocenteQRP = document.getString("docenteQRF");
+                                String cadenafaltaCometidaN1 = document.getString("faltaCometidaNum1");
+                                String cadenafaltaCometidaN2 = document.getString("faltaCometidaNum2");
+                                String cadenafaltaCometidaN3 = document.getString("faltaCometidaNum3");
+                                String cadenacompromisoEstudiante = document.getString("correctivosPedagogicos");
 
 
 
 
-                                DataVerTodosLosReportes datos = new DataVerTodosLosReportes(cadenaNombreUser, cadenaImgCorreo, cadenaAnio,cadenatipoFaltaSeleccionado,cadenacursoSeleccionado,cadenaPeriodo,cadenafaltaCometida,cadenapersonaReportada,cadenacompromisoEstudiante);
+                                DataVerTodosLosReportes datos = new DataVerTodosLosReportes(cadenaImgCorreo,cadenaNombreUser, cadenaAnio,cadenacursoSeleccionado,cadenaPeriodo,cadenaDocenteQRP,cadenafaltaCometidaN1,cadenafaltaCometidaN2,cadenafaltaCometidaN3,cadenapersonaReportada,cadenacompromisoEstudiante);
                                 listDatos.add(datos);
 
                                 adaptadorEstudiantes = new AdaptadorVerReportes(VerReportes.this, listDatos);

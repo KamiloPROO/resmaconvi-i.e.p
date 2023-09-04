@@ -42,17 +42,18 @@ public class AdaptadorVerReportes extends RecyclerView.Adapter<AdaptadorVerRepor
 
         DataVerTodosLosReportes datos = listDatos.get(position);
 
-
+        Glide.with(context).load(datos.getImgCorreo()).into(holder.perfil);
         holder.nombreUser.setText(datos.getNombreUser());
         holder.anioReport.setText(datos.getAnio());
-        Glide.with(context).load(datos.getImgCorreo()).into(holder.perfil);
 
         holder.personaReportada.setText(datos.getPersonaReportada());
         holder.cursoPersonaReportada.setText(datos.getCursoSeleccionado());
         holder.periodo.setText(datos.getPeriodoReporte());
-        holder.tipoFaltaReportada.setText(datos.getTipoFaltaSeleccionado());
-        holder.faltaCometidaPersonaReportada.setText(datos.getFaltaCometida());
-        holder.compromisoPersonaReportada.setText(datos.getCompromisoEstudiante());
+        holder.docenteQRP.setText(datos.getDocenteQRP());
+        holder.faltaCometidaPersonaReportadaN1.setText(datos.getFaltaCometidaN1());
+        holder.faltaCometidaPersonaReportadaN2.setText(datos.getFaltaCometidaN2());
+        holder.faltaCometidaPersonaReportadaN3.setText(datos.getFaltaCometidaN3());
+        holder.correptivoPersonaReportada.setText(datos.getCorrectivoEstudiante());
 
     }
 
@@ -63,22 +64,24 @@ public class AdaptadorVerReportes extends RecyclerView.Adapter<AdaptadorVerRepor
 
     public class ViewHolder extends RecyclerView.ViewHolder {
 
-        TextView nombreUser,anioReport, personaReportada, cursoPersonaReportada, periodo, tipoFaltaReportada,faltaCometidaPersonaReportada,compromisoPersonaReportada;
+        TextView nombreUser,anioReport, personaReportada, cursoPersonaReportada, periodo ,faltaCometidaPersonaReportadaN1,faltaCometidaPersonaReportadaN2,faltaCometidaPersonaReportadaN3,correptivoPersonaReportada,docenteQRP;
 
         ImageView perfil;
 
         public ViewHolder(@NonNull View itemView) {
             super(itemView);
 
+            perfil = itemView.findViewById(R.id.imgPerfilItem);
             nombreUser = itemView.findViewById(R.id.nomUsuarioReport);
             anioReport = itemView.findViewById(R.id.anioReport);
-            perfil = itemView.findViewById(R.id.imgPerfilItem);
             personaReportada = itemView.findViewById(R.id.nombrePersonaReportada);
             cursoPersonaReportada = itemView.findViewById(R.id.cursoPersonaReportada);
-            tipoFaltaReportada = itemView.findViewById(R.id.tipoFaltaReportada);
-            faltaCometidaPersonaReportada = itemView.findViewById(R.id.faltaCometidaPersonaReportada);
-            compromisoPersonaReportada = itemView.findViewById(R.id.compromisoPersonaReportada);
             periodo = itemView.findViewById(R.id.periodoPersonaReportada);
+            docenteQRP = itemView.findViewById(R.id.docenteQRP);
+            faltaCometidaPersonaReportadaN1 = itemView.findViewById(R.id.faltaCometidaPersonaReportadaN1);
+            faltaCometidaPersonaReportadaN2 = itemView.findViewById(R.id.faltaCometidaPersonaReportadaN2);
+            faltaCometidaPersonaReportadaN3 = itemView.findViewById(R.id.faltaCometidaPersonaReportadaN3);
+            correptivoPersonaReportada = itemView.findViewById(R.id.correctivoPersonaReportada);
 
         }
     }

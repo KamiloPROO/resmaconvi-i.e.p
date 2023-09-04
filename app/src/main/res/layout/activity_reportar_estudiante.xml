@@ -119,10 +119,10 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:fontFamily="casual"
+                android:visibility="gone"
                 android:text="@string/seleccionar_estudiante"
                 android:layout_gravity="center"
                 android:textColor="@color/morado"
-                android:visibility="gone"
                 android:textSize="17sp"
                 android:textStyle="bold"
                 android:layout_marginTop="20dp"
@@ -138,17 +138,53 @@
 
             <Spinner
                 android:id="@+id/idSpinnerSeleEstudiante"
-                android:visibility="gone"
                 android:background="@drawable/style_spinner"
                 android:layout_width="340dp"
                 android:layout_height="wrap_content"
                 android:layout_gravity="center"
+                android:visibility="gone"
                 app:layout_constraintBottom_toBottomOf="@+id/bottomNavigationView"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintHorizontal_bias="0.225"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toBottomOf="@+id/textView"
                 app:layout_constraintVertical_bias="0.234" />
+
+            <Button
+                android:id="@+id/btnRevisarHistorialEstudiante"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginTop="20dp"
+                android:padding="5dp"
+                android:visibility="gone"
+                android:background="@drawable/border_button_marco"
+                android:text="@string/revisar_historial_del_estudiante"
+                android:textColor="@color/morado">
+
+            </Button>
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/rcVerHistorialEstudiante"
+                android:layout_width="match_parent"
+                android:layout_height="400dp"
+                android:layout_marginTop="10dp"
+                android:visibility="gone"
+                >
+            </androidx.recyclerview.widget.RecyclerView>
+
+            <Button
+                android:id="@+id/btnCerrarHistorial"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginTop="10dp"
+                android:background="@drawable/border_button_marco_rojo"
+                android:text="X"
+                android:visibility="gone"
+                android:textSize="25sp"
+                android:textColor="@color/rojo"
+                />
 
             <TextView
                 android:id="@+id/textSelecFaltaTipo"
@@ -176,9 +212,9 @@
                 android:id="@+id/idSpinnerSeleFaltaTipoDeFalta"
                 android:background="@drawable/style_spinner"
                 android:layout_width="340dp"
-                android:visibility="gone"
                 android:layout_height="wrap_content"
                 android:layout_gravity="center"
+                android:visibility="gone"
                 app:layout_constraintBottom_toBottomOf="@+id/bottomNavigationView"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintHorizontal_bias="0.225"
@@ -212,8 +248,182 @@
                 android:id="@+id/idSpinnerSeleFalta"
                 android:background="@drawable/style_spinner"
                 android:layout_width="340dp"
-                android:visibility="gone"
                 android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:visibility="gone"
+                app:layout_constraintBottom_toBottomOf="@+id/bottomNavigationView"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.225"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/textView"
+                app:layout_constraintVertical_bias="0.234" />
+
+            <Button
+                android:id="@+id/btnAgregarSegundaFalta"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginTop="20dp"
+                android:visibility="gone"
+                android:padding="10dp"
+                android:background="@drawable/border_button_marco"
+                android:text="Agregar Una Nueva Falta"
+                android:textColor="@color/morado">
+
+            </Button>
+
+
+            <TextView
+                android:id="@+id/textSelecFaltaTipoNumero2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="casual"
+                android:text="@string/selecionar_tipo_de_falta"
+                android:layout_gravity="center"
+                android:textColor="@color/morado"
+                android:textSize="17sp"
+                android:visibility="gone"
+                android:textStyle="bold"
+                android:layout_marginTop="20dp"
+                app:layout_constraintBottom_toTopOf="@+id/bottomNavigationView"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.069"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintVertical_bias="0.289"
+                tools:ignore="MissingConstraints">
+
+            </TextView>
+
+            <Spinner
+                android:id="@+id/idSpinnerSeleFaltaTipoDeFaltaNumero2"
+                android:background="@drawable/style_spinner"
+                android:layout_width="340dp"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:visibility="gone"
+                app:layout_constraintBottom_toBottomOf="@+id/bottomNavigationView"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.225"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/textView"
+                app:layout_constraintVertical_bias="0.234" />
+
+            <TextView
+                android:id="@+id/textSelecFaltaCometidaNumero2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="casual"
+                android:text="@string/seleccionar_falta_cometida"
+                android:layout_gravity="center"
+                android:textColor="@color/morado"
+                android:textSize="17sp"
+                android:visibility="gone"
+                android:textStyle="bold"
+                android:layout_marginTop="20dp"
+                app:layout_constraintBottom_toTopOf="@+id/bottomNavigationView"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.069"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintVertical_bias="0.289"
+                tools:ignore="MissingConstraints">
+
+            </TextView>
+
+            <Spinner
+                android:id="@+id/idSpinnerSeleFaltaNumero2"
+                android:background="@drawable/style_spinner"
+                android:layout_width="340dp"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:visibility="gone"
+                app:layout_constraintBottom_toBottomOf="@+id/bottomNavigationView"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.225"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/textView"
+                app:layout_constraintVertical_bias="0.234" />
+
+            <Button
+                android:id="@+id/btnAgregarTercerFalta"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginTop="20dp"
+                android:visibility="gone"
+                android:padding="10dp"
+                android:background="@drawable/border_button_marco"
+                android:text="Agregar Una Nueva Falta"
+                android:textColor="@color/morado">
+
+            </Button>
+
+
+            <TextView
+                android:id="@+id/textSelecFaltaTipoNumero3"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="casual"
+                android:text="@string/selecionar_tipo_de_falta"
+                android:layout_gravity="center"
+                android:visibility="gone"
+                android:textColor="@color/morado"
+                android:textSize="17sp"
+                android:textStyle="bold"
+                android:layout_marginTop="20dp"
+                app:layout_constraintBottom_toTopOf="@+id/bottomNavigationView"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.069"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintVertical_bias="0.289"
+                tools:ignore="MissingConstraints">
+
+            </TextView>
+
+            <Spinner
+                android:id="@+id/idSpinnerSeleFaltaTipoDeFaltaNumero3"
+                android:background="@drawable/style_spinner"
+                android:layout_width="340dp"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:visibility="gone"
+                app:layout_constraintBottom_toBottomOf="@+id/bottomNavigationView"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.225"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/textView"
+                app:layout_constraintVertical_bias="0.234" />
+
+            <TextView
+                android:id="@+id/textSelecFaltaCometidaNumero3"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="casual"
+                android:text="@string/seleccionar_falta_cometida"
+                android:layout_gravity="center"
+                android:visibility="gone"
+                android:textColor="@color/morado"
+                android:textSize="17sp"
+                android:textStyle="bold"
+                android:layout_marginTop="20dp"
+                app:layout_constraintBottom_toTopOf="@+id/bottomNavigationView"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.069"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintVertical_bias="0.289"
+                tools:ignore="MissingConstraints">
+
+            </TextView>
+
+            <Spinner
+                android:id="@+id/idSpinnerSeleFaltaNumero3"
+                android:background="@drawable/style_spinner"
+                android:layout_width="340dp"
+                android:layout_height="wrap_content"
+                android:visibility="gone"
                 android:layout_gravity="center"
                 app:layout_constraintBottom_toBottomOf="@+id/bottomNavigationView"
                 app:layout_constraintEnd_toEndOf="parent"
@@ -222,6 +432,349 @@
                 app:layout_constraintTop_toBottomOf="@+id/textView"
                 app:layout_constraintVertical_bias="0.234" />
 
+            <TextView
+                android:id="@+id/textSelecDocenteQueReporta"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="casual"
+                android:text="Docente Que Realiza El Reporte"
+                android:layout_gravity="center"
+                android:textColor="@color/morado"
+                android:textSize="17sp"
+                android:visibility="gone"
+                android:textStyle="bold"
+                android:layout_marginTop="20dp"
+                app:layout_constraintBottom_toTopOf="@+id/bottomNavigationView"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.069"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintVertical_bias="0.289"
+                tools:ignore="MissingConstraints">
+
+            </TextView>
+
+            <Spinner
+                android:id="@+id/idSpinnerSeleDocenteRealizaFalta"
+                android:background="@drawable/style_spinner"
+                android:layout_width="340dp"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:visibility="gone"
+                app:layout_constraintBottom_toBottomOf="@+id/bottomNavigationView"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.225"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/textView"
+                app:layout_constraintVertical_bias="0.234" />
+
+            <TextView
+                android:id="@+id/textSelecVerProtocolo"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="monospace"
+                android:visibility="gone"
+                android:text="Revisar Protocolo Para Atencion de Faltas"
+                android:layout_gravity="center"
+                android:textColor="@color/morado"
+                android:textAlignment="center"
+                android:textSize="17sp"
+                android:textStyle="bold"
+                android:layout_marginTop="20dp"
+                app:layout_constraintBottom_toTopOf="@+id/bottomNavigationView"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.069"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintVertical_bias="0.289"
+                tools:ignore="MissingConstraints">
+
+            </TextView>
+
+            <TextView
+                android:id="@+id/textSelecFaltaTipoProtocolo"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="casual"
+                android:visibility="gone"
+                android:text="@string/selecionar_tipo_de_falta"
+                android:layout_gravity="center"
+                android:textColor="@color/morado"
+                android:textSize="17sp"
+                android:textStyle="bold"
+                android:layout_marginTop="20dp"
+                app:layout_constraintBottom_toTopOf="@+id/bottomNavigationView"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.069"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintVertical_bias="0.289"
+                tools:ignore="MissingConstraints">
+
+            </TextView>
+
+            <Spinner
+                android:id="@+id/idSpinnerSeleFaltaTipoDeFaltaProtocolo"
+                android:background="@drawable/style_spinner"
+                android:layout_width="340dp"
+                android:layout_height="wrap_content"
+                android:visibility="gone"
+                android:layout_gravity="center"
+                app:layout_constraintBottom_toBottomOf="@+id/bottomNavigationView"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.225"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/textView"
+                app:layout_constraintVertical_bias="0.234" />
+
+
+             <TextView
+                 android:id="@+id/idTxtProtocoloFaltasTipo1N1"
+                 android:layout_width="wrap_content"
+                 android:layout_height="wrap_content"
+                 android:text="CRITERIO SANCIÓN Y ACCIONES PEDAGÓGICAS PARA ATENCIÓN DE SITUACIONES TIPO I."
+                 android:layout_marginTop="20dp"
+                 android:visibility="gone"
+                 android:textSize="17sp"
+                 android:textAlignment="center"
+                 android:textStyle="bold"
+                 android:textColor="@color/amarillo_pastel"
+                 />
+
+            <TextView
+                android:id="@+id/idTxtProtocoloFaltasTipo1N2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/txtProtocolo1"
+                android:layout_marginTop="20dp"
+                android:visibility="gone"
+                android:textSize="17sp"
+                android:textAlignment="center"
+                android:textColor="@color/amarillo_pastel"
+                />
+
+            <TextView
+                android:id="@+id/idTxtProtocoloFaltasTipo1N3"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/txtProtocolo2"
+                android:layout_marginTop="10dp"
+                android:visibility="gone"
+                android:textSize="17sp"
+                android:padding="5dp"
+                android:layout_gravity="center_horizontal"
+                />
+
+            <TextView
+                android:id="@+id/idTxtProtocoloFaltasTipo1N4"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/txtProtocolo3"
+                android:layout_marginTop="10dp"
+                android:visibility="gone"
+                android:textSize="17sp"
+                android:padding="5dp"
+
+                />
+
+            <!-- PROTOCOLO FALTAS TIPO 2 -->
+
+            <TextView
+                android:id="@+id/idTxtProtocoloFaltasTipo2N1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="PROTOCOLO DE ATENCIÓN SITUACIONES TIPO II."
+                android:layout_marginTop="20dp"
+                android:visibility="gone"
+                android:textSize="17sp"
+                android:layout_gravity="center"
+                android:textAlignment="center"
+                android:textStyle="bold"
+                android:textColor="@color/rosa"
+                />
+
+            <TextView
+                android:id="@+id/idTxtProtocoloFaltasTipo2N2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/txtProtocoloTipo2"
+                android:visibility="gone"
+                android:layout_marginTop="20dp"
+                android:textSize="17sp"
+
+                />
+
+            <TextView
+                android:id="@+id/idTxtProtocoloFaltasTipo2N3"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="RUTA DE ATENCIÓN PARA LAS SITUACIONES TIPO II."
+                android:layout_marginTop="20dp"
+                android:visibility="gone"
+                android:textSize="17sp"
+                android:layout_gravity="center"
+                android:textAlignment="center"
+                android:textStyle="bold"
+                android:textColor="@color/rosa"
+                />
+
+            <TextView
+                android:id="@+id/idTxtProtocoloFaltasTipo2N4"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/txtProtocoloTipo3"
+                android:layout_marginTop="20dp"
+                android:visibility="gone"
+                android:textSize="17sp"
+
+                />
+
+            <TextView
+                android:id="@+id/idTxtProtocoloFaltasTipo2N5"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="CRITERIOS SANCIÓN PARA SITUACIONES TIPO II."
+                android:layout_marginTop="20dp"
+                android:visibility="gone"
+                android:textSize="17sp"
+                android:layout_gravity="center"
+                android:textAlignment="center"
+                android:textStyle="bold"
+                android:textColor="@color/rosa"
+                />
+
+            <TextView
+                android:id="@+id/idTxtProtocoloFaltasTipo2N6"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/txtProtocoloTipo4"
+                android:layout_marginTop="20dp"
+                android:visibility="gone"
+                android:textSize="17sp"
+                android:paddingLeft="5dp"
+                />
+
+            <TextView
+                android:id="@+id/idTxtProtocoloFaltasTipo3N1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="PROTOCOLO PARA LA ATENCIÓN DE SITUACIONES TIPO III."
+                android:layout_marginTop="20dp"
+                android:visibility="gone"
+                android:textSize="17sp"
+                android:layout_gravity="center"
+                android:textAlignment="center"
+                android:textStyle="bold"
+                android:textColor="@color/rojo"
+                />
+
+            <TextView
+                android:id="@+id/idTxtProtocoloFaltasTipo3N2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/txtProtocoloTipo3N1"
+                android:layout_marginTop="20dp"
+                android:visibility="gone"
+                android:textSize="17sp"
+                android:paddingLeft="5dp"
+                />
+
+            <TextView
+                android:id="@+id/idTxtProtocoloFaltasTipo3N3"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="CRITERIO DE SANCIÓN PARA SITUACIONES TIPO III."
+                android:layout_marginTop="20dp"
+                android:visibility="gone"
+                android:textSize="17sp"
+                android:layout_gravity="center"
+                android:textAlignment="center"
+                android:textStyle="bold"
+                android:textColor="@color/rojo"
+                />
+
+            <TextView
+            android:id="@+id/idTxtProtocoloFaltasTipo3N4"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/txtProtocoloTipo3N2"
+            android:layout_marginTop="20dp"
+            android:visibility="gone"
+            android:textSize="17sp"
+            android:textAlignment="center"
+            />
+
+            <TextView
+                android:id="@+id/idTxtProtocoloFaltasTipo3N5"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/txtProtocoloTipo3N3"
+                android:layout_marginTop="20dp"
+                android:visibility="gone"
+                android:textSize="17sp"
+                android:textAlignment="center"
+                />
+
+            <TextView
+                android:id="@+id/idTxtProtocoloFaltasTipo3N6"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Artículo 35°. Circunstancias Atenuantes."
+                android:layout_marginTop="20dp"
+                android:visibility="gone"
+                android:textSize="17sp"
+                android:layout_gravity="center"
+                android:textAlignment="center"
+                android:textStyle="bold"
+                android:textColor="@color/rojo"
+                />
+
+            <TextView
+                android:id="@+id/idTxtProtocoloFaltasTipo3N7"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Se consideran como circunstancias que atenúan la responsabilidad del estudiante de una situación tipo II las siguientes: "
+                android:layout_marginTop="20dp"
+                android:visibility="gone"
+                android:textSize="17sp"
+                android:textAlignment="center"
+                />
+
+            <TextView
+                android:id="@+id/idTxtProtocoloFaltasTipo3N8"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/txtProtocoloTipo3N4"
+                android:layout_marginTop="20dp"
+                android:visibility="gone"
+                android:textSize="17sp"
+                android:textAlignment="center"
+                />
+
+            <TextView
+                android:id="@+id/idTxtProtocoloFaltasTipo3N9"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Artículo 36: Circunstancias agravantes."
+                android:layout_marginTop="20dp"
+                android:visibility="gone"
+                android:textSize="17sp"
+                android:layout_gravity="center"
+                android:textAlignment="center"
+                android:textStyle="bold"
+                android:textColor="@color/rojo"
+                />
+
+            <TextView
+                android:id="@+id/idTxtProtocoloFaltasTipo3N10"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/txtProtocoloTipo3N5"
+                android:layout_marginTop="20dp"
+                android:visibility="gone"
+                android:textSize="17sp"
+                android:paddingLeft="5dp"
+                />
 
             <com.google.android.material.textfield.TextInputLayout
                 android:layout_width="match_parent"
@@ -240,7 +793,7 @@
                     android:layout_gravity="center"
                     android:gravity="top"
                     android:visibility="gone"
-                    android:hint="@string/compromiso_del_estudiante"
+                    android:hint="Correctivos Pedagógicos"
                     android:inputType="textMultiLine"
                     android:lines="6"
                     android:layout_marginTop="10dp"
@@ -262,8 +815,8 @@
                 android:layout_height="wrap_content"
                 android:layout_gravity="center"
                 android:layout_marginTop="20dp"
-                android:padding="10dp"
                 android:visibility="gone"
+                android:padding="10dp"
                 android:layout_marginBottom="70dp"
                 android:background="@drawable/border_button"
                 android:text="@string/reportar"

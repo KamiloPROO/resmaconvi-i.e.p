@@ -75,14 +75,24 @@
 
         </TextView>
 
+        <TextView
+            android:id="@+id/faltaCometidaPersonaReportadaN3"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Juan Camilo Gomez"
+            android:textSize="12sp"
+            android:textAlignment="center"
+            >
+
+        </TextView>
 
         <TextView
             android:id="@+id/nombrePersonaReportada"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:hint="Juan Camilo Gomez"
-            android:textSize="15sp"
-
+            android:textSize="12sp"
+            android:textAlignment="center"
             >
 
         </TextView>
@@ -93,31 +103,40 @@
             android:layout_height="wrap_content"
             android:hint="@string/quinto"
             android:textSize="12sp"
+            android:textAlignment="center"
 
             >
 
         </TextView>
+
+
+        <TextView
+            android:id="@+id/txtDocenteQRP"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Reporte Realizado Por:"
+            android:textColor="@color/morado"
+            android:textSize="12sp"
+            android:textAlignment="center"
+            android:fontFamily="monospace"
+
+            >
+
+        </TextView>
+
         <TextView
             android:id="@+id/periodoPersonaReportada"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:hint="Primer Periodo"
             android:textSize="12sp"
+            android:textAlignment="center"
 
             >
 
         </TextView>
 
-        <TextView
-            android:id="@+id/tipoFaltaReportada"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:hint="@string/situaciones_tipo_1"
-            android:textSize="12sp"
 
-            >
-
-        </TextView>
 
         <TextView
             android:id="@+id/txtFaltaCometida"
@@ -132,24 +151,42 @@
             >
 
         </TextView>
-
         <TextView
-            android:id="@+id/faltaCometidaPersonaReportada"
+            android:id="@+id/docenteQRP"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:hint="Juan Camilo Gomez"
-            android:textSize="15sp"
+            android:hint="Karen leanny Alvear"
+            android:textSize="12sp"
             android:textAlignment="center"
             >
 
         </TextView>
 
         <TextView
+            android:id="@+id/faltaCometidaPersonaReportadaN1"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textSize="12sp"
+            android:textAlignment="center"
+            >
+
+        </TextView>
+        <TextView
+            android:id="@+id/faltaCometidaPersonaReportadaN2"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textSize="12sp"
+            android:textAlignment="center"
+            >
+
+        </TextView>
+
+
+        <TextView
             android:id="@+id/txtCompromiso"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_marginTop="10dp"
-            android:text="Compromiso:"
+            android:text="Correptivos Pedagógicos:"
             android:textColor="@color/morado"
             android:textSize="12sp"
             android:textAlignment="center"
@@ -160,11 +197,11 @@
         </TextView>
 
         <TextView
-            android:id="@+id/compromisoPersonaReportada"
+            android:id="@+id/correctivoPersonaReportada"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:hint="Compromiso"
-            android:textSize="15sp"
+            android:hint="Correctivo"
+            android:textSize="12sp"
             android:textAlignment="center"
             >
 

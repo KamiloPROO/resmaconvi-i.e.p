@@ -45,14 +45,14 @@
 
             <Button
                 android:id="@+id/idBtnVerRutaManual"
+                android:layout_width="220dp"
+                android:layout_height="wrap_content"
                 android:layout_gravity="center"
-                android:background="@drawable/border_button"
-                android:text="Revisar Ruta De Atencion Integral"
-                android:textColor="@color/white"
                 android:layout_marginTop="40dp"
-                android:layout_width="wrap_content"
+                android:background="@drawable/border_button_marco"
                 android:padding="7dp"
-                android:layout_height="wrap_content">
+                android:text="Ruta De Atencion Integral"
+                android:textColor="@color/morado">
 
             </Button>
 
@@ -261,11 +261,11 @@
             <Button
                 android:id="@+id/idBtnVerSituacionesManual"
                 android:layout_gravity="center"
-                android:background="@drawable/border_button"
-                android:text="Revisar Tipo de faltas manual de convivencia"
-                android:textColor="@color/white"
+                android:background="@drawable/border_button_marco"
+                android:text="Tipo de faltas manual de convivencia"
+                android:textColor="@color/morado"
                 android:layout_marginTop="40dp"
-                android:layout_width="wrap_content"
+                android:layout_width="220dp"
                 android:padding="7dp"
                 android:layout_height="wrap_content">
 
@@ -471,11 +471,11 @@
             <Button
                 android:id="@+id/idBtnVerDerechosEstudiantes"
                 android:layout_gravity="center"
-                android:background="@drawable/border_button"
-                android:text="Revisar Derechos y Deberes Estudiantes"
-                android:textColor="@color/white"
+                android:background="@drawable/border_button_marco"
+                android:text="Derechos y Deberes Estudiantes"
+                android:textColor="@color/morado"
                 android:layout_marginTop="40dp"
-                android:layout_width="wrap_content"
+                android:layout_width="220dp"
                 android:padding="7dp"
                 android:layout_height="wrap_content">
 
@@ -493,6 +493,7 @@
                 android:textColor="@color/morado"
                 android:textSize="18sp"
                 android:textStyle="bold"
+                android:textAlignment="center"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintHorizontal_bias="0.497"
                 app:layout_constraintStart_toStartOf="parent"
@@ -600,12 +601,11 @@
             <Button
                 android:id="@+id/idBtnVerDerechosDocentes"
                 android:layout_gravity="center"
-                android:background="@drawable/border_button"
-                android:text="Revisar Derechos y Deberes Docentes"
-                android:textColor="@color/white"
+                android:background="@drawable/border_button_marco"
+                android:text="Derechos y Deberes Docentes"
+                android:textColor="@color/morado"
                 android:layout_marginTop="40dp"
-                android:layout_marginBottom="60dp"
-                android:layout_width="wrap_content"
+                android:layout_width="220dp"
                 android:padding="7dp"
                 android:layout_height="wrap_content">
 
@@ -621,6 +621,7 @@
                 android:fontFamily="casual"
                 android:text="@string/derechos_y_deberes_de_los_docentes"
                 android:textColor="@color/morado"
+                android:textAlignment="center"
                 android:textSize="18sp"
                 android:textStyle="bold"
                 app:layout_constraintEnd_toEndOf="parent"
@@ -722,13 +723,65 @@
                 android:layout_height="wrap_content"
                 android:layout_gravity="center"
                 android:layout_marginTop="6dp"
-                android:layout_marginBottom="60dp"
                 android:background="@drawable/border_button_rojo"
                 android:padding="7dp"
-                android:text="cerrar"
+                android:text="@string/cerrar"
 
 
                 />
+
+            <ViewFlipper
+                android:id="@+id/carruselMelo"
+                android:layout_marginTop="20dp"
+                android:layout_width="match_parent"
+                android:layout_marginBottom="60dp"
+                android:layout_height="240dp"
+                android:autoStart="true"
+                android:flipInterval="2500"
+                android:inAnimation="@android:anim/slide_in_left"
+                android:outAnimation="@android:anim/slide_out_right"
+
+                >
+
+                <ImageView
+                    android:id="@+id/imagen1"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    app:srcCompat="@drawable/logoapk"
+                    />
+                <ImageView
+                    android:id="@+id/imagen2"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    app:srcCompat="@drawable/docentesparaiso"
+                    />
+                <ImageView
+                    android:id="@+id/imagen3"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    app:srcCompat="@drawable/docentesparaiso2"
+                    />
+                <ImageView
+                    android:id="@+id/imagen4"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    app:srcCompat="@drawable/docentesparaiso3"
+                    />
+                <ImageView
+                    android:id="@+id/imagen5"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    app:srcCompat="@drawable/docentesparaiso4"
+                    />
+                <ImageView
+                    android:id="@+id/imagen6"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    app:srcCompat="@drawable/docentesparaiso5"
+                    />
+
+
+            </ViewFlipper>
 
         </LinearLayout>
 
